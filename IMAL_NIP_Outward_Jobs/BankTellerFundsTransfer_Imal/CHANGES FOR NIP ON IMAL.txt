@@ -1,0 +1,6 @@
+CHANGES DONE FOR THIS DEPLOYMENT
+
+1. CHANGED LENGH OF LED_CODE FRO 4 TO 10 ON NIBBSMOBILE TAB;E
+2. CHANGE LENGTH OF LEDC0DE, NUBAN ON ALL TSS AND VAT AND FEE ACCT TABLE
+3. Create stord procedures spd_GetImalVatAcct,spd_GetImalFeeAcct,spd_GetImalPrincipalAcct.
+4. insert the imal income, fee and vat accounts into the stored procedure destination table and edit the stored procedure to select the newly inserted column

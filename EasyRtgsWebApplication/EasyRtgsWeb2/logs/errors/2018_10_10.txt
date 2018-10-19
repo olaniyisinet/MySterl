@@ -1,0 +1,46 @@
+[Date]>> 10/10/2018 12:54:25 PM
+[Method Name]>> .ctor
+[Message]>> Object variable or With block variable not set.
+[Source]>> Microsoft.VisualBasic
+[Stack Trace]>>    at Microsoft.VisualBasic.CompilerServices.Symbols.Container..ctor(Object Instance)
+   at Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGet(Object Instance, Type Type, String MemberName, Object[] Arguments, String[] ArgumentNames, Type[] TypeArguments, Boolean[] CopyBack)
+   at main.show2(Object sender, EventArgs e) in \\10.0.41.102\e$\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\main.aspx.vb:line 174
+
+
+[Date]>> 10/10/2018 2:00:39 PM
+[Method Name]>> Add
+[Message]>> The parameter 'addresses' cannot be an empty string.
+Parameter name: addresses
+[Source]>> System
+[Stack Trace]>>    at System.Net.Mail.MailAddressCollection.Add(String addresses)
+   at easyrtgs.sendmail(String host, String toAddress, String cc, String subject, String body) in E:\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\App_Code\VBCode\easyrtgs.vb:line 286
+   at main.SubmitMT103Request() in E:\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\main.aspx.vb:line 952
+
+
+[Date]>> 10/10/2018 2:00:39 PM
+[Method Name]>> AbortInternal
+[Message]>> Thread was being aborted.
+[Source]>> mscorlib
+[Stack Trace]>>    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at main.SubmitMT103Request() in E:\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\main.aspx.vb:line 969
+
+
+[Date]>> 10/10/2018 2:00:39 PM
+[Method Name]>> ZombieCheck
+[Message]>> This SqlTransaction has completed; it is no longer usable.
+[Source]>> System.Data
+[Stack Trace]>>    at System.Data.SqlClient.SqlTransaction.ZombieCheck()
+   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at main.SubmitMT103Request() in E:\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\main.aspx.vb:line 972
+
+
+[Date]>> 10/10/2018 2:00:39 PM
+[Method Name]>> SubmitMT103Request
+[Message]>> Thread was being aborted.
+[Source]>> App_Web_nzxoccbh
+[Stack Trace]>>    at main.SubmitMT103Request() in E:\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\main.aspx.vb:line 592
+   at main.Button5_Click(Object sender, EventArgs e) in E:\Olaniyi\EasyRtgsWebApplication\EasyRtgsWeb2\main.aspx.vb:line 419
+
+

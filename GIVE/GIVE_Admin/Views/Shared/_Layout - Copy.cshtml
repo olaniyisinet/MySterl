@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - GIVE Admin</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+
+	<style>
+		/*table {
+			width: 100%;
+			/*border-collapse: collapse;
+		}
+
+			table tbody, table thead {
+				display: block;
+			}
+
+			table tbody {
+				overflow: auto;
+				height: 100px;
+			}*/
+		table th, table td {
+			text-align: center;
+			/*padding: .5em 1em;*/
+		}
+
+		table tr:nth-child(even) {
+			background-color: #BEF2F5
+		}
+
+		.pagination li:hover {
+			cursor: pointer;
+		}
+		.navbar-inverse .navbar-nav > li > a {
+			color: #ffffff;
+		}
+
+		.bodybackground {
+			
+		}
+		.footer {
+			position: absolute;
+			bottom: 0;
+			height: 60px; /* Height of the footer */
+			text-align: center
+		}
+	</style>
+	 
+</head>
+<body background="~/Content/images/bg3.jpg" style=" padding:10px; padding-bottom:60px;">
+	<div class="navbar navbar-inverse navbar-fixed-top" style="background-color: brown; color:white">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@*	@Html.ActionLink("GIVE Admin Portal", "", "", new { area = "" }, new { @class = "navbar-brand" })*@
+
+				<img src="~/Content/images/logo-icon2.png" style="float:left" />
+
+				<h4 class="navbar-text" style="color:white; margin: 20px">GIVE Admin</h4>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav" >
+					<li>@Html.ActionLink("Dashboard", "Dashboard", "Home")</li>
+					<li>@Html.ActionLink("Categories", "Index", "Category")</li>
+					<li>@Html.ActionLink("Projects", "Index", "Projects")</li>
+					<li>@Html.ActionLink("NGOs", "Index", "NGO")</li>
+					@*<li>@Html.ActionLink("NIP Inward", "Index", "Inward")</li>*@
+					<li></li>
+					<li></li>
+					<li class=" navbar-right">@Html.ActionLink("Log Out", "Login", "Login")</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class=" body-content container" style="margin: 5%">
+		<div class="col-md-10 col-md-offset-1">
+			@RenderBody()
+		</div>
+		<hr />
+		<footer class="footer" style="text-align: center">
+		
+			<p>&copy; @DateTime.Now.Year - GIVE Admin</p>
+		</footer>
+	</div>
+	@Scripts.Render("~/bundles/jquery")
+		@Scripts.Render("~/bundles/bootstrap")
+		@RenderSection("scripts", required: false)
+
+	@*<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.min.js"></script>*@
+
+	<script type="text/javascript" src="~/Scripts/xlsx_html.full.min.js"></script>
+	
+	<script>
+		function fnExcelReport(tableName) { XLSX.utils.html.save_table_as_excel(document.getElementById(tableName), { name: tableName + '.xlsx' }); }
+			</script>
+</body>
+</html>

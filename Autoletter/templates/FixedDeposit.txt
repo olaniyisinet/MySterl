@@ -1,0 +1,158 @@
+﻿<html>
+<head>
+    <title></title>
+    
+</head>
+<body>
+
+    <p>
+        &nbsp;</p>
+    <table class="style1">
+	<tr>
+            <td class="style2" colspan="2">
+             </td>
+        </tr>
+		<tr>
+            <td class="style2" colspan="2">
+               </td>
+        </tr>
+		<tr align="right">
+            <td class="style2" colspan="2" align="right"><br/><br/><br/><br/>
+               </td>
+        </tr>
+		<tr>
+            <td class="style2" colspan="2">
+               </td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="2">
+                %date% <br/><br/></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                <strong>%name%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                <strong>%address1%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                <strong>%address2%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                <br/><br/></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                Dear Sir/Madam,<br/></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                <br/><b>%title%</b><br/></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style3" colspan="2" align="left">
+               </tr>
+        <tr>
+            <td class="style7" colspan="2" align="left">
+                </td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style4" colspan="2">
+                We refer to your above investment and hereby confirm the following terms and 
+                conditions:</td>
+        </tr>
+        <tr>
+            <td class="style4" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style5" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                Amount :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>%currency% %amount%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                Rate :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>%interest%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                Tenor :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>%days%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                Effective Date:&nbsp;&nbsp;&nbsp; <strong>%effectiveDate%</strong><br />
+               </td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                Maturity Date:&nbsp;&nbsp;&nbsp;&nbsp; <strong>%MaturityDate%</strong></td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6" colspan="2">
+                On maturity, your investment will be rolled over at the prevailing market rate, 
+                if we do not hear from you.
+                However, premature termination of deposit will attract a penal rate of 10% on 
+                the interest.
+                <br />
+                While thanking you for your patronage, kindly acknowledge receipt and acceptance 
+                on the duplicate of this letter and return same to us.
+                <br />
+                <br />
+                Yours faithfully,
+                <br />
+                For: <strong>Sterling Bank Plc.</strong><br />
+                <br />
+                <br />
+&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="style6">
+                ________________________ </td>
+            <td class="style6">
+                ________________________ </td>
+        </tr>
+        <tr>
+            <td class="style6">
+                AUTHORISED SIGNATORY&nbsp;&nbsp;</td>
+            <td class="style6">
+                AUTHORISED SIGNATORY&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+    <p>
+        &nbsp;</p>
+
+</body>
+</html>

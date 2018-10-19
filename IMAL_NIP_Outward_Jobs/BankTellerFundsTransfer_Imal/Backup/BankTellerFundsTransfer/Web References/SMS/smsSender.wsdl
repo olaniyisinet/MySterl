@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="sendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMessageLiveOld">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requester" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMessageLiveOldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendMessageLiveOldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMessageLive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requester" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMessageLiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendMessageLiveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="sendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:sendMessage" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:sendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageLiveOldSoapIn">
+    <wsdl:part name="parameters" element="tns:sendMessageLiveOld" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageLiveOldSoapOut">
+    <wsdl:part name="parameters" element="tns:sendMessageLiveOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageLiveSoapIn">
+    <wsdl:part name="parameters" element="tns:sendMessageLive" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageLiveSoapOut">
+    <wsdl:part name="parameters" element="tns:sendMessageLiveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="smsSenderSoap">
+    <wsdl:operation name="sendMessage">
+      <wsdl:input message="tns:sendMessageSoapIn" />
+      <wsdl:output message="tns:sendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageLiveOld">
+      <wsdl:input message="tns:sendMessageLiveOldSoapIn" />
+      <wsdl:output message="tns:sendMessageLiveOldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageLive">
+      <wsdl:input message="tns:sendMessageLiveSoapIn" />
+      <wsdl:output message="tns:sendMessageLiveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="smsSenderSoap" type="tns:smsSenderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendMessage">
+      <soap:operation soapAction="http://tempuri.org/sendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageLiveOld">
+      <soap:operation soapAction="http://tempuri.org/sendMessageLiveOld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageLive">
+      <soap:operation soapAction="http://tempuri.org/sendMessageLive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="smsSenderSoap12" type="tns:smsSenderSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sendMessage">
+      <soap12:operation soapAction="http://tempuri.org/sendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageLiveOld">
+      <soap12:operation soapAction="http://tempuri.org/sendMessageLiveOld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageLive">
+      <soap12:operation soapAction="http://tempuri.org/sendMessageLive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="smsSender">
+    <wsdl:port name="smsSenderSoap" binding="tns:smsSenderSoap">
+      <soap:address location="https://epayments.sterlingbankng.com/smsservice/smsSender.asmx" />
+    </wsdl:port>
+    <wsdl:port name="smsSenderSoap12" binding="tns:smsSenderSoap12">
+      <soap12:address location="https://epayments.sterlingbankng.com/smsservice/smsSender.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

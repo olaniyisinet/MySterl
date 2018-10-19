@@ -1,0 +1,28 @@
+﻿select a.bra_code,a.cus_num,a.cur_code,a.led_code,a.sub_acct_code,a.bus_amt,(a.bus_amt-a.int_amt) dis_amt,
+a.val_date,a.mat_date,(mat_date-val_date)||' Days' gra_days,a.int_rate||'% Per Annum' int_rate,c.cus_sho_name,c.add_line1,
+c.add_line2,c.email,c.mob_num,e.alt_cur_code,e.des_eng currency
+from bus_act a,address c,currency e,account f
+where  to_char(a.val_date,'DDMMYYYY')=:Date01
+and a.val_date<>a.mat_date
+and a.cus_num>20000
+and a.bra_code=:Branch
+and a.bra_code=f.bra_code
+and a.cus_num=f.cus_num
+and a.cur_code=f.cur_code
+and a.led_code=f.led_code
+and a.sub_acct_code=f.sub_acct_code
+and ((
+      f.ADD_FLAG         = 0
+AND    c.BRA_CODE         = a.BRA_CODE
+AND    c.CUS_NUM          = a.CUS_NUM
+AND    c.CUR_CODE         = 0
+AND    c.LED_CODE         = 0
+AND    c.SUB_ACCT_CODE    = 0  ) OR
+    (
+      f.ADD_FLAG        = 1
+AND    c.BRA_CODE         = a.BRA_CODE
+AND    c.CUS_NUM          = a.CUS_NUM
+AND    c.CUR_CODE        = a.CUR_CODE
+AND    c.LED_CODE         = a.LED_CODE
+AND    c.SUB_ACCT_CODE    = a.SUB_ACCT_CODE))
+and a.cur_code=e.cur_code

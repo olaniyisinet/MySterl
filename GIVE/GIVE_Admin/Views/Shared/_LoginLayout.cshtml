@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - GIVE Admin</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+
+	<link href="~/Content/Login.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body background-repeat:no-repeat; background-size:auto; style="background-color: #E9ECEF;">
+
+
+	<div class=" body-content" style="margin: 5% 25%">
+		@RenderBody()
+		<footer style="text-align: center">
+			<hr />
+			<p>&copy; @DateTime.Now.Year - GIVE ADMIN</p>
+		</footer>
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+
+</body>
+</html>

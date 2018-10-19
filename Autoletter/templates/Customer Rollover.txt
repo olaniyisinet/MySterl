@@ -1,0 +1,188 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="templates_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="height: 100%; width: 100%; margin: 0; padding: 0; box-sizing: border-box;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=500, initial-scale=1, maximum-scale=1" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" value="notranslate">
+    <meta name="application-name" content="Gmail">
+    <meta name="description" content="Google's approach to email">
+    <meta name="application-url" content="https://mail.google.com/mail/u/0">
+    <meta name="google" content="notranslate">
+<title></title>
+
+    <style type="text/css">
+<!--
+.style1 {color: #808080}
+-->
+    </style>
+</head>
+<body style="height: 100%; width: 600; margin: 0; padding: 0; box-sizing: border-box; font-size: 10px;">
+    <table  style="font-family: Tahoma, Geneva, sans-serif; font-size: 10px; width:800; border:0; cellspacing:0; cellpadding:5px; align:center; font-size: 10px;">
+        <tbody>
+            <tr>
+                <td colspan="3"><img src="images/banner.jpg" style="width:800; height:170;" alt="" /></td>
+            </tr>
+            <tr>
+                <td width="254" style="width:122">&nbsp;</td>
+                <td width="320" style="width:456">&nbsp;</td>
+                <td width="218" style="width:222">&nbsp;</td>
+            </tr>
+
+        </tbody>
+    </table>
+	<table width="530" align="center"  style="font-family: Tahoma, Geneva, sans-serif; font-size: 10px; border:0; cellspacing:0; cellpadding:5px;">
+	            <tr>
+                <td style="font-family: Tahoma, Geneva, sans-serif;  color: #c00000;">Reference: <span style="color:#545454;">%refno%</span></td>
+                <td>&nbsp;</td>
+                <td style="font-family: Tahoma, Geneva, sans-serif; color: #c00000;"><strong>%fname%</strong></td>
+            </tr>
+            <tr>
+                <td><span style="color:white;">Reference:</span><span style="color:#545454;"> %fDate%</span></td>
+                <td>&nbsp;</td>
+                <td style="color:#545454">
+                    %address1%, %address2%                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td style="color:#545454;font-weight:bold">%acctnum%</td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+             <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td><br/>
+<br/>
+            </tr>
+
+            <tr>
+
+                <td colspan="3" align="center" style="margin-top: 30px; font-size: 13px; color:#545454;" height="300"><strong>Your Investment has been Confirmed!</strong></td>
+<br/>
+<br/>
+            </tr>
+             <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="font-family: Tahoma, Geneva, sans-serif; color: #c00000;"><p><strong>Principal Amount</strong></p></td>
+                <td>&nbsp;</td>
+                <td style="font-family: Tahoma, Geneva, sans-serif; color: #c00000;"><p><strong>Value Date</strong><strong> </strong></p></td>
+            </tr>
+            <tr>
+                <td style="color:#545454;">%currency%%amount%</td>
+				<td>&nbsp;</td>
+                <td style="color:#545454;">%effectiveDate%</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+				<br/>
+				<br/>
+            </tr>
+            <tr>
+                <td colspan="3">
+				<div style="width: 100%; height: 50px; border:2px; color:black;">
+                    <table border="1" BORDERCOLOR=RED font-size="10px";>
+                        <tbody>            <br/>
+            <br/>
+                            <tr>
+							<td width="40" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">TENOR</font></td>
+                                <td width="30" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">RATE</font></td>
+                                
+                                <td width="75" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">MATURITY DATE</font></td>
+                                <td width="81" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">GROSS INTEREST -%currency%</font></td>
+                                <td width="81" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">10% WHT -%currency%</font></td>
+                                <td width="81" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">NET INTEREST -%currency%</font></td>
+                                <td width="81" align="center" bgcolor="#7e7e7e"><font face="Tahoma, Geneva, sans-serif" color="white">VALUE AT MATURITY -%currency%</font></td>
+                            </tr>
+                            <tr>
+							<td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%days%</b></td>
+                                <td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%interest%</b></td>
+                                
+                                <td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%MaturityDate%</b></td>
+                                <td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%gross%</b></td>
+                                <td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%wht%</b></td>
+                                <td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%netInterest%</b></td>
+                                <td align="center" bgcolor="#d3d3d3" style="color:#545454;"><b>%matvalue%</b></td>
+                            </tr>
+
+            <br/>
+                    </table>
+					</div>                </td>
+            </tr>
+			<tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+				<br/>
+				<br/>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+            </tr>
+            <tr style="border-bottom: 1px solid black;">
+              <td colspan="6" valign="top" nowrap="nowrap" style="color: #808080; font-weight: bolder;"><div style="padding-left:20px"><strong>While you maintain your Investment with us, please be aware of the following:</strong></div></td>
+				<br />            
+			</tr>
+            
+			<tr align="center">
+                <td colspan="3" style="color: #939393; font-weight: 100;">                </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+            <tr>
+              <td colspan="6"  style="color: #808080;"><div style="padding-left:35px">
+			  <ul>
+			  <li>Premature termination of Investments attracts a penal rate of 10% of your interest.</li>
+  <li>The Bank will roll over your Investment at the prevailing market rate if we do not receive your directive.</li>
+  <li>On or before the maturity date of your Investment, it is important that you direct us to either ROLL OVER or TERMINATE your Investment.</li>
+  <li>The Bank will roll over your Investment at the prevailing market rate if we do not receive your directive.</li>
+  </ul></div></td>
+                </tr>
+                
+
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="3">&nbsp;</td>
+				<br/><br/><br /><br/><br /><br /><br/><br /><br/><br />
+            </tr>
+            <tr>
+			<td colspan="3"><center><table width="485" border="1" align="center" cellpadding="5" cellspacing="0" bordercolor="#CCCCCC">
+			<tr>
+                <td colspan="3"><p style="padding:10px; border: 1px solid; color: #CCCCCC;">For further enquiries, please send  an email to <a style="color:#CCCCCC; text-decoration: underline;" href="mailto:customercare@sterlingbankng.com">customercare@sterlingbankng.com</a> or call 070078375464</p></td>
+			</tr>
+			</table>
+			</center>			</td>
+            </tr>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+            </tr>
+	
+	</table>
+
+
+</body>
+</html>

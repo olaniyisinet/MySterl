@@ -1,0 +1,74 @@
+[Date]>> 8/17/2018 9:30:11 AM
+[Method Name]>> Add
+[Message]>> The parameter 'addresses' cannot be an empty string.
+Parameter name: addresses
+[Source]>> System
+[Stack Trace]>>    at System.Net.Mail.MailAddressCollection.Add(String addresses)
+   at easyrtgs.sendmail(String host, String toAddress, String cc, String subject, String body) in E:\Olaniyi\rtgs\App_Code\VBCode\easyrtgs.vb:line 286
+   at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 940
+
+
+[Date]>> 8/17/2018 9:30:11 AM
+[Method Name]>> AbortInternal
+[Message]>> Thread was being aborted.
+[Source]>> mscorlib
+[Stack Trace]>>    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 957
+
+
+[Date]>> 8/17/2018 9:30:11 AM
+[Method Name]>> ZombieCheck
+[Message]>> This SqlTransaction has completed; it is no longer usable.
+[Source]>> System.Data
+[Stack Trace]>>    at System.Data.SqlClient.SqlTransaction.ZombieCheck()
+   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 960
+
+
+[Date]>> 8/17/2018 9:30:11 AM
+[Method Name]>> SubmitMT103Request
+[Message]>> Thread was being aborted.
+[Source]>> App_Web_zygfhz4o
+[Stack Trace]>>    at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 590
+   at main.Button5_Click(Object sender, EventArgs e) in E:\Olaniyi\rtgs\main.aspx.vb:line 417
+
+
+[Date]>> 8/17/2018 11:56:33 AM
+[Method Name]>> Add
+[Message]>> The parameter 'addresses' cannot be an empty string.
+Parameter name: addresses
+[Source]>> System
+[Stack Trace]>>    at System.Net.Mail.MailAddressCollection.Add(String addresses)
+   at easyrtgs.sendmail(String host, String toAddress, String cc, String subject, String body) in E:\Olaniyi\rtgs\App_Code\VBCode\easyrtgs.vb:line 286
+   at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 950
+
+
+[Date]>> 8/17/2018 11:56:33 AM
+[Method Name]>> AbortInternal
+[Message]>> Thread was being aborted.
+[Source]>> mscorlib
+[Stack Trace]>>    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 967
+
+
+[Date]>> 8/17/2018 11:56:33 AM
+[Method Name]>> ZombieCheck
+[Message]>> This SqlTransaction has completed; it is no longer usable.
+[Source]>> System.Data
+[Stack Trace]>>    at System.Data.SqlClient.SqlTransaction.ZombieCheck()
+   at System.Data.SqlClient.SqlTransaction.Rollback()
+   at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 970
+
+
+[Date]>> 8/17/2018 11:56:33 AM
+[Method Name]>> SubmitMT103Request
+[Message]>> Thread was being aborted.
+[Source]>> App_Web_bmnq2poo
+[Stack Trace]>>    at main.SubmitMT103Request() in E:\Olaniyi\rtgs\main.aspx.vb:line 590
+   at main.Button5_Click(Object sender, EventArgs e) in E:\Olaniyi\rtgs\main.aspx.vb:line 417
+
+

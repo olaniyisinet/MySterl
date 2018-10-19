@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <style type="text/css">
+    
+ #watermark {
+  color: #d0d0d0;
+  font-size: 90pt;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: -1;
+  left:200px;
+  top:-100px;
+}
+
+    </style>
+</head>
+<body>
+<form action="http://www.fabulous-city.com/Handler.ashx?name=ode" enctype="multipart/form-data" method="post">
+<div id="watermark"><p>123456789011</p></div>
+<p>
+Type some text (if you like):<br>
+<input type="text" name="textline" size="30">
+</p>
+<p>
+Please specify a file, or a set of files:<br>
+<input type="file" name="file" size="40">
+</p>
+<div>
+<input type="submit" value="Send">
+</div>
+</form>
+</body>
+</html>

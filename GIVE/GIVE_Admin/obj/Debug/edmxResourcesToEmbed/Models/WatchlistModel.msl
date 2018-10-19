@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WatchListModelStoreContainer" CdmEntityContainer="WatchListEntities1">
+    <EntitySetMapping Name="Blacklists">
+      <EntityTypeMapping TypeName="WatchListModel.Blacklist">
+        <MappingFragment StoreEntitySet="Blacklist">
+          <ScalarProperty Name="Sn" ColumnName="Sn" />
+          <ScalarProperty Name="Publish_Date" ColumnName="Publish_Date" />
+          <ScalarProperty Name="Record_Count" ColumnName="Record_Count" />
+          <ScalarProperty Name="Record_Count_agg" ColumnName="Record_Count_agg" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address3" ColumnName="address3" />
+          <ScalarProperty Name="address_City" ColumnName="address_City" />
+          <ScalarProperty Name="address_country" ColumnName="address_country" />
+          <ScalarProperty Name="address_postalCode" ColumnName="address_postalCode" />
+          <ScalarProperty Name="address_StateOrProvince" ColumnName="address_StateOrProvince" />
+          <ScalarProperty Name="address_uid" ColumnName="address_uid" />
+          <ScalarProperty Name="address_uid_Agg" ColumnName="address_uid_Agg" />
+          <ScalarProperty Name="aka_category" ColumnName="aka_category" />
+          <ScalarProperty Name="List_Type" ColumnName="List_Type" />
+          <ScalarProperty Name="BVN" ColumnName="BVN" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Middle_Name" ColumnName="Middle_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="aka_firstName" ColumnName="aka_firstName" />
+          <ScalarProperty Name="aka_lastName" ColumnName="aka_lastName" />
+          <ScalarProperty Name="aka_type" ColumnName="aka_type" />
+          <ScalarProperty Name="aka_uid" ColumnName="aka_uid" />
+          <ScalarProperty Name="aka_uid_agg" ColumnName="aka_uid_agg" />
+          <ScalarProperty Name="citizenship_country" ColumnName="citizenship_country" />
+          <ScalarProperty Name="citizenship_mainEntry" ColumnName="citizenship_mainEntry" />
+          <ScalarProperty Name="citizenship_uid" ColumnName="citizenship_uid" />
+          <ScalarProperty Name="citizenship_uid_agg" ColumnName="citizenship_uid_agg" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="dateOfBirthItem_mainEntry" ColumnName="dateOfBirthItem_mainEntry" />
+          <ScalarProperty Name="dateOfBirthItem_uid" ColumnName="dateOfBirthItem_uid" />
+          <ScalarProperty Name="dateOfBirthItem_uid_agg" ColumnName="dateOfBirthItem_uid_agg" />
+          <ScalarProperty Name="sdnEntry_firstName" ColumnName="sdnEntry_firstName" />
+          <ScalarProperty Name="id_expirationDate" ColumnName="id_expirationDate" />
+          <ScalarProperty Name="id_country" ColumnName="id_country" />
+          <ScalarProperty Name="id_idCountry" ColumnName="id_idCountry" />
+          <ScalarProperty Name="id_idNumber" ColumnName="id_idNumber" />
+          <ScalarProperty Name="id_Type" ColumnName="id_Type" />
+          <ScalarProperty Name="id_issueDate" ColumnName="id_issueDate" />
+          <ScalarProperty Name="id_uid" ColumnName="id_uid" />
+          <ScalarProperty Name="id_uid_Agg" ColumnName="id_uid_Agg" />
+          <ScalarProperty Name="nationality_country" ColumnName="nationality_country" />
+          <ScalarProperty Name="nationality_mainEntry" ColumnName="nationality_mainEntry" />
+          <ScalarProperty Name="nationality_uid" ColumnName="nationality_uid" />
+          <ScalarProperty Name="nationality_uid_agg" ColumnName="nationality_uid_agg" />
+          <ScalarProperty Name="placeOfBirth_mainEntry" ColumnName="placeOfBirth_mainEntry" />
+          <ScalarProperty Name="placeOfBirth" ColumnName="placeOfBirth" />
+          <ScalarProperty Name="placeofBirth_uid" ColumnName="placeofBirth_uid" />
+          <ScalarProperty Name="placeOfBirthItem_uid_agg" ColumnName="placeOfBirthItem_uid_agg" />
+          <ScalarProperty Name="program" ColumnName="program" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="sdntype" ColumnName="sdntype" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uid_agg" ColumnName="uid_agg" />
+          <ScalarProperty Name="callsign" ColumnName="callsign" />
+          <ScalarProperty Name="grossRegisteredTonnage" ColumnName="grossRegisteredTonnage" />
+          <ScalarProperty Name="grossRegisteredTonnage_agg" ColumnName="grossRegisteredTonnage_agg" />
+          <ScalarProperty Name="tonnage" ColumnName="tonnage" />
+          <ScalarProperty Name="tonnage_agg" ColumnName="tonnage_agg" />
+          <ScalarProperty Name="vesselFlag" ColumnName="vesselFlag" />
+          <ScalarProperty Name="vesselOwner" ColumnName="vesselOwner" />
+          <ScalarProperty Name="vesselType" ColumnName="vesselType" />
+          <ScalarProperty Name="vesselName" ColumnName="vesselName" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="Uploader" ColumnName="Uploader" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entity_Sanction">
+      <EntityTypeMapping TypeName="WatchListModel.Entity_Sanction">
+        <MappingFragment StoreEntitySet="Entity_Sanction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DataID" ColumnName="DataID" />
+          <ScalarProperty Name="VersionNum" ColumnName="VersionNum" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="UN_List_Type" ColumnName="UN_List_Type" />
+          <ScalarProperty Name="Ref_Num" ColumnName="Ref_Num" />
+          <ScalarProperty Name="Listed_On" ColumnName="Listed_On" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="List_Type" ColumnName="List_Type" />
+          <ScalarProperty Name="Last_Day_Updated" ColumnName="Last_Day_Updated" />
+          <ScalarProperty Name="Entity_Alias_Quality" ColumnName="Entity_Alias_Quality" />
+          <ScalarProperty Name="Entity_Alias_Name" ColumnName="Entity_Alias_Name" />
+          <ScalarProperty Name="Entity_Address_City" ColumnName="Entity_Address_City" />
+          <ScalarProperty Name="Entity_Address_Country" ColumnName="Entity_Address_Country" />
+          <ScalarProperty Name="Sort_Key" ColumnName="Sort_Key" />
+          <ScalarProperty Name="Sort_Key_Last_Mod" ColumnName="Sort_Key_Last_Mod" />
+          <ScalarProperty Name="dateGenerated" ColumnName="dateGenerated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Individuals_Sanction">
+      <EntityTypeMapping TypeName="WatchListModel.Individuals_Sanction">
+        <MappingFragment StoreEntitySet="Individuals_Sanction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Data_ID" ColumnName="Data_ID" />
+          <ScalarProperty Name="VersionNum" ColumnName="VersionNum" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Middle_Name" ColumnName="Middle_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="UN_List_Type" ColumnName="UN_List_Type" />
+          <ScalarProperty Name="Ref_No" ColumnName="Ref_No" />
+          <ScalarProperty Name="Listed_On" ColumnName="Listed_On" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="List_Type" ColumnName="List_Type" />
+          <ScalarProperty Name="Last_Day_Updated" ColumnName="Last_Day_Updated" />
+          <ScalarProperty Name="Individual_Alias_Quality" ColumnName="Individual_Alias_Quality" />
+          <ScalarProperty Name="Individual_Alias_Name" ColumnName="Individual_Alias_Name" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="DOB_Type" ColumnName="DOB_Type" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Place_Of_Birth" ColumnName="Place_Of_Birth" />
+          <ScalarProperty Name="Type_of_Doc" ColumnName="Type_of_Doc" />
+          <ScalarProperty Name="Doc_No" ColumnName="Doc_No" />
+          <ScalarProperty Name="Sort_Key" ColumnName="Sort_Key" />
+          <ScalarProperty Name="Sort_Key_Last_Mod" ColumnName="Sort_Key_Last_Mod" />
+          <ScalarProperty Name="dateGenerated" ColumnName="dateGenerated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEPLists">
+      <EntityTypeMapping TypeName="WatchListModel.PEPList">
+        <MappingFragment StoreEntitySet="PEPList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Middle_Name" ColumnName="Middle_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="NAME_OF_PEP" ColumnName="NAME_OF_PEP" />
+          <ScalarProperty Name="POLITICAL_POSITION" ColumnName="POLITICAL_POSITION" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="Uploader" ColumnName="Uploader" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Defaulter">
+      <EntityTypeMapping TypeName="WatchListModel.tbl_Defaulter">
+        <MappingFragment StoreEntitySet="tbl_Defaulter">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Business_Name" ColumnName="Business_Name" />
+          <ScalarProperty Name="Registration_Number" ColumnName="Registration_Number" />
+          <ScalarProperty Name="Business_Address" ColumnName="Business_Address" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Type_of_Business" ColumnName="Type_of_Business" />
+          <ScalarProperty Name="Victim_Bank" ColumnName="Victim_Bank" />
+          <ScalarProperty Name="Total_Unpaid_Exposure" ColumnName="Total_Unpaid_Exposure" />
+          <ScalarProperty Name="Reason_for_write_off" ColumnName="Reason_for_write_off" />
+          <ScalarProperty Name="Type_of_Credit_Facility" ColumnName="Type_of_Credit_Facility" />
+          <ScalarProperty Name="Name_of_Guarantor" ColumnName="Name_of_Guarantor" />
+          <ScalarProperty Name="Collateral" ColumnName="Collateral" />
+          <ScalarProperty Name="RELATED_ACCOUNTS" ColumnName="RELATED_ACCOUNTS" />
+          <ScalarProperty Name="Guarantor_Branch" ColumnName="Guarantor_Branch" />
+          <ScalarProperty Name="TIN_or_BVN_Account_Name" ColumnName="TIN_or_BVN_Account_Name" />
+          <ScalarProperty Name="Guarantor_Business_Address" ColumnName="Guarantor_Business_Address" />
+          <ScalarProperty Name="Relationship_to_Defaulter" ColumnName="Relationship_to_Defaulter" />
+          <ScalarProperty Name="Other_information" ColumnName="Other_information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStatus">
+      <EntityTypeMapping TypeName="WatchListModel.tblStatu">
+        <MappingFragment StoreEntitySet="tblStatus">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="WatchListModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="BranchDept" ColumnName="BranchDept" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="SupervisorID" ColumnName="SupervisorID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWatchLists">
+      <EntityTypeMapping TypeName="WatchListModel.tblWatchList">
+        <MappingFragment StoreEntitySet="tblWatchList">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Publish_Date" ColumnName="Publish_Date" />
+          <ScalarProperty Name="Record_Count" ColumnName="Record_Count" />
+          <ScalarProperty Name="Record_Count_agg" ColumnName="Record_Count_agg" />
+          <ScalarProperty Name="ids" ColumnName="ids" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address3" ColumnName="address3" />
+          <ScalarProperty Name="address_City" ColumnName="address_City" />
+          <ScalarProperty Name="address_country" ColumnName="address_country" />
+          <ScalarProperty Name="address_postalCode" ColumnName="address_postalCode" />
+          <ScalarProperty Name="address_StateOrProvince" ColumnName="address_StateOrProvince" />
+          <ScalarProperty Name="address_uid" ColumnName="address_uid" />
+          <ScalarProperty Name="address_uid_Agg" ColumnName="address_uid_Agg" />
+          <ScalarProperty Name="aka_category" ColumnName="aka_category" />
+          <ScalarProperty Name="aka_firstName" ColumnName="aka_firstName" />
+          <ScalarProperty Name="aka_lastName" ColumnName="aka_lastName" />
+          <ScalarProperty Name="aka_type" ColumnName="aka_type" />
+          <ScalarProperty Name="aka_uid" ColumnName="aka_uid" />
+          <ScalarProperty Name="aka_uid_agg" ColumnName="aka_uid_agg" />
+          <ScalarProperty Name="citizenship_country" ColumnName="citizenship_country" />
+          <ScalarProperty Name="citizenship_mainEntry" ColumnName="citizenship_mainEntry" />
+          <ScalarProperty Name="citizenship_uid" ColumnName="citizenship_uid" />
+          <ScalarProperty Name="citizenship_uid_agg" ColumnName="citizenship_uid_agg" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="dateOfBirthItem_mainEntry" ColumnName="dateOfBirthItem_mainEntry" />
+          <ScalarProperty Name="dateOfBirthItem_uid" ColumnName="dateOfBirthItem_uid" />
+          <ScalarProperty Name="dateOfBirthItem_uid_agg" ColumnName="dateOfBirthItem_uid_agg" />
+          <ScalarProperty Name="sdnEntry_firstName" ColumnName="sdnEntry_firstName" />
+          <ScalarProperty Name="id_expirationDate" ColumnName="id_expirationDate" />
+          <ScalarProperty Name="id_idcountry" ColumnName="id_idcountry" />
+          <ScalarProperty Name="id_idNumber" ColumnName="id_idNumber" />
+          <ScalarProperty Name="id_Type" ColumnName="id_Type" />
+          <ScalarProperty Name="id_issueDate" ColumnName="id_issueDate" />
+          <ScalarProperty Name="id_uid" ColumnName="id_uid" />
+          <ScalarProperty Name="id_uid_Agg" ColumnName="id_uid_Agg" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="nationality_country" ColumnName="nationality_country" />
+          <ScalarProperty Name="nationality_mainEntry" ColumnName="nationality_mainEntry" />
+          <ScalarProperty Name="nationality_uid" ColumnName="nationality_uid" />
+          <ScalarProperty Name="nationality_uid_agg" ColumnName="nationality_uid_agg" />
+          <ScalarProperty Name="placeOfBirth_mainEntry" ColumnName="placeOfBirth_mainEntry" />
+          <ScalarProperty Name="placeOfBirth" ColumnName="placeOfBirth" />
+          <ScalarProperty Name="placeofBirth_uid" ColumnName="placeofBirth_uid" />
+          <ScalarProperty Name="placeOfBirthItem_uid_agg" ColumnName="placeOfBirthItem_uid_agg" />
+          <ScalarProperty Name="program" ColumnName="program" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="sdntype" ColumnName="sdntype" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uid_agg" ColumnName="uid_agg" />
+          <ScalarProperty Name="callsign" ColumnName="callsign" />
+          <ScalarProperty Name="grossRegisteredTonnage" ColumnName="grossRegisteredTonnage" />
+          <ScalarProperty Name="grossRegisteredTonnage_agg" ColumnName="grossRegisteredTonnage_agg" />
+          <ScalarProperty Name="tonnage" ColumnName="tonnage" />
+          <ScalarProperty Name="taonnage_agg" ColumnName="taonnage_agg" />
+          <ScalarProperty Name="vesselFlag" ColumnName="vesselFlag" />
+          <ScalarProperty Name="vesselOwner" ColumnName="vesselOwner" />
+          <ScalarProperty Name="vesselType" ColumnName="vesselType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWatchList_bk">
+      <EntityTypeMapping TypeName="WatchListModel.tblWatchList_bk">
+        <MappingFragment StoreEntitySet="tblWatchList_bk">
+          <ScalarProperty Name="tblListID" ColumnName="tblListID" />
+          <ScalarProperty Name="Ref_No" ColumnName="Ref_No" />
+          <ScalarProperty Name="Names" ColumnName="Names" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastUpdateBy" ColumnName="LastUpdateBy" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWatchLists1">
+      <EntityTypeMapping TypeName="WatchListModel.tblWatchList1">
+        <MappingFragment StoreEntitySet="tblWatchLists">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Publish_Date" ColumnName="Publish_Date" />
+          <ScalarProperty Name="Record_Count" ColumnName="Record_Count" />
+          <ScalarProperty Name="Record_Count_agg" ColumnName="Record_Count_agg" />
+          <ScalarProperty Name="ids" ColumnName="ids" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address3" ColumnName="address3" />
+          <ScalarProperty Name="address_City" ColumnName="address_City" />
+          <ScalarProperty Name="address_country" ColumnName="address_country" />
+          <ScalarProperty Name="address_postalCode" ColumnName="address_postalCode" />
+          <ScalarProperty Name="address_StateOrProvince" ColumnName="address_StateOrProvince" />
+          <ScalarProperty Name="address_uid" ColumnName="address_uid" />
+          <ScalarProperty Name="address_uid_Agg" ColumnName="address_uid_Agg" />
+          <ScalarProperty Name="aka_category" ColumnName="aka_category" />
+          <ScalarProperty Name="aka_firstName" ColumnName="aka_firstName" />
+          <ScalarProperty Name="aka_lastName" ColumnName="aka_lastName" />
+          <ScalarProperty Name="aka_type" ColumnName="aka_type" />
+          <ScalarProperty Name="aka_uid" ColumnName="aka_uid" />
+          <ScalarProperty Name="aka_uid_agg" ColumnName="aka_uid_agg" />
+          <ScalarProperty Name="citizenship_country" ColumnName="citizenship_country" />
+          <ScalarProperty Name="citizenship_mainEntry" ColumnName="citizenship_mainEntry" />
+          <ScalarProperty Name="citizenship_uid" ColumnName="citizenship_uid" />
+          <ScalarProperty Name="citizenship_uid_agg" ColumnName="citizenship_uid_agg" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="dateOfBirthItem_mainEntry" ColumnName="dateOfBirthItem_mainEntry" />
+          <ScalarProperty Name="dateOfBirthItem_uid" ColumnName="dateOfBirthItem_uid" />
+          <ScalarProperty Name="dateOfBirthItem_uid_agg" ColumnName="dateOfBirthItem_uid_agg" />
+          <ScalarProperty Name="sdnEntry_firstName" ColumnName="sdnEntry_firstName" />
+          <ScalarProperty Name="id_expirationDate" ColumnName="id_expirationDate" />
+          <ScalarProperty Name="id_idcountry" ColumnName="id_idcountry" />
+          <ScalarProperty Name="id_idNumber" ColumnName="id_idNumber" />
+          <ScalarProperty Name="id_Type" ColumnName="id_Type" />
+          <ScalarProperty Name="id_issueDate" ColumnName="id_issueDate" />
+          <ScalarProperty Name="id_uid" ColumnName="id_uid" />
+          <ScalarProperty Name="id_uid_Agg" ColumnName="id_uid_Agg" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="nationality_country" ColumnName="nationality_country" />
+          <ScalarProperty Name="nationality_mainEntry" ColumnName="nationality_mainEntry" />
+          <ScalarProperty Name="nationality_uid" ColumnName="nationality_uid" />
+          <ScalarProperty Name="nationality_uid_agg" ColumnName="nationality_uid_agg" />
+          <ScalarProperty Name="placeOfBirth_mainEntry" ColumnName="placeOfBirth_mainEntry" />
+          <ScalarProperty Name="placeOfBirth" ColumnName="placeOfBirth" />
+          <ScalarProperty Name="placeofBirth_uid" ColumnName="placeofBirth_uid" />
+          <ScalarProperty Name="placeOfBirthItem_uid_agg" ColumnName="placeOfBirthItem_uid_agg" />
+          <ScalarProperty Name="program" ColumnName="program" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="sdntype" ColumnName="sdntype" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uid_agg" ColumnName="uid_agg" />
+          <ScalarProperty Name="callsign" ColumnName="callsign" />
+          <ScalarProperty Name="grossRegisteredTonnage" ColumnName="grossRegisteredTonnage" />
+          <ScalarProperty Name="grossRegisteredTonnage_agg" ColumnName="grossRegisteredTonnage_agg" />
+          <ScalarProperty Name="tonnage" ColumnName="tonnage" />
+          <ScalarProperty Name="taonnage_agg" ColumnName="taonnage_agg" />
+          <ScalarProperty Name="vesselFlag" ColumnName="vesselFlag" />
+          <ScalarProperty Name="vesselOwner" ColumnName="vesselOwner" />
+          <ScalarProperty Name="vesselType" ColumnName="vesselType" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="updateRecs">
+      <EntityTypeMapping TypeName="WatchListModel.updateRec">
+        <MappingFragment StoreEntitySet="updateRec">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ReportType" ColumnName="ReportType" />
+          <ScalarProperty Name="dateGenerated" ColumnName="dateGenerated" />
+          <ScalarProperty Name="TimeUpdated" ColumnName="TimeUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Watchlist_New">
+      <EntityTypeMapping TypeName="WatchListModel.Watchlist_New">
+        <MappingFragment StoreEntitySet="Watchlist_New">
+          <ScalarProperty Name="Sn" ColumnName="Sn" />
+          <ScalarProperty Name="Publish_Date" ColumnName="Publish_Date" />
+          <ScalarProperty Name="Record_Count" ColumnName="Record_Count" />
+          <ScalarProperty Name="Record_Count_agg" ColumnName="Record_Count_agg" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address3" ColumnName="address3" />
+          <ScalarProperty Name="address_city" ColumnName="address_city" />
+          <ScalarProperty Name="address_country" ColumnName="address_country" />
+          <ScalarProperty Name="address_postalCode" ColumnName="address_postalCode" />
+          <ScalarProperty Name="address_StateOrProvince" ColumnName="address_StateOrProvince" />
+          <ScalarProperty Name="address_uid" ColumnName="address_uid" />
+          <ScalarProperty Name="address_uid_Agg" ColumnName="address_uid_Agg" />
+          <ScalarProperty Name="aka_category" ColumnName="aka_category" />
+          <ScalarProperty Name="List_type" ColumnName="List_type" />
+          <ScalarProperty Name="BVN" ColumnName="BVN" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Middle_Name" ColumnName="Middle_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="aka_firstName" ColumnName="aka_firstName" />
+          <ScalarProperty Name="aka_lastName" ColumnName="aka_lastName" />
+          <ScalarProperty Name="aka_type" ColumnName="aka_type" />
+          <ScalarProperty Name="aka_uid" ColumnName="aka_uid" />
+          <ScalarProperty Name="citizenship_country" ColumnName="citizenship_country" />
+          <ScalarProperty Name="citizenship_mainEntry" ColumnName="citizenship_mainEntry" />
+          <ScalarProperty Name="citizenship_uid" ColumnName="citizenship_uid" />
+          <ScalarProperty Name="dateOfBirth" ColumnName="dateOfBirth" />
+          <ScalarProperty Name="sdnEntry_firstName" ColumnName="sdnEntry_firstName" />
+          <ScalarProperty Name="id_expirationDate" ColumnName="id_expirationDate" />
+          <ScalarProperty Name="id_country" ColumnName="id_country" />
+          <ScalarProperty Name="id_idCountry" ColumnName="id_idCountry" />
+          <ScalarProperty Name="id_idNumber" ColumnName="id_idNumber" />
+          <ScalarProperty Name="id_Type" ColumnName="id_Type" />
+          <ScalarProperty Name="id_issueDate" ColumnName="id_issueDate" />
+          <ScalarProperty Name="id_uid" ColumnName="id_uid" />
+          <ScalarProperty Name="id_uid_Agg" ColumnName="id_uid_Agg" />
+          <ScalarProperty Name="nationality_country" ColumnName="nationality_country" />
+          <ScalarProperty Name="nationality_mainEntry" ColumnName="nationality_mainEntry" />
+          <ScalarProperty Name="nationality_uid" ColumnName="nationality_uid" />
+          <ScalarProperty Name="nationality_uid_agg" ColumnName="nationality_uid_agg" />
+          <ScalarProperty Name="placeOfBirth_mainEntry" ColumnName="placeOfBirth_mainEntry" />
+          <ScalarProperty Name="placeOfBirth" ColumnName="placeOfBirth" />
+          <ScalarProperty Name="placeofBirth_uid" ColumnName="placeofBirth_uid" />
+          <ScalarProperty Name="placeOfBirthItem_uid_agg" ColumnName="placeOfBirthItem_uid_agg" />
+          <ScalarProperty Name="program" ColumnName="program" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="sdntype" ColumnName="sdntype" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="grossRegisteredTonnage" ColumnName="grossRegisteredTonnage" />
+          <ScalarProperty Name="grossRegisteredTonnage_agg" ColumnName="grossRegisteredTonnage_agg" />
+          <ScalarProperty Name="vesselFlag" ColumnName="vesselFlag" />
+          <ScalarProperty Name="vesselOwner" ColumnName="vesselOwner" />
+          <ScalarProperty Name="vesselType" ColumnName="vesselType" />
+          <ScalarProperty Name="vesselName" ColumnName="vesselName" />
+          <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+          <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+          <ScalarProperty Name="Remark3" ColumnName="Remark3" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="UploadedDate" ColumnName="UploadedDate" />
+          <ScalarProperty Name="Uploader" ColumnName="Uploader" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

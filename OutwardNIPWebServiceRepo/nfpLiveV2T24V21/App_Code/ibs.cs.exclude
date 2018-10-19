@@ -1,0 +1,461 @@
+using System;
+using System.Web;
+using System.Collections;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using System.Data;
+
+/// <summary>
+/// Summary description for ibs
+/// </summary>
+[WebService(Namespace = "http://tempuri.org/")]
+[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+public class ibs : System.Web.Services.WebService {
+
+    [WebMethod]
+    public string DebitandSendtoNIBSS(string sessionid, string bracodeval, string cusnumval, string curcodeval,
+        string ledcodeval, string subacctval, string amt, string fee, string orignatorName, string DestinationBankCode,
+        string ChannelCode, string AccountName, string AccountNumber, string paymentRef, string cusshowname)
+    {
+        //check if the name enquiry session exists already
+        Connect cnSNE = new Connect("spd_checkExistSessionNE");
+        cnSNE.addparam("@sessionne", sessionid);
+        cnSNE.query();
+        if (cnSNE.returnValue > 0)
+        {
+            return "6:0"; //
+        }
+
+
+        string msg;
+        string ledger = "";
+        string logval = "0";
+        Gadget g = new Gadget();
+        AccountService acs = new AccountService();
+        Transaction t = new Transaction();
+        TransactionService tsv = new TransactionService();
+        string sessionidNE = "";
+        sessionidNE = sessionid;//get session id from the already done NE
+        t.bra_code = bracodeval;
+        t.cusnum = cusnumval;
+        t.curcode = curcodeval;
+        t.ledcode = ledcodeval;
+        t.subacctcode = subacctval;
+        t.paymentRef = paymentRef;
+        t.amount = decimal.Parse(amt);
+        t.destinationcode = DestinationBankCode;
+        t.transactionCode = g.newTrnxRef(bracodeval);
+        t.originatorname = orignatorName;
+        //t.feecharge = decimal.Parse(fee);
+        t.AccountName = AccountName;
+        t.AccountNumber = AccountNumber;
+        t.channelCode = 2;//Channel code for Internet Banking
+        t.sessionid = sessionidNE;
+        string acct = bracodeval + cusnumval + curcodeval + ledcodeval + subacctval;
+
+        //2013-10-14 - temporary disallow all ledgers except 1 and 9
+        //if (ledcodeval == "1" || ledcodeval == "9")
+        //{
+        //}
+        //else
+        //{
+        //    msg = "Error:Transaction on this account type is not allowed ";
+        //    new ErrorLog(msg + acct + " Refid " + logval);
+        //    return msg;
+        //}
+
+        //get The new fee and VAT
+        if (acs.getNIPFee(t.amount))
+        {
+            t.feecharge = acs.NIPfee;
+            t.vat = acs.NIPvat;
+            t.VAT_bra_code = "900";
+            t.VAT_cus_num = "0";
+            t.VAT_cur_code = "1";
+            t.VAT_led_code = "4522";
+            t.VAT_sub_acct_code = "0";
+        }
+        else
+        {
+            msg = "Error: Unable to debit customer's account for Principal";
+            return "2:" + logval.ToString();// msg;
+        }
+
+        
+        //Log transaction Request First
+        logval = tsv.InsertNameIBSTrans(t);
+        if (t.curcode != "1")
+        {
+            new ErrorLog("57:Transaction not permitted " + acct + " Refid " + logval);
+            msg = "57:Transaction not permitted";
+            return msg;
+        }
+//do not allow ledger 57
+        if (t.ledcode == "57")
+        {
+            new ErrorLog("57:Transaction not permitted " + acct + " Refid " + logval);
+            msg = "57:Transaction not permitted";
+            return msg;
+        }
+        //Update 13-SEP-12 ensure that the amount value is not 0 and not less than 0 and that limits apply 
+        decimal maxPerTrans = 0;
+        decimal maxPerday = 0;
+        decimal sum = 0; decimal balAmttobe = 0;
+        if (t.amount == 0 || t.amount < 0)
+        {
+            new ErrorLog("Sorry, the amount value cannot be less than or equal to 0: " + acct);
+            msg = "Sorry, the amount value cannot be less than or equal to 0: " + acct;
+            return "57:Transaction not permitted";
+        }
+
+        //25-OCT-2013
+        //check if customer has maximum trans limit per day per transaction concession 
+        bool HasConcessionPerTransPerday = tsv.getMaxperTransPerday(t.bra_code, t.cusnum, t.curcode, t.ledcode, t.subacctcode);
+        if (HasConcessionPerTransPerday)
+        {
+            maxPerTrans = tsv.maxPerTrans;
+            maxPerday = tsv.maxPerday;
+        }
+        else
+        {
+            //get the ledger type and determine which ledger type 
+            if (t.ledcode == "1" || t.ledcode == "9" || t.ledcode == "22" || t.ledcode == "5051" || t.ledcode == "5052" || t.ledcode == "5053" || t.ledcode == "5054" || t.ledcode == "5055" || t.ledcode == "5056" || t.ledcode == "5060" || t.ledcode == "5061")
+            {
+                tsv.getTransactionLimitsNewIBSCurrent();
+                maxPerTrans = tsv.maxPerTrans;
+                maxPerday = tsv.maxPerday;
+            }
+            else
+            {
+                tsv.getTransactionLimitsNewIBSSavings();
+                maxPerTrans = tsv.maxPerTrans;
+                maxPerday = tsv.maxPerday;
+            }
+        }
+
+        //get the ledger type and determine which ledger type
+        //if (t.ledcode == "1" || t.ledcode == "9" || t.ledcode == "22" || t.ledcode == "5051" || t.ledcode == "5052" || t.ledcode == "5053" || t.ledcode == "5054" || t.ledcode == "5055" || t.ledcode == "5056" || t.ledcode == "5060" || t.ledcode == "5061")
+        //{
+        //    tsv.getTransactionLimitsNewIBSCurrent();
+        //}
+        //else
+        //{
+        //    tsv.getTransactionLimitsNewIBSSavings();
+        //}
+        
+        //tsv.getTransactionLimits();
+
+        //maxPerTrans = tsv.maxPerTrans;
+       // maxPerday = tsv.maxPerday;
+        if (maxPerTrans == 0 || maxPerday == 0)
+        {
+            new ErrorLog("Unable to get the maximum amount per day/transaction");
+            msg = "Unable to get the maximum amount per day/transaction";
+            return "57:Transaction not permitted";
+        }
+        //check if the amount to transfer is within the minimum amount to transfer
+        if (t.amount <= maxPerTrans)
+        {
+            //check if the total transfer done by this customer has exceeded total of 10m
+            tsv.getTotalSumdone(t.bra_code, t.cusnum, t.curcode, t.ledcode, t.subacctcode);
+            sum = tsv.sum;
+            if (maxPerday >= sum)
+            {
+                //check if the current amount to transfer + the amount transfered so far is greater thatn 10m
+                balAmttobe = t.amount + sum;
+                if (maxPerday >= balAmttobe)
+                {
+                    //proceed
+                }
+                else
+                {
+                    new ErrorLog("Sorry, this transaction will not be processed because the amount to transfer is greater than the balance if processed. balance if processed will be: " + balAmttobe.ToString() + " while maximum allowed tranfer per day is  " + maxPerday.ToString());
+                    msg = "Sorry, this transaction will not be processed because the amount to transfer is greater than the balance if processed. balance if processed will be: " + balAmttobe.ToString() + " while maximum allowed tranfer per day is  " + maxPerday.ToString();
+                    return "57:Transaction not permitted";
+                }
+            }
+            else
+            {
+                new ErrorLog("Sorry, you have exceeded your transfer limit for the day " + maxPerday.ToString());
+                msg = "Sorry, you cannot transfer amount greater than " + maxPerday.ToString();
+                return "57:Transaction not permitted";
+            }
+
+        }
+        else
+        {
+            new ErrorLog("Sorry, you cannot transfer amount greater than " + maxPerTrans.ToString() + " per transaction ");
+            msg = "Sorry, you cannot transfer amount greater than " + maxPerTrans.ToString() + " per transaction ";
+            return "57:Transaction not permitted";
+        }
+
+
+        //******************************************************************************
+
+
+        t.Refid = Int32.Parse(logval);
+        //update the Response code
+        t.ResponseCode = "00";
+        tsv.UpdateIBSTransactions(t);
+
+        
+
+        t.tellerID = "9990";
+        
+        t.transactionCode = g.newTrnxRef(bracodeval);
+
+        t.origin_branch = t.bra_code;
+        t.inCust.cus_sho_name = orignatorName;
+        //t.outCust.cusname = g.RemoveSpecialChars(t.AccountName) + "/" + t.transactionCode;
+        t.outCust.cusname = g.RemoveSpecialChars(t.AccountName) + "/" + g.RemoveSpecialChars(paymentRef);
+
+        t.inCust.bra_code = t.bra_code;
+        t.inCust.cus_num = t.cusnum;
+        t.inCust.cur_code = t.curcode;
+        t.inCust.led_code = t.ledcode;
+        t.inCust.sub_acct_code = t.subacctcode;
+
+        string NewSessionid = g.newSessionId(DestinationBankCode);
+        t.sessionid = NewSessionid; //sessionid for Funds Transfer
+
+        //check if the ledger is 84 if it is then check the amount
+        if (t.ledcode == "84")
+        {
+            //check if the amount is greather than 20000
+            if (t.amount > 20000)
+            {
+                //12 invalid Transaction
+                return "12:" + logval.ToString();// msg;
+            }
+        }
+
+
+        tsv.UpdateFTSessionID(t.Refid, t.sessionid);
+        t.paymentRef = paymentRef;
+
+        acs.authorizeIBSTrnxFromSterling(t);
+        if (acs.Respreturnedcode1 == "1x")
+        {
+            tsv.UpdateIBSvTeller(t, 3);//vTeller timed out
+            msg = "Error: Transaction was not completed. Please check your balance " +
+                "before performing another transaction";
+
+            t.ResponseCode = "1x";
+            t.Refid = Int32.Parse(logval);
+            int cn1 = tsv.UpdateIBSTrans(t);
+            return "2:" + logval.ToString();// msg;
+        }
+
+        if (acs.Respreturnedcode1 != "0")
+        {
+            tsv.UpdateIBSvTeller(t, 2);//unable to debit
+            msg = "Error: Unable to debit customer's account for Principal";
+            return "2:" + logval.ToString();// msg;
+        }
+        //update vTeller Message column
+        tsv.UpdateIBSvTeller(t, 1);//debited successfully
+        msg = "Customer has been debitted!";
+
+        //if successful
+
+        TR_SingleFundTransferDC sft = new TR_SingleFundTransferDC();
+        sft.SessionID = NewSessionid;
+        sft.DestinationBankCode = DestinationBankCode;
+        sft.ChannelCode = ChannelCode;
+        sft.AccountName = t.AccountName;
+        sft.AccountNumber = AccountNumber;
+        sft.OriginatorName = orignatorName;
+        sft.Narration = "Transfer from " + cusshowname + " to " + t.AccountName;
+
+        //if (paymentRef.Length > 100)
+        //{
+        //    paymentRef = paymentRef.Substring(0, 100);
+        //}
+
+        sft.PaymentReference = paymentRef;
+        
+        sft.Amount = amt;
+        sft.createRequest();
+
+        TransactionService trs = new TransactionService();
+        //send Funds Transfer Request to NIBSS
+        sft.sendRequest();
+
+        string rspstmt = "";
+        switch (sft.ResponseCode)
+        {
+            case "00":
+                //success
+                rspstmt = "3";  //acs.ResponseMsg;
+                break;
+            case "03": //txt = "Invalid sender"; break;
+            case "05": //txt = "Do not honor"; break;
+            case "06": //txt = "Dormant account"; break;
+            case "07": //txt = "Invalid account"; break;
+            case "08": //txt = "Account name mismatch"; break;
+            case "09": //txt = "Request processing in progress"; break;
+            case "12": //txt = "Invalid transaction"; break;
+            case "13": //txt = "Invalid amount"; break;
+            case "14": //txt = "Invalid Batch Number"; break;
+            case "15": //txt = "Invalid Session or Record ID"; break;
+            case "16": //txt = "Unknown Bank Code"; break;
+            case "17": //txt = "Invalid Channel"; break;
+            case "18": //txt = "Wrong Method Call"; break;
+            case "21": //txt = "No action taken"; break;
+            case "25": //txt = "Unable to locate record"; break;
+            case "26": //txt = "Duplicate record"; break;
+            case "30": //txt = "Wrong destination account format"; break;
+            case "34": //txt = "Suspected fraud"; break;
+            case "35": //txt = "Contact sending bank"; break;
+            case "51": //txt = "No sufficient funds"; break;
+            case "57": //txt = "Transaction not permitted to sender"; break;
+            case "58": //txt = "Transaction not permitted on channel"; break;
+            case "61": //txt = "Transfer Limit Exceeded"; break;
+            case "63": //txt = "Security violation"; break;
+            case "65": //txt = "Exceeds withdrawal frequency"; break;
+            case "68": //txt = "Response received too late"; break;
+            case "91": //txt = "Beneficiary Bank not available"; break;
+            case "92": //txt = "Routing Error"; break;
+            case "94": //txt = "Duplicate Transaction"; break;
+            case "96": //txt = "Corresponding Bank is currently offline."; break;
+            case "97": //txt = "Timeout waiting for response from destination."; break;
+                string rsp = NIPReversal(logval);
+                new ErrorLog("IBS Reversal was done==>" + rsp);
+                break;
+            case "1x":
+            default:
+                rspstmt = "5";
+                break;
+
+        }
+        //update the table with the response and sessioid for DC
+        t.ResponseCode = sft.ResponseCode;
+        t.Refid = Int32.Parse(logval);
+        t.sessionid = sft.SessionID;
+        int cn = trs.UpdateMobileTrans(t);
+
+        return rspstmt + ":" + logval.ToString();
+    }
+
+    public string NIPReversal(string logval)
+    {
+        //insert into the mobile reversal table
+        Connect cn = new Connect("spd_mobileTrnxReverse");
+        cn.addparam("@refid", logval);
+        cn.addparam("@doneby", "AUTOSYSTEM");
+        cn.addparam("@action", "reverse");
+        cn.query();
+        return "";
+    }
+
+    [WebMethod]
+    public string NIBSSReversal(string sessionid, string bracodeval, string cusnumval, string curcodeval, string ledcodeval, string subacctval, string amt, string fee, string orignatorName, string DestinationBankCode, string ChannelCode, string AccountName, string AccountNumber, string Narration, string cusshowname)
+    {
+        //insert record
+
+
+        string msg;
+        string ledger = "";
+        Gadget g = new Gadget();
+        AccountService acs = new AccountService();
+        Transaction t = new Transaction();
+        TransactionService tsv = new TransactionService();
+
+        t.bra_code = bracodeval;
+        t.cusnum = cusnumval;
+        t.curcode = curcodeval;
+        t.ledcode = ledcodeval;
+        t.subacctcode = subacctval;
+        t.amount = decimal.Parse(amt);
+
+        //go and get the operational fee/income ledger from database
+        DataSet dsledger = tsv.getCurrentIncomeAcct();
+        if (dsledger.Tables[0].Rows.Count > 0)
+        {
+            DataRow drledger = dsledger.Tables[0].Rows[0];
+            ledger = drledger["ledcode"].ToString();
+        }
+        //ensure that the TSS and Income ledger for the approving branch exist
+        if (!acs.checkTSSandFeesAccount(ledger, t.bra_code))
+        {
+            //accounts are not okay
+            msg = "ERROR! \nKindly Contact the Branch Operation that Ledger:8720 has not been activated.  This transaction will not be processed.";
+            return msg;
+        }
+
+        if (!acs.tssACCok) //is TSS ok?
+        {
+            //print err
+            msg = "ERROR! \nKindly verify that your Branch's Clearing Account is active";
+            return msg; //stop
+        }
+
+        if (!acs.feeACCok) //is Fee ok?
+        {
+            //print err
+            msg = "Kindly verify that your Branch's Nibss Income Account is active";
+            return msg; //stop
+        }
+
+        t.tellerID = "9990";
+        //compute the amount to pay
+        t.feecharge = acs.calculateFee(t.amount);
+
+        t.origin_branch = t.bra_code;
+        t.inCust.cus_sho_name = cusshowname;
+        t.outCust.cusname = AccountName + "_Mobile Transaction:Reversal";
+
+        t.inCust.bra_code = t.bra_code;
+        t.inCust.cus_num = t.cusnum;
+        t.inCust.cur_code = t.curcode;
+        t.inCust.led_code = t.ledcode;
+        t.inCust.sub_acct_code = t.subacctcode;
+
+        string NewSessionid = sessionid;
+        t.sessionid = NewSessionid;
+        t.feecharge = decimal.Parse(fee);
+        acs.authorizeTrnxReversalIBS(t);
+        if (acs.Respreturnedcode1 != "0")
+        {
+            msg = "Reversal was not Successful";
+            return msg;
+        }
+        else
+        {
+            return "Reversal was Successful";
+        }
+    }
+
+    [WebMethod]
+    public string requeryTrnx(string sessionNE)
+    {
+        string sql = "select nameResponse, response, requeryStatus, vTellerMsg,reversalStatus " +
+            "from tbl_nibssmobile where sessionidNE = @ne";
+        Connect cn = new Connect(sql, true);
+        cn.addparam("@ne", sessionNE);
+        DataSet ds = cn.query("recs");
+
+        string resp = "";
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            resp = ds.Tables[0].Rows[0]["nameresponse"].ToString();
+            resp += ",";
+            resp += ds.Tables[0].Rows[0]["response"].ToString();
+            resp += ",";
+            resp += ds.Tables[0].Rows[0]["requeryStatus"].ToString();
+            resp += ",v";
+            resp += ds.Tables[0].Rows[0]["vtellermsg"].ToString();
+            resp += ",";
+            if (ds.Tables[0].Rows[0]["reversalStatus"].ToString() == "TREATED")
+            {
+                resp += "00";
+            }
+        }
+        else
+        {
+            resp = ",,,,";
+        }
+        return resp;
+    }
+}
+

@@ -1,0 +1,48 @@
+﻿@{
+	ViewBag.Title = "GIVE ADMIN HOME";
+}
+<h2>@ViewBag.Title</h2>
+@*<h3>@ViewBag.Message</h3>*@
+
+<style>
+	.col-md-3 {
+		background-color: lightcoral;
+		border: 2px groove;
+		border-radius: 5px;
+		text-align: center;
+		color: white;
+		margin-top: 5%;
+		margin-right: 5%;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		min-height: 150px;
+	}
+</style>
+
+
+<div class="col-md-12" style="margin: 5%">
+	@*<img src="~/Content/images/sampleBI.png" alt="demo report" />*@
+
+	<div class="col-md-3">
+
+		<h3 style="padding-top: 5%">Total Projects</h3>
+		<h1>@ViewBag.TotalProjects</h1>
+
+		<h5>Active: @ViewBag.TotalActiveProjects</h5>
+		<h5 style="padding-bottom:5%">Closed: @ViewBag.TotalInActiveProjects</h5>
+
+	</div>
+
+
+	<div class="col-md-3">
+
+		<h3 style="padding-top:5%">Total NGOs</h3>
+		<h1>@ViewBag.TotalNGOs</h1>
+
+		@*<h5>Active: 1,000</h5>*@
+		<h5 style="padding-bottom:5%"></h5>
+
+	</div>
+
+
+
+</div>

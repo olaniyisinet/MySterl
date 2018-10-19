@@ -1,0 +1,18 @@
+﻿    select distinct a.cus_sho_name from address a inner join map_acct b on a.bra_code=b.bra_code inner join account c on a.bra_code=c.bra_code 
+where ((a.cus_num=b.cus_num ) and (b.bra_code = c.bra_code) and (b.cus_num = c.cus_num) and (b.cur_code = c.cur_code)
+and (b.led_code=c.led_code) and (b.sub_acct_code=c.sub_acct_code)
+and ((
+      c.ADD_FLAG         = 0
+AND    a.BRA_CODE         = c.BRA_CODE
+AND    a.CUS_NUM          = c.CUS_NUM
+AND    a.CUR_CODE         = 0
+AND    a.LED_CODE         = 0
+AND    a.SUB_ACCT_CODE    = 0  ) OR
+    (
+      c.ADD_FLAG        = 1
+AND    a.BRA_CODE         = c.BRA_CODE
+AND    a.CUS_NUM          = c.CUS_NUM
+AND    a.CUR_CODE         = c.CUR_CODE
+AND    a.LED_CODE         = c.LED_CODE
+AND    a.SUB_ACCT_CODE    = c.SUB_ACCT_CODE))
+and (to_char(b.map_acc_no)=to_char('%nuban%')))

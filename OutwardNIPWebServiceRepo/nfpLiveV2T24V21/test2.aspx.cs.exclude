@@ -1,0 +1,102 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class test2 : System.Web.UI.Page
+{
+    public string NameEnquiry(string SessionID, string DestinationBankCode, string ChannelCode, string AccountNumber)
+    {
+        string msg = "";
+        string responsecodeVal = "";
+        string AcctNameval = ""; string BankVerificationNumber = ""; string KYCLevel = "";
+        TR_SingleNameEnquiry sne = new TR_SingleNameEnquiry();
+
+        try
+        {
+            new ErrorLog("Received NE for NewIBS " + SessionID + " " + DestinationBankCode + " " + ChannelCode + " " + AccountNumber);
+        }
+        catch
+        {
+            //proceed
+        }
+
+        sne.SessionID = SessionID;
+        sne.DestinationInstitutionCode = DestinationBankCode;
+        sne.ChannelCode = ChannelCode;
+        sne.AccountNumber = AccountNumber;
+        sne.createRequest();
+
+        if (!sne.sendRequest()) //unsuccessful request
+        {
+            //assign values returned from nibss to parameters
+            responsecodeVal = sne.ResponseCode;
+            BankVerificationNumber = sne.BankVerificationNumber;
+            KYCLevel = sne.KYCLevel;
+
+            AcctNameval = "";
+            msg = responsecodeVal + ":" + AcctNameval + ":" + BankVerificationNumber + ":" + KYCLevel;
+
+            try
+            {
+                new ErrorLog(msg);
+            }
+            catch
+            {
+
+            }
+        }
+        else
+        {
+            responsecodeVal = sne.ResponseCode;
+            AcctNameval = sne.AccountName;
+            BankVerificationNumber = sne.BankVerificationNumber;
+            KYCLevel = sne.KYCLevel;
+
+            msg = responsecodeVal + ":" + AcctNameval + ":" + BankVerificationNumber + ":" + KYCLevel;
+            try
+            {
+                new ErrorLog(msg);
+            }
+            catch
+            {
+            }
+        }
+        return msg;
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        string SessionID;
+        string DestinationInstitutionCode;
+        string NameEnquiryRef;
+        string ChannelCode;
+        string BeneficiaryAccountName;
+        string BeneficiaryAccountNumber;
+        string BeneficiaryBankVerificationNumber;
+
+        string OriginatorAccountName;
+        string OriginatorAccountNumber;
+        string OriginatorBankVerificationNumber;
+        string OriginatorKYCLevel;
+        string TransactionLocation;
+        string BeneficiaryKYCLevel;
+        string Narration = "";
+        string PaymentReference = "";
+        string Amount;
+        string ResponseCode;
+
+        //TestNewIbs.NewIBS ws = new TestNewIbs.NewIBS();
+        //TextBox2.Text = ws.NameEnquiry(SessionID, DestinationInstitutionCode, ChannelCode, AccountNumber);
+    }
+}

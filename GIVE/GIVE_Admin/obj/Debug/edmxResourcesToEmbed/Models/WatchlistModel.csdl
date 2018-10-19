@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WatchListModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Blacklist">
+    <Key>
+      <PropertyRef Name="Sn" />
+    </Key>
+    <Property Name="Sn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Publish_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Record_Count" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Record_Count_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_postalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_StateOrProvince" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_uid_Agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="List_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BVN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Middle_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateOfBirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateOfBirthItem_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateOfBirthItem_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateOfBirthItem_uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sdnEntry_firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_expirationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_idCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_idNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_issueDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_uid_Agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeOfBirth_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeOfBirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeofBirth_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="program" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sdntype" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="callsign" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="grossRegisteredTonnage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="grossRegisteredTonnage_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tonnage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tonnage_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselFlag" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselOwner" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BatchId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedDate" Type="DateTime" Precision="3" />
+    <Property Name="Uploader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Entity_Sanction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VersionNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UN_List_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Ref_Num" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Listed_On" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="List_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Day_Updated" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Entity_Alias_Quality" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Entity_Alias_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Entity_Address_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Entity_Address_Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sort_Key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sort_Key_Last_Mod" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateGenerated" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Individuals_Sanction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Data_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VersionNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Middle_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UN_List_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Ref_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Listed_On" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Designation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="List_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Day_Updated" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Individual_Alias_Quality" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Individual_Alias_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DOB_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Place_Of_Birth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type_of_Doc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Doc_No" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sort_Key" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sort_Key_Last_Mod" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateGenerated" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PEPList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Middle_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NAME_OF_PEP" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="POLITICAL_POSITION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Relationship" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="REMARKS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BatchId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedDate" Type="DateTime" Precision="3" />
+    <Property Name="Uploader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_Defaulter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TIN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Business_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Registration_Number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Business_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Branch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type_of_Business" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Victim_Bank" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Unpaid_Exposure" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Reason_for_write_off" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type_of_Credit_Facility" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Name_of_Guarantor" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Collateral" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RELATED_ACCOUNTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Guarantor_Branch" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TIN_or_BVN_Account_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Guarantor_Business_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Relationship_to_Defaulter" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Other_information" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblStatu">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BranchDept" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="SupervisorID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdateBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblWatchList">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Publish_Date" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Record_Count" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Record_Count_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ids" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_postalCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_StateOrProvince" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_uid_Agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_category" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_firstName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_lastName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_type" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirth" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirthItem_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirthItem_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirthItem_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sdnEntry_firstName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_expirationDate" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_idcountry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_idNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_Type" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_issueDate" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_uid_Agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeOfBirth_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeOfBirth" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeofBirth_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="program" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sdntype" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="callsign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="grossRegisteredTonnage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="grossRegisteredTonnage_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="tonnage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="taonnage_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vesselFlag" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vesselOwner" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vesselType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblWatchList_bk">
+    <Key>
+      <PropertyRef Name="tblListID" />
+    </Key>
+    <Property Name="tblListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ref_No" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Names" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdateBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblWatchList1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Publish_Date" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Record_Count" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Record_Count_agg" Type="Binary" MaxLength="500" FixedLength="false" />
+    <Property Name="ids" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_postalCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_StateOrProvince" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="address_uid_Agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_category" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_firstName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_lastName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_type" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="aka_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="citizenship_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirth" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirthItem_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirthItem_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dateOfBirthItem_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sdnEntry_firstName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_expirationDate" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_idcountry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_idNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_Type" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_issueDate" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id_uid_Agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="nationality_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeOfBirth_mainEntry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeOfBirth" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeofBirth_uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="program" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sdntype" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="uid" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="uid_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="callsign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="grossRegisteredTonnage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="grossRegisteredTonnage_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="tonnage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="taonnage_agg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vesselFlag" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vesselOwner" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vesselType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="updateRec">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dateGenerated" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TimeUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Watchlist_New">
+    <Key>
+      <PropertyRef Name="Sn" />
+    </Key>
+    <Property Name="Sn" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Publish_Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Record_Count" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Record_Count_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_postalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_StateOrProvince" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="address_uid_Agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="List_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BVN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="First_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Middle_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aka_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="citizenship_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateOfBirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sdnEntry_firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_expirationDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_idCountry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_idNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_issueDate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_uid_Agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_country" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nationality_uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeOfBirth_mainEntry" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeOfBirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeofBirth_uid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="program" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="sdntype" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="grossRegisteredTonnage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="grossRegisteredTonnage_agg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselFlag" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselOwner" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselType" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="vesselName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Remark1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Remark2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Remark3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BatchId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedDate" Type="DateTime" Precision="3" />
+    <Property Name="Uploader" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="WatchListEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blacklists" EntityType="Self.Blacklist" />
+    <EntitySet Name="Entity_Sanction" EntityType="Self.Entity_Sanction" />
+    <EntitySet Name="Individuals_Sanction" EntityType="Self.Individuals_Sanction" />
+    <EntitySet Name="PEPLists" EntityType="Self.PEPList" />
+    <EntitySet Name="tbl_Defaulter" EntityType="Self.tbl_Defaulter" />
+    <EntitySet Name="tblStatus" EntityType="Self.tblStatu" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <EntitySet Name="tblWatchLists" EntityType="Self.tblWatchList" />
+    <EntitySet Name="tblWatchList_bk" EntityType="Self.tblWatchList_bk" />
+    <EntitySet Name="tblWatchLists1" EntityType="Self.tblWatchList1" />
+    <EntitySet Name="updateRecs" EntityType="Self.updateRec" />
+    <EntitySet Name="Watchlist_New" EntityType="Self.Watchlist_New" />
+  </EntityContainer>
+</Schema>

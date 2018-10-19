@@ -1,0 +1,307 @@
+﻿@model IEnumerable<NIB_EChannels.Models.NIP_Branch>
+
+@{
+    ViewBag.Title = "NIP At Branch";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Index", "NIPBranch", FormMethod.Post))
+{
+    <div class="col-md-12 form-horizontal" style="border-top: groove; border-radius: 3px 4px; padding-bottom: 20px;">
+        <br />
+        <div class="col-md-4">
+            <label for="startdate">Start Date</label>
+            <input class="form-control" id="startdate" type="date" name="startdate" />
+        </div>
+
+        <div class="col-md-4">
+            <label for="enddate">End Date</label>
+            <input class="form-control" id="endedate" type="date" name="enddate" />
+        </div>
+
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success btn-lg">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+
+            <button type="button" class="btn btn-info btn-lg" id="btnExport" onclick="fnExcelReport('nipTable');">
+                <span class="glyphicon glyphicon-floppy-save"></span> Export to Excel
+            </button>
+        </div>
+    </div>
+
+    <p><br /><br /></p>
+
+    <br /><br />
+
+    <div class="col-md-12">
+        <h3 style="color:red; margin-top: 10px;">@ViewBag.Message</h3>
+    </div>
+    <p><br /><br /></p>
+    <table class="table table-bordered table-striped table-hover" data-toggle="table" style="background-color: white;" id="nipTable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Refid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sessionid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sessionidNE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.transactioncode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.channelCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BatchNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paymentRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.feecharge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.originatorname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bra_code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cus_num)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cur_code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.led_code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sub_acct_code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.accname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.response)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateadded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.requeryStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nameResponse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lastupdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reversalstatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vTellerMsg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.oddResponse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FTadvice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FTadviceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mailSent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.outwardTrnsType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.appsTransType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nuban)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bankcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prin_Rsp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fee_Rsp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vat_Rsp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prin_Rsp1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fee_Rsp1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vat_Rsp1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account_Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restriction)
+            </th>
+            <th></th>
+        </tr>
+        @if (Model != null)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Refid)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sessionid)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sessionidNE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.transactioncode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.channelCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BatchNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.paymentRef)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.feecharge)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.vat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccountNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.originatorname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bra_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cus_num)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cur_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.led_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sub_acct_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.accname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.response)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dateadded)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.requeryStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nameResponse)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.lastupdate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.reversalstatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.vTellerMsg)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.oddResponse)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FTadvice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FTadviceDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.mailSent)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.outwardTrnsType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.appsTransType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nuban)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.bankcode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prin_Rsp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fee_Rsp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vat_Rsp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prin_Rsp1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fee_Rsp1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vat_Rsp1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Account_Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Restriction)
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+}

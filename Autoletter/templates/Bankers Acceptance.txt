@@ -1,0 +1,174 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="templates_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <title></title>
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+	 
+    <div>
+ <br/>
+ <br/>
+ <br/>
+        <table class="style1">
+            <tr>
+                <td class="style2" colspan="2">
+                    <b>Reference: %refno%
+                    <br />
+                    %date%</b></td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    <strong>%name%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    <strong>%address1%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    <strong>%address2%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    Dear Sir/Madam,</td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" class="style3" colspan="2">
+                    <strong>%title%</strong></td>
+            </tr>
+            <tr>
+                <td align="left" class="style7" colspan="2">
+                </td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style4" colspan="2">
+                    <p class="MsoNormal">
+                        <span style="font-family:&quot;Century Gothic&quot;,&quot;sans-serif&quot;">We 
+                        write to confirm your investment in Bankers Acceptance under the following terms 
+                        and conditions:<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="style4" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style5" colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    Issuer :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="style6">
+                    <strong>%issuer%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    Face Value :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                </td>
+                <td class="style6">
+                    <strong>%currency% %amount%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    Discounted Value :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td class="style6">
+                    <strong>%currency% %disvalue%</strong></td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    Tenor :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br />
+                </td>
+                <td class="style5">
+                    <strong>%tenor%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    Discounted Rate :&nbsp;&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+                </td>
+                <td class="style6">
+                    <strong>%rate%</strong></td>
+            </tr>
+			               <tr>
+                <td class="style6">
+                    Value Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td class="style6">
+                    <strong>%valdate%</strong></td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    Maturity Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td class="style6">
+                    <strong>%matdate%</strong><br/></td>
+            </tr>
+            
+            <tr>
+                <td class="style6" colspan="2">
+                    <p class="MsoNormal">
+                        &nbsp;</p>
+                    <p class="MsoNormal">
+                        <span style="font-family:&quot;Century Gothic&quot;,&quot;sans-serif&quot;">At 
+                        maturity your investment will be rolled over at the prevailing market rate if we 
+                        do not receive further instructions from you. Kindly acknowledge receipt and acceptance on the duplicate copy and return same to us.</span><br/></p>
+                    
+                    <p class="MsoNormal">
+                        <span style="font-size:8.0pt"><o:p>&nbsp;</o:p></span><span 
+                            style="font-family:&quot;Century Gothic&quot;,&quot;sans-serif&quot;"><br/>Thank 
+                        you for your continued patronage. </span><br/><o:p></o:p>
+                    </p><br/><b/>
+                    <p>This is an auto generated letter and requires no signature.</p>
+                    <br />
+                </td>
+            </tr>
+             
+             
+        </table>
+        <p>
+            &nbsp;</p>
+    
+    </div>
+	 <div id="watermark" align="right" style="  color: #d0d0d0; font-size: 30pt;  position: absolute;  width: 100%;  height: 100%;  margin: 0 auto;  z-index: -1;  left:-100px;  top:-200px;"><p>%refno% %branch% %tellerid% </p></div>
+   
+	 </form>
+</body>
+</html>
+ 

@@ -1,0 +1,37 @@
+﻿select a.deb_cre_acct ,a.bra_code,a.cus_num,a.cur_code,a.led_code,a.sub_acct_code,a.tra_amt,
+a.val_date,a.mat_date,a.dep_days||' Days' dep_days,b.int_rate||'% Per Annum' int_rate,c.cus_sho_name,c.add_line1,
+c.add_line2,c.email,c.mob_num,e.alt_cur_code,e.des_eng currency, a.int_at_mat  gross_interest,((a.int_at_mat*10)/100) WHT,
+(a.int_at_mat-((a.int_at_mat*10)/100)) net_interest,(a.tra_amt+(a.int_at_mat-((a.int_at_mat*10)/100))) Mat_Value
+from time_dep a,act_rate b,address c,currency e,account f
+where  to_char(a.val_date,'DDMMYYYY')=:Date01
+and a.val_date<>a.mat_date
+and a.cus_num>20000
+and a.bra_code=:Branch
+and a.bra_code=b.bra_code
+and a.cus_num=b.cus_num
+and a.cur_code=b.cur_code
+and a.led_code=b.led_code
+and a.sub_acct_code=b.sub_acct_code
+and b.new_old_flag=0
+and a.bra_code=f.bra_code
+and a.cus_num=f.cus_num
+and a.cur_code=f.cur_code
+and a.led_code=f.led_code
+and a.sub_acct_code=f.sub_acct_code
+and ((
+      f.ADD_FLAG         = 0
+AND    c.BRA_CODE         = a.BRA_CODE
+AND    c.CUS_NUM          = a.CUS_NUM
+AND    c.CUR_CODE         = 0
+AND    c.LED_CODE         = 0
+AND    c.SUB_ACCT_CODE    = 0  ) OR
+    (
+      f.ADD_FLAG        = 1
+AND    c.BRA_CODE         = a.BRA_CODE
+AND    c.CUS_NUM          = a.CUS_NUM
+AND    c.CUR_CODE        = a.CUR_CODE
+AND    c.LED_CODE         = a.LED_CODE
+AND    c.SUB_ACCT_CODE    = a.SUB_ACCT_CODE))
+and a.cur_code=e.cur_code
+AND LENGTH(TRIM(a.deb_cre_acct)) >0
+

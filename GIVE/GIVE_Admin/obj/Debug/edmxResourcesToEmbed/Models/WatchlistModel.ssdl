@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WatchListModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Blacklist">
+    <Key>
+      <PropertyRef Name="Sn" />
+    </Key>
+    <Property Name="Sn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Publish_Date" Type="varchar(max)" />
+    <Property Name="Record_Count" Type="varchar(max)" />
+    <Property Name="Record_Count_agg" Type="varchar(max)" />
+    <Property Name="id" Type="varchar(max)" />
+    <Property Name="address1" Type="varchar(max)" />
+    <Property Name="address2" Type="varchar(max)" />
+    <Property Name="address3" Type="varchar(max)" />
+    <Property Name="address_City" Type="varchar(max)" />
+    <Property Name="address_country" Type="varchar(max)" />
+    <Property Name="address_postalCode" Type="varchar(max)" />
+    <Property Name="address_StateOrProvince" Type="varchar(max)" />
+    <Property Name="address_uid" Type="varchar(max)" />
+    <Property Name="address_uid_Agg" Type="varchar(max)" />
+    <Property Name="aka_category" Type="varchar(max)" />
+    <Property Name="List_Type" Type="varchar(max)" />
+    <Property Name="BVN" Type="varchar" MaxLength="20" />
+    <Property Name="First_Name" Type="varchar(max)" />
+    <Property Name="Middle_Name" Type="varchar(max)" />
+    <Property Name="Last_Name" Type="varchar(max)" />
+    <Property Name="aka_firstName" Type="varchar(max)" />
+    <Property Name="aka_lastName" Type="varchar(max)" />
+    <Property Name="aka_type" Type="varchar(max)" />
+    <Property Name="aka_uid" Type="varchar(max)" />
+    <Property Name="aka_uid_agg" Type="varchar(max)" />
+    <Property Name="citizenship_country" Type="varchar(max)" />
+    <Property Name="citizenship_mainEntry" Type="varchar(max)" />
+    <Property Name="citizenship_uid" Type="varchar(max)" />
+    <Property Name="citizenship_uid_agg" Type="varchar(max)" />
+    <Property Name="dateOfBirth" Type="varchar(max)" />
+    <Property Name="dateOfBirthItem_mainEntry" Type="varchar(max)" />
+    <Property Name="dateOfBirthItem_uid" Type="varchar(max)" />
+    <Property Name="dateOfBirthItem_uid_agg" Type="varchar(max)" />
+    <Property Name="sdnEntry_firstName" Type="varchar(max)" />
+    <Property Name="id_expirationDate" Type="varchar(max)" />
+    <Property Name="id_country" Type="varchar(max)" />
+    <Property Name="id_idCountry" Type="varchar(max)" />
+    <Property Name="id_idNumber" Type="varchar" MaxLength="50" />
+    <Property Name="id_Type" Type="varchar" MaxLength="50" />
+    <Property Name="id_issueDate" Type="varchar(max)" />
+    <Property Name="id_uid" Type="varchar" MaxLength="50" />
+    <Property Name="id_uid_Agg" Type="varchar(max)" />
+    <Property Name="nationality_country" Type="varchar(max)" />
+    <Property Name="nationality_mainEntry" Type="varchar(max)" />
+    <Property Name="nationality_uid" Type="varchar(max)" />
+    <Property Name="nationality_uid_agg" Type="varchar(max)" />
+    <Property Name="placeOfBirth_mainEntry" Type="varchar(max)" />
+    <Property Name="placeOfBirth" Type="varchar(max)" />
+    <Property Name="placeofBirth_uid" Type="varchar(max)" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="varchar" MaxLength="50" />
+    <Property Name="program" Type="varchar(max)" />
+    <Property Name="remarks" Type="varchar(max)" />
+    <Property Name="sdntype" Type="varchar(max)" />
+    <Property Name="title" Type="varchar(max)" />
+    <Property Name="uid" Type="varchar(max)" />
+    <Property Name="uid_agg" Type="varchar(max)" />
+    <Property Name="callsign" Type="varchar(max)" />
+    <Property Name="grossRegisteredTonnage" Type="varchar(max)" />
+    <Property Name="grossRegisteredTonnage_agg" Type="varchar(max)" />
+    <Property Name="tonnage" Type="varchar(max)" />
+    <Property Name="tonnage_agg" Type="varchar(max)" />
+    <Property Name="vesselFlag" Type="varchar(max)" />
+    <Property Name="vesselOwner" Type="varchar(max)" />
+    <Property Name="vesselType" Type="varchar(max)" />
+    <Property Name="vesselName" Type="varchar(max)" />
+    <Property Name="BatchId" Type="varchar(max)" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="Uploader" Type="varchar(max)" />
+    <Property Name="Type" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Entity_Sanction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataID" Type="varchar(max)" />
+    <Property Name="VersionNum" Type="varchar(max)" />
+    <Property Name="First_Name" Type="varchar(max)" />
+    <Property Name="UN_List_Type" Type="varchar(max)" />
+    <Property Name="Ref_Num" Type="varchar(max)" />
+    <Property Name="Listed_On" Type="varchar(max)" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="List_Type" Type="varchar(max)" />
+    <Property Name="Last_Day_Updated" Type="varchar(max)" />
+    <Property Name="Entity_Alias_Quality" Type="varchar(max)" />
+    <Property Name="Entity_Alias_Name" Type="varchar(max)" />
+    <Property Name="Entity_Address_City" Type="varchar(max)" />
+    <Property Name="Entity_Address_Country" Type="varchar(max)" />
+    <Property Name="Sort_Key" Type="varchar(max)" />
+    <Property Name="Sort_Key_Last_Mod" Type="varchar(max)" />
+    <Property Name="dateGenerated" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'WatchList.dbo.external_relations' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="external_relations">
+          <Property Name="Last_Name" Type="varchar(max)" />
+          <Property Name="First_Name" Type="varchar(max)" />
+          <Property Name="Middle_Name" Type="varchar(max)" />
+          <Property Name="WHOLENAME" Type="varchar(max)" />
+          <Property Name="GENDER" Type="varchar(max)" />
+          <Property Name="TITLE" Type="varchar(max)" />
+          <Property Name="FUNCTION" Type="varchar(max)" />
+          <Property Name="LANGUAGE" Type="varchar(max)" />
+          <Property Name="DATE_OF_BIRTH" Type="varchar(max)" />
+          <Property Name="BIRTH_PLACE" Type="varchar(max)" />
+          <Property Name="BIRTH_COUNTRY" Type="varchar(max)" />
+          <Property Name="PASSPORT_COUNTRY" Type="varchar(max)" />
+          <Property Name="PASSPORT_NUMBER" Type="varchar(max)" />
+          <Property Name="dateGenerated" Type="varchar(max)" />
+        </EntityType>-->
+  <EntityType Name="Individuals_Sanction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data_ID" Type="varchar(max)" />
+    <Property Name="VersionNum" Type="varchar(max)" />
+    <Property Name="First_Name" Type="varchar(max)" />
+    <Property Name="Middle_Name" Type="varchar(max)" />
+    <Property Name="Last_Name" Type="varchar(max)" />
+    <Property Name="UN_List_Type" Type="varchar(max)" />
+    <Property Name="Ref_No" Type="varchar(max)" />
+    <Property Name="Listed_On" Type="varchar(max)" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="Designation" Type="varchar(max)" />
+    <Property Name="Nationality" Type="varchar(max)" />
+    <Property Name="List_Type" Type="varchar(max)" />
+    <Property Name="Last_Day_Updated" Type="varchar(max)" />
+    <Property Name="Individual_Alias_Quality" Type="varchar(max)" />
+    <Property Name="Individual_Alias_Name" Type="varchar(max)" />
+    <Property Name="Country" Type="varchar(max)" />
+    <Property Name="DOB_Type" Type="varchar(max)" />
+    <Property Name="DOB" Type="varchar(max)" />
+    <Property Name="Place_Of_Birth" Type="varchar(max)" />
+    <Property Name="Type_of_Doc" Type="varchar(max)" />
+    <Property Name="Doc_No" Type="varchar(max)" />
+    <Property Name="Sort_Key" Type="varchar(max)" />
+    <Property Name="Sort_Key_Last_Mod" Type="varchar(max)" />
+    <Property Name="dateGenerated" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="PEPList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar(max)" />
+    <Property Name="Middle_Name" Type="varchar(max)" />
+    <Property Name="Last_Name" Type="varchar(max)" />
+    <Property Name="NAME_OF_PEP" Type="varchar(max)" />
+    <Property Name="POLITICAL_POSITION" Type="varchar(max)" />
+    <Property Name="Relationship" Type="varchar(max)" />
+    <Property Name="Country" Type="varchar(max)" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="BatchId" Type="varchar(max)" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="Uploader" Type="varchar(max)" />
+    <Property Name="Type" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Defaulter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIN" Type="varchar" MaxLength="20" />
+    <Property Name="Business_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Registration_Number" Type="varchar" MaxLength="200" />
+    <Property Name="Business_Address" Type="varchar(max)" />
+    <Property Name="Branch" Type="varchar" MaxLength="50" />
+    <Property Name="Type_of_Business" Type="varchar(max)" />
+    <Property Name="Victim_Bank" Type="varchar" MaxLength="200" />
+    <Property Name="Total_Unpaid_Exposure" Type="varchar(max)" />
+    <Property Name="Reason_for_write_off" Type="varchar(max)" />
+    <Property Name="Type_of_Credit_Facility" Type="varchar" MaxLength="200" />
+    <Property Name="Name_of_Guarantor" Type="varchar" MaxLength="200" />
+    <Property Name="Collateral" Type="varchar(max)" />
+    <Property Name="RELATED_ACCOUNTS" Type="varchar(max)" />
+    <Property Name="Guarantor_Branch" Type="varchar(max)" />
+    <Property Name="TIN_or_BVN_Account_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Guarantor_Business_Address" Type="varchar(max)" />
+    <Property Name="Relationship_to_Defaulter" Type="varchar" MaxLength="200" />
+    <Property Name="Other_information" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tblStatus">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="BranchDept" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="Role" Type="nvarchar" MaxLength="400" />
+    <Property Name="SupervisorID" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="LastUpdateBy" Type="nvarchar" MaxLength="500" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblWatchList">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Publish_Date" Type="nvarchar" MaxLength="500" />
+    <Property Name="Record_Count" Type="nvarchar" MaxLength="500" />
+    <Property Name="Record_Count_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="ids" Type="nvarchar" MaxLength="500" />
+    <Property Name="address1" Type="nvarchar" MaxLength="500" />
+    <Property Name="address2" Type="nvarchar" MaxLength="500" />
+    <Property Name="address3" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_City" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_country" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_postalCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_StateOrProvince" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_uid_Agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_category" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_firstName" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_lastName" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_type" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_country" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirth" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirthItem_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirthItem_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirthItem_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="sdnEntry_firstName" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_expirationDate" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_idcountry" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_idNumber" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_Type" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_issueDate" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_uid_Agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_country" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeOfBirth_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeOfBirth" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeofBirth_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="program" Type="nvarchar" MaxLength="500" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="sdntype" Type="nvarchar" MaxLength="500" />
+    <Property Name="title" Type="nvarchar" MaxLength="500" />
+    <Property Name="uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="callsign" Type="nvarchar" MaxLength="500" />
+    <Property Name="grossRegisteredTonnage" Type="nvarchar" MaxLength="500" />
+    <Property Name="grossRegisteredTonnage_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="tonnage" Type="nvarchar" MaxLength="500" />
+    <Property Name="taonnage_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="vesselFlag" Type="nvarchar" MaxLength="500" />
+    <Property Name="vesselOwner" Type="nvarchar" MaxLength="500" />
+    <Property Name="vesselType" Type="nvarchar" MaxLength="500" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="tblWatchList_bk">
+    <Key>
+      <PropertyRef Name="tblListID" />
+    </Key>
+    <Property Name="tblListID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ref_No" Type="nvarchar" MaxLength="500" />
+    <Property Name="Names" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastUpdateBy" Type="nvarchar" MaxLength="500" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblWatchLists">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Publish_Date" Type="nvarchar" MaxLength="500" />
+    <Property Name="Record_Count" Type="nvarchar" MaxLength="500" />
+    <Property Name="Record_Count_agg" Type="varbinary" MaxLength="500" />
+    <Property Name="ids" Type="nvarchar" MaxLength="500" />
+    <Property Name="address1" Type="nvarchar" MaxLength="500" />
+    <Property Name="address2" Type="nvarchar" MaxLength="500" />
+    <Property Name="address3" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_City" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_country" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_postalCode" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_StateOrProvince" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="address_uid_Agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_category" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_firstName" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_lastName" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_type" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="aka_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_country" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="citizenship_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirth" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirthItem_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirthItem_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="dateOfBirthItem_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="sdnEntry_firstName" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_expirationDate" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_idcountry" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_idNumber" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_Type" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_issueDate" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="id_uid_Agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="lastName" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_country" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="nationality_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeOfBirth_mainEntry" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeOfBirth" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeofBirth_uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="program" Type="nvarchar" MaxLength="500" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="sdntype" Type="nvarchar" MaxLength="500" />
+    <Property Name="title" Type="nvarchar" MaxLength="500" />
+    <Property Name="uid" Type="nvarchar" MaxLength="500" />
+    <Property Name="uid_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="callsign" Type="nvarchar" MaxLength="500" />
+    <Property Name="grossRegisteredTonnage" Type="nvarchar" MaxLength="500" />
+    <Property Name="grossRegisteredTonnage_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="tonnage" Type="nvarchar" MaxLength="500" />
+    <Property Name="taonnage_agg" Type="nvarchar" MaxLength="500" />
+    <Property Name="vesselFlag" Type="nvarchar" MaxLength="500" />
+    <Property Name="vesselOwner" Type="nvarchar" MaxLength="500" />
+    <Property Name="vesselType" Type="nvarchar" MaxLength="500" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="updateRec">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportType" Type="varchar" MaxLength="50" />
+    <Property Name="dateGenerated" Type="varchar(max)" />
+    <Property Name="TimeUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Watchlist_New">
+    <Key>
+      <PropertyRef Name="Sn" />
+    </Key>
+    <Property Name="Sn" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Publish_Date" Type="varchar(max)" />
+    <Property Name="Record_Count" Type="varchar(max)" />
+    <Property Name="Record_Count_agg" Type="varchar(max)" />
+    <Property Name="id" Type="varchar(max)" />
+    <Property Name="address1" Type="varchar(max)" />
+    <Property Name="address2" Type="varchar(max)" />
+    <Property Name="address3" Type="varchar(max)" />
+    <Property Name="address_city" Type="varchar(max)" />
+    <Property Name="address_country" Type="varchar(max)" />
+    <Property Name="address_postalCode" Type="varchar(max)" />
+    <Property Name="address_StateOrProvince" Type="varchar(max)" />
+    <Property Name="address_uid" Type="varchar(max)" />
+    <Property Name="address_uid_Agg" Type="varchar(max)" />
+    <Property Name="aka_category" Type="varchar(max)" />
+    <Property Name="List_type" Type="varchar(max)" />
+    <Property Name="BVN" Type="varchar" MaxLength="20" />
+    <Property Name="First_Name" Type="varchar(max)" />
+    <Property Name="Middle_Name" Type="varchar(max)" />
+    <Property Name="Last_Name" Type="varchar(max)" />
+    <Property Name="aka_firstName" Type="varchar(max)" />
+    <Property Name="aka_lastName" Type="varchar(max)" />
+    <Property Name="aka_type" Type="varchar(max)" />
+    <Property Name="aka_uid" Type="varchar(max)" />
+    <Property Name="citizenship_country" Type="varchar(max)" />
+    <Property Name="citizenship_mainEntry" Type="varchar(max)" />
+    <Property Name="citizenship_uid" Type="varchar(max)" />
+    <Property Name="dateOfBirth" Type="varchar(max)" />
+    <Property Name="sdnEntry_firstName" Type="varchar(max)" />
+    <Property Name="id_expirationDate" Type="varchar(max)" />
+    <Property Name="id_country" Type="varchar(max)" />
+    <Property Name="id_idCountry" Type="varchar(max)" />
+    <Property Name="id_idNumber" Type="varchar(max)" />
+    <Property Name="id_Type" Type="varchar(max)" />
+    <Property Name="id_issueDate" Type="varchar(max)" />
+    <Property Name="id_uid" Type="varchar(max)" />
+    <Property Name="id_uid_Agg" Type="varchar(max)" />
+    <Property Name="nationality_country" Type="varchar(max)" />
+    <Property Name="nationality_mainEntry" Type="varchar(max)" />
+    <Property Name="nationality_uid" Type="varchar(max)" />
+    <Property Name="nationality_uid_agg" Type="varchar(max)" />
+    <Property Name="placeOfBirth_mainEntry" Type="varchar(max)" />
+    <Property Name="placeOfBirth" Type="varchar(max)" />
+    <Property Name="placeofBirth_uid" Type="varchar(max)" />
+    <Property Name="placeOfBirthItem_uid_agg" Type="varchar(max)" />
+    <Property Name="program" Type="varchar(max)" />
+    <Property Name="remarks" Type="varchar(max)" />
+    <Property Name="sdntype" Type="varchar(max)" />
+    <Property Name="title" Type="varchar(max)" />
+    <Property Name="grossRegisteredTonnage" Type="varchar(max)" />
+    <Property Name="grossRegisteredTonnage_agg" Type="varchar(max)" />
+    <Property Name="vesselFlag" Type="varchar(max)" />
+    <Property Name="vesselOwner" Type="varchar(max)" />
+    <Property Name="vesselType" Type="varchar(max)" />
+    <Property Name="vesselName" Type="varchar(max)" />
+    <Property Name="Remark1" Type="varchar(max)" />
+    <Property Name="Remark2" Type="varchar(max)" />
+    <Property Name="Remark3" Type="varchar(max)" />
+    <Property Name="BatchId" Type="varchar(max)" />
+    <Property Name="UploadedDate" Type="datetime" />
+    <Property Name="Uploader" Type="varchar(max)" />
+    <Property Name="Type" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="WatchListModelStoreContainer">
+    <EntitySet Name="Blacklist" EntityType="Self.Blacklist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Entity_Sanction" EntityType="Self.Entity_Sanction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Individuals_Sanction" EntityType="Self.Individuals_Sanction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PEPList" EntityType="Self.PEPList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Defaulter" EntityType="Self.tbl_Defaulter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStatus" EntityType="Self.tblStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWatchList" EntityType="Self.tblWatchList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWatchList_bk" EntityType="Self.tblWatchList_bk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWatchLists" EntityType="Self.tblWatchLists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="updateRec" EntityType="Self.updateRec" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Watchlist_New" EntityType="Self.Watchlist_New" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

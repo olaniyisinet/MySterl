@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="getBalance2.aspx.cs" Inherits="sync_getBalance2" %>

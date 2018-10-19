@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://173.1.217.219/BankOneFT/SterlingFundsTransferService.svc?wsdl" filename="SterlingFundsTransferService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.1.217.219/BankOneFT/SterlingFundsTransferService.svc?xsd=xsd1" filename="SterlingFundsTransferService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://173.1.217.219/BankOneFT/SterlingFundsTransferService.svc?disco" filename="SterlingFundsTransferService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://173.1.217.219/BankOneFT/SterlingFundsTransferService.svc?xsd=xsd0" filename="SterlingFundsTransferService0.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BankOneGetAccountName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNameRequestXml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneGetAccountNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankOneGetAccountNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneDeposit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="encryptedXmlRequest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankOneDepositResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneInterBankDeposit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="encryptedXmlRequest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneInterBankDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankOneInterBankDepositResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneDepositReversal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="encryptedXmlRequest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BankOneDepositReversalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankOneDepositReversalResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FundsTranferAdvice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="encryptedXmlRequest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FundsTranferAdviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FundsTranferAdviceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getTxt">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTxtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTxtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameEnquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationBankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChannelCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NameEnquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NameEnquiryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DebitandSendtoNIBSS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bracodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cusnumval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="curcodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ledcodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subacctval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fee" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orignatorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationBankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChannelCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cusshowname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Appid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referenceidval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryBankVerificationNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryKYCLevel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginatorAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginatorBankVerificationNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginatorKYCLevel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NameEnquiryRef" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DebitandSendtoNIBSSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DebitandSendtoNIBSSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DebitandSendtoNIBSST24">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bracodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cusnumval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="curcodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ledcodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subacctval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fee" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orignatorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationBankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChannelCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cusshowname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Appid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referenceidval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryBankVerificationNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryKYCLevel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginatorAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginatorBankVerificationNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OriginatorKYCLevel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionLocation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NameEnquiryRef" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DebitandSendtoNIBSST24Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DebitandSendtoNIBSST24Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NIBSSReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bracodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cusnumval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="curcodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ledcodeval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subacctval" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fee" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orignatorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationBankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChannelCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Narration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cusshowname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NIBSSReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NIBSSReversalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="requeryTrnx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionNE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="requeryTrnxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requeryTrnxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getTxtSoapIn">
+    <wsdl:part name="parameters" element="tns:getTxt" />
+  </wsdl:message>
+  <wsdl:message name="getTxtSoapOut">
+    <wsdl:part name="parameters" element="tns:getTxtResponse" />
+  </wsdl:message>
+  <wsdl:message name="NameEnquirySoapIn">
+    <wsdl:part name="parameters" element="tns:NameEnquiry" />
+  </wsdl:message>
+  <wsdl:message name="NameEnquirySoapOut">
+    <wsdl:part name="parameters" element="tns:NameEnquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DebitandSendtoNIBSSSoapIn">
+    <wsdl:part name="parameters" element="tns:DebitandSendtoNIBSS" />
+  </wsdl:message>
+  <wsdl:message name="DebitandSendtoNIBSSSoapOut">
+    <wsdl:part name="parameters" element="tns:DebitandSendtoNIBSSResponse" />
+  </wsdl:message>
+  <wsdl:message name="DebitandSendtoNIBSST24SoapIn">
+    <wsdl:part name="parameters" element="tns:DebitandSendtoNIBSST24" />
+  </wsdl:message>
+  <wsdl:message name="DebitandSendtoNIBSST24SoapOut">
+    <wsdl:part name="parameters" element="tns:DebitandSendtoNIBSST24Response" />
+  </wsdl:message>
+  <wsdl:message name="NIBSSReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:NIBSSReversal" />
+  </wsdl:message>
+  <wsdl:message name="NIBSSReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:NIBSSReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="requeryTrnxSoapIn">
+    <wsdl:part name="parameters" element="tns:requeryTrnx" />
+  </wsdl:message>
+  <wsdl:message name="requeryTrnxSoapOut">
+    <wsdl:part name="parameters" element="tns:requeryTrnxResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NewIBSSoap">
+    <wsdl:operation name="getTxt">
+      <wsdl:input message="tns:getTxtSoapIn" />
+      <wsdl:output message="tns:getTxtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NameEnquiry">
+      <wsdl:input message="tns:NameEnquirySoapIn" />
+      <wsdl:output message="tns:NameEnquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DebitandSendtoNIBSS">
+      <wsdl:input message="tns:DebitandSendtoNIBSSSoapIn" />
+      <wsdl:output message="tns:DebitandSendtoNIBSSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DebitandSendtoNIBSST24">
+      <wsdl:input message="tns:DebitandSendtoNIBSST24SoapIn" />
+      <wsdl:output message="tns:DebitandSendtoNIBSST24SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NIBSSReversal">
+      <wsdl:input message="tns:NIBSSReversalSoapIn" />
+      <wsdl:output message="tns:NIBSSReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="requeryTrnx">
+      <wsdl:input message="tns:requeryTrnxSoapIn" />
+      <wsdl:output message="tns:requeryTrnxSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewIBSSoap" type="tns:NewIBSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTxt">
+      <soap:operation soapAction="http://tempuri.org/getTxt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameEnquiry">
+      <soap:operation soapAction="http://tempuri.org/NameEnquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebitandSendtoNIBSS">
+      <soap:operation soapAction="http://tempuri.org/DebitandSendtoNIBSS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebitandSendtoNIBSST24">
+      <soap:operation soapAction="http://tempuri.org/DebitandSendtoNIBSST24" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NIBSSReversal">
+      <soap:operation soapAction="http://tempuri.org/NIBSSReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requeryTrnx">
+      <soap:operation soapAction="http://tempuri.org/requeryTrnx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewIBSSoap12" type="tns:NewIBSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTxt">
+      <soap12:operation soapAction="http://tempuri.org/getTxt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NameEnquiry">
+      <soap12:operation soapAction="http://tempuri.org/NameEnquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebitandSendtoNIBSS">
+      <soap12:operation soapAction="http://tempuri.org/DebitandSendtoNIBSS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DebitandSendtoNIBSST24">
+      <soap12:operation soapAction="http://tempuri.org/DebitandSendtoNIBSST24" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NIBSSReversal">
+      <soap12:operation soapAction="http://tempuri.org/NIBSSReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requeryTrnx">
+      <soap12:operation soapAction="http://tempuri.org/requeryTrnx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewIBS">
+    <wsdl:port name="NewIBSSoap" binding="tns:NewIBSSoap">
+      <soap:address location="http://10.0.0.189/nfplive/newibs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewIBSSoap12" binding="tns:NewIBSSoap12">
+      <soap12:address location="http://10.0.0.189/nfplive/newibs.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://service.client.remote.nibanking.sterlingbankng.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NIBankingClientService" targetNamespace="http://service.client.remote.nibanking.sterlingbankng.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.client.remote.nibanking.sterlingbankng.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="fetchTransactionDetails" type="tns:fetchTransactionDetails" />
+      <xs:element name="fetchTransactionDetails2" type="tns:fetchTransactionDetails2" />
+      <xs:element name="fetchTransactionDetails2Response" type="tns:fetchTransactionDetails2Response" />
+      <xs:element name="fetchTransactionDetailsResponse" type="tns:fetchTransactionDetailsResponse" />
+      <xs:element name="ftSingleCreditRequest" type="tns:ftSingleCreditRequest" />
+      <xs:element name="ftSingleCreditRequestResponse" type="tns:ftSingleCreditRequestResponse" />
+      <xs:element name="getAccountDetails" type="tns:getAccountDetails" />
+      <xs:element name="getAccountDetailsResponse" type="tns:getAccountDetailsResponse" />
+      <xs:element name="nameEnquiry" type="tns:nameEnquiry" />
+      <xs:element name="nameEnquiryResponse" type="tns:nameEnquiryResponse" />
+      <xs:element name="requery" type="tns:requery" />
+      <xs:element name="requeryResponse" type="tns:requeryResponse" />
+      <xs:element name="reverse" type="tns:reverse" />
+      <xs:element name="reverseResponse" type="tns:reverseResponse" />
+      <xs:complexType name="getAccountDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ftSingleCreditRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionID" type="xs:string" />
+          <xs:element minOccurs="0" name="senderName" type="xs:string" />
+          <xs:element minOccurs="0" name="toAccount" type="xs:string" />
+          <xs:element minOccurs="0" name="amount" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+          <xs:element minOccurs="0" name="narration" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ftSingleCreditRequestResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fetchTransactionDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="transactionReferenceIdentifier" type="xs:string" />
+          <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fetchTransactionDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="transactionReferenceIdentifier" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requeryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="nameEnquiry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="nameEnquiryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reverse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionID" type="xs:string" />
+          <xs:element minOccurs="0" name="account" type="xs:string" />
+          <xs:element minOccurs="0" name="amount" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="reverseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fetchTransactionDetails2">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="transactionReferenceIdentifier" type="xs:string" />
+          <xs:element minOccurs="0" name="branchCode" type="xs:string" />
+          <xs:element minOccurs="0" name="customerNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="currencyCode" type="xs:string" />
+          <xs:element minOccurs="0" name="ledgerCode" type="xs:string" />
+          <xs:element minOccurs="0" name="subAccount" type="xs:string" />
+          <xs:element minOccurs="0" name="keyExchange" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fetchTransactionDetails2Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception" />
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getAccountDetails">
+    <wsdl:part name="parameters" element="tns:getAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="reverseResponse">
+    <wsdl:part name="parameters" element="tns:reverseResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountDetailsResponse">
+    <wsdl:part name="parameters" element="tns:getAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ftSingleCreditRequestResponse">
+    <wsdl:part name="parameters" element="tns:ftSingleCreditRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="nameEnquiryResponse">
+    <wsdl:part name="parameters" element="tns:nameEnquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchTransactionDetails2">
+    <wsdl:part name="parameters" element="tns:fetchTransactionDetails2" />
+  </wsdl:message>
+  <wsdl:message name="ftSingleCreditRequest">
+    <wsdl:part name="parameters" element="tns:ftSingleCreditRequest" />
+  </wsdl:message>
+  <wsdl:message name="fetchTransactionDetails">
+    <wsdl:part name="parameters" element="tns:fetchTransactionDetails" />
+  </wsdl:message>
+  <wsdl:message name="fetchTransactionDetailsResponse">
+    <wsdl:part name="parameters" element="tns:fetchTransactionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="requeryResponse">
+    <wsdl:part name="parameters" element="tns:requeryResponse" />
+  </wsdl:message>
+  <wsdl:message name="fetchTransactionDetails2Response">
+    <wsdl:part name="parameters" element="tns:fetchTransactionDetails2Response" />
+  </wsdl:message>
+  <wsdl:message name="nameEnquiry">
+    <wsdl:part name="parameters" element="tns:nameEnquiry" />
+  </wsdl:message>
+  <wsdl:message name="requery">
+    <wsdl:part name="parameters" element="tns:requery" />
+  </wsdl:message>
+  <wsdl:message name="reverse">
+    <wsdl:part name="parameters" element="tns:reverse" />
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception" />
+  </wsdl:message>
+  <wsdl:portType name="NIBankingClientService">
+    <wsdl:operation name="getAccountDetails">
+      <wsdl:input name="getAccountDetails" message="tns:getAccountDetails" />
+      <wsdl:output name="getAccountDetailsResponse" message="tns:getAccountDetailsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="ftSingleCreditRequest">
+      <wsdl:input name="ftSingleCreditRequest" message="tns:ftSingleCreditRequest" />
+      <wsdl:output name="ftSingleCreditRequestResponse" message="tns:ftSingleCreditRequestResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchTransactionDetails">
+      <wsdl:input name="fetchTransactionDetails" message="tns:fetchTransactionDetails" />
+      <wsdl:output name="fetchTransactionDetailsResponse" message="tns:fetchTransactionDetailsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="requery">
+      <wsdl:input name="requery" message="tns:requery" />
+      <wsdl:output name="requeryResponse" message="tns:requeryResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="nameEnquiry">
+      <wsdl:input name="nameEnquiry" message="tns:nameEnquiry" />
+      <wsdl:output name="nameEnquiryResponse" message="tns:nameEnquiryResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="reverse">
+      <wsdl:input name="reverse" message="tns:reverse" />
+      <wsdl:output name="reverseResponse" message="tns:reverseResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="fetchTransactionDetails2">
+      <wsdl:input name="fetchTransactionDetails2" message="tns:fetchTransactionDetails2" />
+      <wsdl:output name="fetchTransactionDetails2Response" message="tns:fetchTransactionDetails2Response" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NIBankingClientServiceSoapBinding" type="tns:NIBankingClientService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAccountDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getAccountDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAccountDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="fetchTransactionDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="fetchTransactionDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="fetchTransactionDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ftSingleCreditRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ftSingleCreditRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ftSingleCreditRequestResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="requery">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="requery">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="requeryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nameEnquiry">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="nameEnquiry">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="nameEnquiryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reverse">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="reverse">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="reverseResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="fetchTransactionDetails2">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="fetchTransactionDetails2">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="fetchTransactionDetails2Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NIBankingClientService">
+    <wsdl:port name="NIBankingRemoteClientServicePort" binding="tns:NIBankingClientServiceSoapBinding">
+      <soap:address location="http://192.168.4.62:3030/NIBankingClientService/services/nibService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

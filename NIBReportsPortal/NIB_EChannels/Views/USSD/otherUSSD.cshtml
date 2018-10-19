@@ -1,0 +1,148 @@
+﻿@{
+	ViewBag.Title = "USSD Outwards";
+}
+
+@*@model System.Data.DataTable
+	@using System.Data;*@
+
+<h2>@ViewBag.Title</h2>
+
+@model IEnumerable<NIB_EChannels.Models.USSDModel>
+
+@*<div><b>Table Format Data Displaying in ForEach</b><br /></div>*@
+
+@using (Html.BeginForm("Index", "USSD", FormMethod.Post))
+{
+	<div class="row" style="border-top: groove; border-radius: 3px 4px; padding-bottom: 20px; padding-top: 20px">
+		<div class="col-md-10" style="margin-top:10px">
+			<div class="col-md-3">
+				<label for="startdate">Start Date/Time</label>
+				<input class="form-control" id="startdate" type="date" name="startdate" value="07/16/2018 12:00 AM" />
+			</div>
+
+			<div class="col-md-3">
+				<label for="enddate">End Date/Time</label>
+				<input class="form-control" id="endedate" type="date" name="enddate" />
+			</div>
+
+			<div class="col-md-3">
+				<label for="method">Method</label>
+				<select class="form-control" id="method" name="method">
+					<option>LocalFT</option>
+					<option>Inter-bank Transfer</option>
+					<option>Bill Pay</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<button type="submit" class="btn btn-success btn-lg">
+					<span class="glyphicon glyphicon-search"></span> Search
+				</button>
+			</div>
+		</div>
+	</div><br /><br />
+
+	<div class="col-md-12">
+		<h3 style="color:red; margin-top: 10px;">@ViewBag.Message</h3>
+	</div>
+	<p>
+		<br /><button type="button" class="btn btn-info btn-lg" id="btnExport" onclick="fnExcelReport('ussdTable');">
+			<span class="glyphicon glyphicon-floppy-save"></span> Export to Excel
+		</button><br />
+	</p>
+
+	if (Model != null)
+	{
+			<table class="table table-bordered table-striped table-hover" style="background-color: white;" id="ussdTable">
+				<thead>
+					<tr>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.Refid)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.SessionID)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.Method)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.FromAccount)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.ToAccount)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.Amount)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.RequestCode)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.ReferenceCode)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.BeneficiaryName)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.PaymentReference)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.ResponseCode)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.Dateadded)
+						</th>
+						<th style="text-align: center;">
+							@Html.DisplayNameFor(model => model.DateProcessed)
+						</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.Refid)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.SessionID)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.Method)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.FromAccount)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.ToAccount)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.Amount)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.RequestCode)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.ReferenceCode)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.BeneficiaryName)
+							</td>
+							<td style="">
+								@Html.DisplayFor(modelItem => item.PaymentReference)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.ResponseCode)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.Dateadded)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.DateProcessed)
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		}
+}

@@ -1,0 +1,145 @@
+﻿@model IEnumerable<NIB_EChannels.Models.InwardModel>
+
+@{
+	ViewBag.Title = "NIP Inwards";
+}
+
+<h2>@ViewBag.Title</h2> 
+
+@using (Html.BeginForm("Index", "Inward", FormMethod.Post))
+{
+	<div class="col-md-12 form-horizontal" style="border-top: groove; border-radius: 3px 4px; padding-bottom: 20px;">
+		<br />
+		<div class="col-md-4">
+			<label for="startdate">Start Date</label>
+			<input class="form-control" id="startdate" type="date" name="startdate" />
+		</div>
+
+		<div class="col-md-4">
+			<label for="enddate">End Date</label>
+			<input class="form-control" id="endedate" type="date" name="enddate" />
+		</div>
+
+		<div class="col-md-4">
+			<button type="submit" class="btn btn-success btn-lg">
+				<span class="glyphicon glyphicon-search"></span> Search
+			</button>
+
+			<button type="button" class="btn btn-info btn-lg" id="btnExport" onclick="fnExcelReport('inwardTable');">
+				<span class="glyphicon glyphicon-floppy-save"></span> Export to Excel
+			</button>
+		</div>
+	</div>
+
+	<p><br /><br /></p>
+
+	<br /><br />
+
+	<div class="col-md-12">
+		<h3 style="color:red; margin-top: 10px;">@ViewBag.Message</h3>
+	</div>
+	<p><br /><br /></p>
+
+	if (Model != null)
+	{
+		<table class="table table-bordered table-striped table-hover" id="inwardTable">
+			<thead>
+				<tr>
+					<th>
+						@Html.DisplayNameFor(model => model.Id)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.SessionID)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.RequestTypeID)
+					</th>
+
+					<th>
+						@Html.DisplayNameFor(model => model.TimeIn)
+					</th>
+
+					<th>
+						@Html.DisplayNameFor(model => model.TimeOut)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.ResponseCode)
+					</th>
+
+					<th>
+						@Html.DisplayNameFor(model => model.ResponseDescription)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Beneficiary)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Amount)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.PaymentReference)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.OriginatorAccountName)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Narration)
+					</th>
+					@*<th>
+						@Html.DisplayNameFor(model => model.IMALTransactionID)
+					</th>*@
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.Id)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.SessionID)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.RequestTypeID)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.TimeIn)
+						</td>
+
+						<td>
+							@Html.DisplayFor(modelItem => item.TimeOut)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.ResponseCode)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.ResponseDescription)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Beneficiary)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Amount)
+						</td>
+						@**@
+						<td>
+							@Html.DisplayFor(modelItem => item.PaymentReference)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.OriginatorAccountName)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Narration)
+						</td>
+						@*<td>
+							@Html.DisplayFor(modelItem => item.IMALTransactionID)
+						</td>*@
+					</tr>
+				}
+			</tbody>
+
+		</table>
+
+<iframe id="txtArea1" style="display:none"></iframe>
+	}
+}

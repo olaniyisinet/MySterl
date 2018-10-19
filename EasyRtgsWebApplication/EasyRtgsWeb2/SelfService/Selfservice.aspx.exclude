@@ -1,0 +1,155 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/SwiftMasterPage.master" AutoEventWireup="false" CodeFile="Selfservice.aspx.vb" Inherits="SelfService_Selfservice" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style7
+        {
+            width: 100%;
+        }
+        .style8
+        {
+            width: 177px;
+        }
+        .style13
+        {
+            width: 214px;
+        }
+        .style14
+        {
+            width: 171px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" Runat="Server">
+    <asp:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="2" 
+        Width="988px">
+        <asp:TabPanel ID="TabPanel1" runat="server" HeaderText="TabPanel1">
+            <HeaderTemplate>Request Unlock</HeaderTemplate>
+            <ContentTemplate><asp:Panel ID="Panel1" runat="server"><table class="style7"><tr><td class="style8"><asp:Label ID="Label1" runat="server" Text="Type In Request ID eg. FT1111"></asp:Label></td><td><asp:TextBox ID="txtReqIDUnlock" runat="server" Width="200px"></asp:TextBox>&#160;&nbsp;<asp:Button ID="btnUnlock" runat="server" Text="Unlock" />&#160;&#160; <asp:Label ID="lblRequestUnlock" runat="server"></asp:Label></td></tr><tr><td class="style8">&#160;</td><td>&#160;</td></tr><tr><td class="style8">&#160;</td><td>&#160;</td></tr><tr><td class="style8">&#160;</td><td>&#160;</td></tr></table></asp:Panel></ContentTemplate>
+        </asp:TabPanel>
+        <asp:TabPanel ID="TabPanel4" runat="server" HeaderText="TabPanel4">
+            <HeaderTemplate>Not Generating SWIFT</HeaderTemplate>
+            <ContentTemplate><asp:Panel ID="Panel4" runat="server"><table class="style7"><tr><td class="style13"><asp:Label ID="Label7" runat="server" Text="Type In Request ID eg. FT1111"></asp:Label></td><td><asp:TextBox ID="txtSendersRefNoSwift" runat="server" Width="200px"></asp:TextBox><asp:Label ID="lblNoSwiftMsg" runat="server"></asp:Label></td></tr><tr><td class="style13">&#160;</td><td><asp:Button ID="btnResolveNoSwiftGeneration" runat="server" 
+                                    Text="Resolve Non-Swift Generation" /></td></tr></table></asp:Panel></ContentTemplate>
+        </asp:TabPanel>
+        <asp:TabPanel ID="TabPanel2" runat="server" HeaderText="TabPanel2">
+            <HeaderTemplate>
+                Transaction Review (Re-post transaction)
+            </HeaderTemplate>
+            <ContentTemplate>
+                <asp:Panel ID="Panel5" runat="server">
+                    <table class="style7">
+                        <tr>
+                            <td class="style14">
+                                &nbsp;</td>
+                            <td>
+                                <asp:Label ID="Label9" runat="server" Font-Bold="True" Font-Size="Larger" 
+                                    Font-Underline="True" Text="Review Transactions That Have Not Been Posted."></asp:Label>
+                                <br />
+                                <asp:Label ID="Label10" runat="server" Font-Size="Large" Font-Strikeout="False" 
+                                    Text="&lt;u&gt;Instructions:&lt;/u&gt;Click in the box below to select a date. Click on the &quot;Get Unposted Entry&quot; button to show the entries for that date."></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style14">
+                                <asp:Literal ID="Literal1" runat="server" Text="Select Date:"></asp:Literal>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtDateUnpostedEntries" runat="server" Width="200px"></asp:TextBox>
+                                <asp:CalendarExtender ID="txtDateUnpostedEntries_CalendarExtender" 
+                                    runat="server" Enabled="True" Format="dd-MMM-yyyy" 
+                                    TargetControlID="txtDateUnpostedEntries">
+                                </asp:CalendarExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style14">
+                                &nbsp;</td>
+                            <td>
+                                <asp:Button ID="btnGetEntryForDate" runat="server" Text="Get Unposted Entry" />
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:Label ID="Label8" runat="server" 
+                        Text="Currently Showing Unposted Entries For Date"></asp:Label>
+                    <asp:Label ID="lblCurrentDate" runat="server"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="lblResultStatus" runat="server" Font-Bold="False" 
+                        Font-Names="Tahoma" Font-Size="Larger"></asp:Label>
+                    <br />
+                    <div style="overflow: scroll; width: 1000px;">
+                        <asp:GridView ID="gvUnpostedTransactions" runat="server" 
+                            AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" 
+                            DataSourceID="sqlDsUnpostedTransactions" Font-Size="X-Small" 
+                            ForeColor="#333333" 
+                            EmptyDataText="&lt;b&gt;There are no unposted entries for the selected date.&lt;/b&gt;">
+                            <AlternatingRowStyle BackColor="White" />
+                            <Columns>
+                                <asp:TemplateField ShowHeader="False">
+                                    <ItemTemplate>
+                                        &nbsp; &nbsp;
+                                        <asp:Button ID="btnRepost" runat="server" 
+                                            CommandArgument="<%# Container.DataItemIndex %>" CommandName="Post Entry" 
+                                            OnClientClick="return confirm('Have you checked on BANKS that it is not already on BANKS?\nIf you found this entry on BANKS, click Cancel here and then click on the button: \'Already Posted\'.\nAre you sure you want to repost?');" 
+                                            Text="Post Entry" ToolTip="Click if this entry was NOT found on BANKS" 
+                                            Width="120px" />
+                                        &nbsp; &nbsp;
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField ShowHeader="False">
+                                    <ItemTemplate>
+                                        &nbsp; &nbsp;
+                                        <asp:Button ID="btnAlreadyPosted" runat="server" 
+                                            CommandArgument="<%# Container.DataItemIndex %>" CommandName="Already Posted" 
+                                            OnClientClick="return confirm('Have you checked on BANKS that it is not already on BANKS?\nIf you DID NOT find this entry on BANKS, click Cancel here and then click on the button: \'Post Entry\'.');" 
+                                            Text="Already Posted" ToolTip="Click if this entry was found on BANKS" 
+                                            Width="120px" />
+                                        &nbsp; &nbsp;
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="SN" HeaderText="SN" SortExpression="SN" />
+                                <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" 
+                                    ReadOnly="True" SortExpression="ID" Visible="False" />
+                                <asp:BoundField DataField="Entry Date" HeaderText="Entry Date" 
+                                    SortExpression="Entry Date" />
+                                <asp:BoundField DataField="Reason" HeaderText="Reason" 
+                                    SortExpression="Reason" />
+                                <asp:BoundField DataField="Account Name" HeaderText="Account Name" 
+                                    SortExpression="Account Name" />
+                                <asp:BoundField DataField="Customer's Account" HeaderText="Customer's Account" 
+                                    SortExpression="Customer's Account" />
+                                <asp:BoundField DataField="Account To Credit" HeaderText="Account To Credit" 
+                                    SortExpression="Account To Credit" />
+                                <asp:BoundField DataField="Amount" HeaderText="Amount" 
+                                    SortExpression="Amount" />
+                                <asp:BoundField DataField="Explanation Code" HeaderText="Explanation Code" 
+                                    SortExpression="Explanation Code" />
+                                <asp:BoundField DataField="Remarks" HeaderText="Remarks" 
+                                    SortExpression="Remarks" />
+                                <asp:BoundField DataField="Senders Reference" HeaderText="Senders Reference" 
+                                    SortExpression="Senders Reference" />
+                            </Columns>                            
+                        </asp:GridView>
+                    </div>
+                    <br />
+                    <asp:SqlDataSource ID="sqlDsUnpostedTransactions" runat="server" 
+                        
+                        ConnectionString="<%$ ConnectionStrings:TradeServicesTestConnectionString %>" SelectCommand="select a.SN,a.ID, a.Status + '-' + a.ErrorText Reason,b.sendersReference [Senders Reference],a.EntryDate [Entry Date], 
+a.CustomerName [Account Name],a.DrCustAcct [Customer's Account],a.CrCommAcct [Account To Credit], a.Amount, a.expl_code [Explanation Code], a.Remarks from TransactTemp2 a inner join tblSwiftRequest b on a.SN=b.reqID where a.Status in ('Server Error') 
+and CONVERT(datetime,a.Entrydate)&gt;=CONVERT(datetime,@entrydate)
+order by SN desc, EntryDate	desc
+">
+                        <SelectParameters>
+                            <asp:SessionParameter DefaultValue="0" Name="entrydate" 
+                                SessionField="entrydate" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:TabPanel>
+    </asp:TabContainer>
+</asp:Content>
+
