@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace OtpService.Models.Request
+{
+    public class doGenerateOtpByMobileReq
+    {
+        [Required]
+        public string EMAIL  { get; set; }
+        [Required]
+        public string mobnum { get; set; }
+        [Required]
+   
+        public int Appid { get; set; }
+    }
+}

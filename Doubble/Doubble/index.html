@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html ng-app="dcalc">
+<head>
+  <meta charset="utf-8">
+  <title>Doubble | Start Savings and Earn a Doubble Returns</title>
+  <meta name="description" content="Watch your money grow and secure that future cashflow. You can get as much as 100% returns on your savings with Doubble by Sterling. With the options available, all you need do is relax and let us do the magic.">
+  <meta name="keywords" content="Earn Double, Cashflow, savings, doubble 3, double 3, doubble 5, double 5, doubble 10, double 10, Personal Banking, Savings Account, Current Account, Banke Adeola">
+
+  <script data-require="angular.js@*" data-semver="4.0.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favsrc/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favsrc/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favsrc/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favsrc/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favsrc/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favsrc/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favsrc/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favsrc/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favsrc/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/favsrc/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favsrc/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favsrc/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favsrc/favicon-16x16.png">
+  <link rel="manifest" href="assets/favsrc/manifest.json">
+  <meta name="msapplication-TileColor" content="#ad161f">
+  <meta name="msapplication-TileImage" content="assets/favsrc/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link rel="stylesheet" href="custom.css" type="text/css"> </head>
+  <script src="app.js"></script>
+  <script src="dr_comma.js"></script>
+  <script>
+        function scrollToAnchor(aid){
+            var aTag = $("a[name='"+ aid +"']");
+            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+        }
+
+        $("#home").click(function() {
+           scrollToAnchor('home');
+        });
+
+        $("#about").click(function() {
+           scrollToAnchor('about');
+        });
+
+        $("#calc").click(function() {
+           scrollToAnchor('calc');
+        });
+
+        $("#var").click(function() {
+           scrollToAnchor('var');
+        });
+
+        $("#faq").click(function() {
+           scrollToAnchor('faq');
+        });
+
+        $("#abtvar").click(function() {
+           scrollToAnchor('abtvar');
+        });
+  </script>
+<body ng-controller="doubble">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container" id="home">
+      <a class="navbar-brand">
+        <img src="https://sterlingbankng.com/projects/doubble2/assets/logo_.png" height="30" alt="" class="d-inline-block align-top img-fluid" width="120"> </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarLightSupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbarLightSupportedContent">
+        <ul class="navbar-nav small">
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#home">&nbsp; Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#var">Variants</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#calc">See How</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li>
+              <a class="btn navbar-btn ml-2 text-white btn-danger hidden-xs" href="Doubble/Doubble"> &nbsp;Apply Now</a>
+              
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="text-white m-3">
+    <div class="container">
+      <div class="row" >
+        <div class="align-self-center col-md-6 col-sm-12 col-12">
+          <h1 class="text-dark" style="font-size:60px">Stop Waiting</h1>
+          <h1 class="text-danger" style="font-size:60px">Start Saving</h1>
+          <p class="mb-4 text-dark">Subscribe to Doubble and get returns as high as 100% of amount saved. Ready?</p>
+          <a class="btn btn-lg btn-outline-danger" href="#abtvar">Get Started</a>
+        </div>
+        <div class="col-md-5 p-0 offset-md-1">
+          <img src="assets/coin_base.jpg" atl="first slide" class="d-block img-fluid w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of T1 -->
+
+  <div class="py-5" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-fluid d-block" src="https://sterlingbankng.com/projects/doubble/assets/img/coin_plate.jpg"> </div>
+        <div class="col-md-7 align-self-center">
+          <h1 class="text-muted" id="abtvar">What is Doubble?</h1>
+          <p class="my-3 small">Doubble by Sterling helps assure sustainability of your future cash flow in the medium term as there is no absolute guarantee of assured future cash inflows in the years ahead from existing sources. It allows you to save up now and earn returns
+            as much as 100% of the amount saved which is paid monthly in equal installments to you, your spouse, kids or any beneficiary of your choice over a period of time after the savings period has ended.&nbsp;
+            <br>
+            <br>Watch your money grow and secure that future cashflow. With the options available, all you have to do is make your choice, relax and let us do the magic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-2">
+    <div class="container"> </div>
+  </div>
+
+  <div class="py-5" id="var">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 class="mb-2 text-muted">Variants</h1>
+          <!-- <p class="">
+            <b>Watch your money grow and secure that future cashflow.&nbsp;</b>
+          </p> -->
+          <!-- <p class="small" style="margin:-10px;">You can get back up to 200% of your investment when&nbsp;you subscribe to Doubble by Sterling.&nbsp;
+            <br>With the flexible options available, all you do is relax and let us do the magic.</p> -->
+            <div class="row text-left mt-3" >
+              <div class="col-md-3 my-3">
+                <div class="row mb-3">
+                  <div class="text-center col-2x">
+                    <i class="d-block mx-auto fa text-danger fa-money fa-2x"></i>
+                  </div>
+                  <div class="align-self-center col-10">
+                    <h6 class="mb-0 text-uppercase text-danger">
+                      <b>Doubble 3</b>
+                    </h6>
+                  </div>
+                </div>
+                <p class="small text-justify">This is a 72 months contract with 36 months contribution period (whilst savings accrue interest) and pay out with returns from month 37 to 60.</p>
+              </div>
+              <div class="col-md-3 my-3">
+                <div class="row mb-3">
+                  <div class="text-center col-2x">
+                    <i class="d-block mx-auto fa text-danger fa-money fa-2x"></i>
+                  </div>
+                  <div class="align-self-center col-10">
+                    <h6 class="mb-0 text-uppercase text-danger">
+                      <b>Doubble 5</b>
+                    </h6>
+                  </div>
+                </div>
+                <p class="small text-justify">This is a 120 months contract with 60 months contribution period (whilst savings accrue interest) and pay out with returns from month 61 to 120.</p>
+              </div>
+              <div class="col-md-3 my-3">
+                <div class="row mb-3">
+                  <div class="text-center col-2x">
+                    <i class="d-block mx-auto fa text-danger fa-money fa-2x"></i>
+                  </div>
+                  <div class="align-self-center col-10">
+                    <h6 class="mb-0 text-uppercase text-danger">
+                      <b>Doubble 10</b>
+                    </h6>
+                  </div>
+                </div>
+                <p class="small text-justify">This is a 180 months contract with 60 months contribution period (whilst savings accrue interest) and pay out with returns from month 61 to 180.</p>
+              </div>
+              <div class="col-md-3 my-3">
+                <div class="row mb-3">
+                  <div class="text-center col-2x">
+                    <i class="mx-auto fa fa-circle-o-notch d-block fa-2x text-danger"></i>
+                  </div>
+                  <div class="align-self-center col-10">
+                    <h6 class="mb-0 text-danger text-uppercase">
+                      <b>Doubble Lump Sum</b>
+                    </h6>
+                  </div>
+                </div>
+                <p class="small text-justify">This is a 120 months contract with an initial lumpsum payment (if you don’t earn monthly or you prefer to contribute a lump sum once) whilst accruing interest and monthly pay-out with returns starting from month 61 to 120.</p>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row" >
+                <div class="col-md-6 col-sm-6 col-6 text-right">
+                  <a class="btn active m-3 btn-success px-4" href="#calc">Calculate Earnings</a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-6 text-left">
+                  <a class="btn active m-3 btn-danger px-4" href="Doubble/Doubble">Start Application</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" id="calc">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mb-2 text-muted text-center">Try out the Calculator</h1>
+          <p class="text-center">Try out how your investment will grow and learn how rich you can become.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a href="" class="active nav-link" data-toggle="tab" data-target="#tabone">
+                <h4>Monthly Calculator</h4>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo">
+                <h4>Lump Sum Calculator</h4>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="" data-toggle="tab" data-target="#tabthree">
+                <h4>Retire Well</h4>
+              </a>
+            </li> -->
+          </ul>
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <div class="row">
+                <div class="col-md-12 m-2">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-3 bg-danger">
+                        <div class="card-body bg-danger" style="border:none;">
+                          <h1 class="text-center">If you save</h1>
+                          <form class="form">
+                            <div class="flex">
+                              <span class="currency">₦</span>
+                              <input type="text" ng-change="calDoubble()" ng-model="saveamt" id="num" commaseparator placeholder="Enter an Amount"> </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="mb-0 text-center text-uppercase text-danger">
+                          <b>Doubble 3</b>
+                          <small style="font-size:9px;display:block;">will earn you</small>
+                        </p>
+                        <hr class="mb-1 mt-1">
+                        <div class="text-center">
+                          <h4 class="mb-0">
+                            <b>{{ted3 | currency:"₦":2}}</b>
+                          </h4>
+                          <small>25% returns plus total savings.</small>
+                        </div>
+                        <hr class="mb-2 mt-1">
+                        <div class="text-center">
+                          <h5 class="mb-0">
+                            <b>{{mpd3 | currency:"₦":2}}</b>
+                          </h5>
+                          <small class="text-danger">Receivable for {{d3}} months and</small>
+                        </div>
+                        <hr class="mb-2 mt-1">
+                        <div class="text-center">
+                          <h5 class="mb-0">
+                            <b>{{tsd3 | currency:"₦":2}}</b>
+                          </h5>
+                          <small class="smaller">Total Savings for only {{m3}} months.</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="mb-0 text-center text-uppercase text-danger">
+                          <b>Doubble 5</b>
+                          <small style="font-size:9px;display:block;">will earn you</small>
+                        </p>
+                        <hr class="mb-1 mt-1">
+                        <div class="text-center">
+                          <h4 class="mb-0">
+                            <b>{{ted5 | currency:"₦":2}}</b>
+                          </h4>
+                          <small>50% returns plus total savings.</small>
+                        </div>
+                        <hr class="mb-2 mt-1">
+                        <div class="text-center">
+                          <h5 class="mb-0">
+                            <b>{{mpd5 | currency:"₦":2}}</b>
+                          </h5>
+                          <small class="text-danger">Receivable for {{d5}} months and</small>
+                        </div>
+                        <hr class="mb-2 mt-1">
+                        <div class="text-center">
+                          <h5 class="mb-0">
+                            <b>{{tsd5 | currency:"₦":2}}</b>
+                          </h5>
+                          <small class="smaller">Total Savings for only {{m5}} months.</small>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <p class="mb-0 text-center text-uppercase text-danger">
+                          <b>Doubble 10</b>
+                          <small style="font-size:9px;display:block;">will earn you</small>
+                        </p>
+                        <hr class="mb-1 mt-1">
+                        <div class="text-center">
+                          <h4 class="mb-0">
+                            <b>{{ted10 | currency:"₦":2}}</b>
+                          </h4>
+                          <small>100% returns plus total savings.</small>
+                        </div>
+                        <hr class="mb-2 mt-1">
+                        <div class="text-center">
+                          <h5 class="mb-0">
+                            <b>{{mpd10 | currency:"₦":2}}</b>
+                          </h5>
+                          <small class="text-danger">Receivable for {{d10}} months and</small>
+                        </div>
+                        <hr class="mb-2 mt-1">
+                        <div class="text-center">
+                          <h5 class="mb-0">
+                            <b>{{tsd10 | currency:"₦":2}}</b>
+                          </h5>
+                          <small class="smaller">Total Savings for only {{m10}} months.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+              <div class="col-md-12 m-2">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-3 bg-secondary">
+                      <div class="card-body bg-secondary" style="border:none;">
+                        <h1 class="text-center">Jump Start your Bulk Investment</h1>
+                      </div>
+                    </div>
+                    <div class="col-md-3 bg-light">
+                      <div class="card-body bg-light" style="border:none;">
+                        <h4 class="text-center">If you investment only</h4>
+                        <form class="form">
+                          <div class="flex">
+                            <span class="currency">₦</span>
+                            <input type="text" ng-change="calDoubble()" ng-model="savels" id="num" commaseparator placeholder="Enter an Amount"> </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                      <h4 class="text-center">60 Months Investment Earning</h4>
+                      <div class="text-center">
+                        <h2 class="mb-0">
+                          <b>{{tls | currency:"₦":2}}</b>
+                        </h2>
+                      </div>
+                      <hr class="mb-2 mt-1">
+                      <div class="row">
+                        <div class="col-md-6" style="border-right:1px solid #ccc;">
+                          <div class="text-center">
+                            <h4 class="mb-0">
+                              <b>{{tmls | currency:"₦":2}}</b>
+                            </h4>
+                            <small>Monthly Payment for {{mls}} Months</small>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="text-center">
+                            <h4 class="mb-0">
+                              <b>{{savels | currency:"₦":2}}</b>
+                            </h4>
+                            <small>Total Contributions</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="tab-pane fade" id="tabthree" role="tabpanel">
+              <p class="">Retirement Goes Here</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5" id="faq">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col-md-12" >
+          <div class="row my-3">
+            <div class="col-md-12">
+              <h1 class="mb-2 text-muted text-center">Our Frequently Ask Questions</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <h5 class="text-danger">Can I pre-terminate my Investment?</h5>
+                <p class="small">Yes. The investment can be pre -terminated. However customers who pre-terminate before the end of the contract tenor will get their full contributions but will forfeit 50% of the accrued earnings.</p>
+
+                <h5 class="text-danger">Do I continue making contributions throughout the contract tenor?</h5>
+                <p class="small">No. You will only contribute for some months during the contract based on the selected variant after which the contribution stops and the pay-out to the nominated beneficiary with returns commences for remaining months in the contract.</p>
+
+                <h5 class="text-danger">How do I know what monthly pay-out I will get for different monthly contributions? </h5>
+                <p class="small">The calculator on the platform will state what the pay-out will be for the different contracts based on contribution. There will also be a contract letter stating the terms of the contact.</p>
+
+                <h5 class="text-danger">How do I know my balance? </h5>
+                <p class="small">You can view you balance on the platform using your log- in details.</p>
+
+                <h5 class="text-danger">Can I purchase multiples of the product? </h5>
+                <p class="small">Yes, you can open as many as you want for your benefit or other beneficiaries.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <h5 class="text-danger">What is the target market for this product?</h5>
+                <p class="small">The product will benefit salary account holders, business owners, professionals and self - employed individuals between looking to save additional funds towards their later years for specific purposes.</p>
+
+                <h5 class="text-danger">Can I opt to collect the total contribution in lump sum instead of having the pay-out monthly over a period of time?</h5>
+                <p class="small">The contract is designed to pay out monthly over - time and not in bulk at the end of the contribution period as it is designed to address future cashflow sustainability challenge. Request to collect the contribution in lump sum will result
+                  in termination of the contract.</p>
+
+                <h5 class="text-danger">Is the beneficiary transferable?</h5>
+                <p class="small">Yes, to the new beneficiary the customer selects/ nominates for the pay-out period.</p>
+
+                <h5 class="text-danger">Can I just transfer any loose cash into my Doubble Contract?</h5>
+                <p class="small">No, the monthly indicated contribution is automated and is debited on the anniversary date every month.</p>
+
+                <h5 class="text-danger">How can I know my expected earnings before investing? </h5>
+                <p class="small">We have built a Calculator that shows all the information you need. Try it by <a href="#calc">clicking here</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-light text-dark p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-dark">
+          <ul class="list-unstyled text-light small text-center">
+            <a href="#home" class="text-dark">Home</a> |
+            <a href="#about" class="text-muted">About us</a> |
+            <a href="#calc" class="text-dark">Our Calculators</a> |
+            <a href="#" class="text-dark">Apply Now</a>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <p class="text-center text-dark small">© Copyright 2018 Sterling Bank Plc. - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+</body>
+</html>

@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RequestPushCorpFacility">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestContext" type="tns:RequestContext" />
+            <s:element minOccurs="0" maxOccurs="1" name="PushCorpFacility" type="tns:PushCorpFacility" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RequestContext">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="requestSeqId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="requesTimeStamp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="callMode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PushCorpFacility">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CorpFacilityData" type="tns:CorpFacilityData" />
+          <s:element minOccurs="0" maxOccurs="1" name="CorpFacilityTrancheList" type="tns:ArrayOfCorpFacilityTranche" />
+          <s:element minOccurs="0" maxOccurs="1" name="CollateralRelatedFacilities" type="tns:CollateralRelatedFacilities" />
+          <s:element minOccurs="0" maxOccurs="1" name="FacilityFeeList" type="tns:ArrayOfFacilityFee" />
+          <s:element minOccurs="0" maxOccurs="1" name="CorpFacilityFeeList" type="tns:ArrayOfCorpFacilityFee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CorpFacilityData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idFacilityACP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idFacilityT24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="branchSbu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idCorpT24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilityStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilityStatusDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilityType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilityGrpType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilitySubType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="appType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="disbursMode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilityDiscrp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="disbursAccNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="disbursAccCur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="settelemntAccNum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="provisioningAccNum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="osAmt" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="beneficiaryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="beneficiaryName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="beneficiaryAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dealDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="facilityAmt" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="facilityAmtCur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="amortType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="baseRate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="baseRateVal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="spread" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="appInterRate" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="yield" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="accuralBasis" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="cot" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="principalFreq" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="interFreq" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="drawdownDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="firstPayDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="tenor" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenorUnit" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lastPayDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="residual_percentage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="maximum_notional_amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="max_tenor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="default_pricing" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCorpFacilityTranche">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CorpFacilityTranche" nillable="true" type="tns:CorpFacilityTranche" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CorpFacilityTranche">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idFacilityT24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="trancheCalculType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="trancheAmt" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="trancheAmtCur" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="trancheBookingDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CollateralRelatedFacilities">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idCollT24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idFacilityT24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="coverageAmt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="coverageAmtCur" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFacilityFee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FacilityFee" nillable="true" type="tns:FacilityFee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FacilityFee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="feePropertyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feeValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feefrequency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feeCalculMode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCorpFacilityFee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CorpFacilityFee" nillable="true" type="tns:CorpFacilityFee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CorpFacilityFee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="idFacilityT24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feetype" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feefrequency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feeCalculMode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feeRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="calulatedOn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feeAmt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="feeAmtCur" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RequestPushCorpFacilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestPushCorpFacilityResult" type="tns:ResponsePushCorpFacility" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponsePushCorpFacility">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseContext" type="tns:ResponseContext" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResponseContext">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="requestSeqId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="responseTimeStamp" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="List" type="tns:ArrayOfResponserror" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errorstack" type="tns:ArrayOfError" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfResponserror">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="responserror" nillable="true" type="tns:responserror" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="responserror">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfError">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Error" nillable="true" type="tns:Error" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Error">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorProcess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorLine" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAALoanWithFees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cus_num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facilityAmt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cur" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="drawdownDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="disbursAccNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="provisioningAccNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProposalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ApprovalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExpiryDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="productGroup" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="interest" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="processingFee" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="committmentFee" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="dayOfMonth" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="repaymentDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAALoanWithFeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAALoanWithFeesResult" type="tns:ClassResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ClassResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAALoanWithFees2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cus_num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facilityAmt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cur" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="drawdownDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="disbursAccNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="provisioningAccNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProposalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ApprovalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExpiryDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="t24ProductId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="interest" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="dayOfMonth" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="repaymentDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="json" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAALoanWithFees2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAALoanWithFees2Result" type="tns:ClassResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAnnuityDeposit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="effectiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="commitmentAmount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="termInYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="payinAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutAccountNumber1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutAccountNumber2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutAccountNumber3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="daoCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="braCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAnnuityDepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAnnuityDepositResult" type="tns:ClassResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetArrangementIdFromActivityId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetArrangementIdFromActivityIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetArrangementIdFromActivityIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAaDetailSchedule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arrangementID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAaDetailScheduleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAaDetailScheduleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAaBillsDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arrangementID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAaBillsDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAaBillsDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAnnuityDepositLumpSum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="effectiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="commitmentAmount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="termInYear" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="payinAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutAccountNumber1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutAccountNumber2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutAccountNumber3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="daoCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="braCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAnnuityDepositLumpSumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAnnuityDepositLumpSumResult" type="tns:ClassResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAALoan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cus_num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facilityAmt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cur" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="drawdownDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="disbursAccNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="provisioningAccNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProposalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ApprovalDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExpiryDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="productGroup" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAALoanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAALoanResult" type="tns:ClassResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestPushCorpFacilitySoapIn">
+    <wsdl:part name="parameters" element="tns:RequestPushCorpFacility" />
+  </wsdl:message>
+  <wsdl:message name="RequestPushCorpFacilitySoapOut">
+    <wsdl:part name="parameters" element="tns:RequestPushCorpFacilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAALoanWithFeesSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAALoanWithFees" />
+  </wsdl:message>
+  <wsdl:message name="CreateAALoanWithFeesSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAALoanWithFeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAALoanWithFees2SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAALoanWithFees2" />
+  </wsdl:message>
+  <wsdl:message name="CreateAALoanWithFees2SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAALoanWithFees2Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateAnnuityDepositSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAnnuityDeposit" />
+  </wsdl:message>
+  <wsdl:message name="CreateAnnuityDepositSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAnnuityDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetArrangementIdFromActivityIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetArrangementIdFromActivityId" />
+  </wsdl:message>
+  <wsdl:message name="GetArrangementIdFromActivityIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetArrangementIdFromActivityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAaDetailScheduleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAaDetailSchedule" />
+  </wsdl:message>
+  <wsdl:message name="GetAaDetailScheduleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAaDetailScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAaBillsDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAaBillsDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAaBillsDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAaBillsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAnnuityDepositLumpSumSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAnnuityDepositLumpSum" />
+  </wsdl:message>
+  <wsdl:message name="CreateAnnuityDepositLumpSumSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAnnuityDepositLumpSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAALoanSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAALoan" />
+  </wsdl:message>
+  <wsdl:message name="CreateAALoanSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAALoanResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LoanServicesSoap">
+    <wsdl:operation name="RequestPushCorpFacility">
+      <wsdl:input message="tns:RequestPushCorpFacilitySoapIn" />
+      <wsdl:output message="tns:RequestPushCorpFacilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoanWithFees">
+      <wsdl:input message="tns:CreateAALoanWithFeesSoapIn" />
+      <wsdl:output message="tns:CreateAALoanWithFeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoanWithFees2">
+      <wsdl:input message="tns:CreateAALoanWithFees2SoapIn" />
+      <wsdl:output message="tns:CreateAALoanWithFees2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAnnuityDeposit">
+      <wsdl:input message="tns:CreateAnnuityDepositSoapIn" />
+      <wsdl:output message="tns:CreateAnnuityDepositSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangementIdFromActivityId">
+      <wsdl:input message="tns:GetArrangementIdFromActivityIdSoapIn" />
+      <wsdl:output message="tns:GetArrangementIdFromActivityIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAaDetailSchedule">
+      <wsdl:input message="tns:GetAaDetailScheduleSoapIn" />
+      <wsdl:output message="tns:GetAaDetailScheduleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAaBillsDetails">
+      <wsdl:input message="tns:GetAaBillsDetailsSoapIn" />
+      <wsdl:output message="tns:GetAaBillsDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAnnuityDepositLumpSum">
+      <wsdl:input message="tns:CreateAnnuityDepositLumpSumSoapIn" />
+      <wsdl:output message="tns:CreateAnnuityDepositLumpSumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoan">
+      <wsdl:input message="tns:CreateAALoanSoapIn" />
+      <wsdl:output message="tns:CreateAALoanSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoanServicesSoap" type="tns:LoanServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestPushCorpFacility">
+      <soap:operation soapAction="http://tempuri.org/RequestPushCorpFacility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoanWithFees">
+      <soap:operation soapAction="http://tempuri.org/CreateAALoanWithFees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoanWithFees2">
+      <soap:operation soapAction="http://tempuri.org/CreateAALoanWithFees2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAnnuityDeposit">
+      <soap:operation soapAction="http://tempuri.org/CreateAnnuityDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangementIdFromActivityId">
+      <soap:operation soapAction="http://tempuri.org/GetArrangementIdFromActivityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAaDetailSchedule">
+      <soap:operation soapAction="http://tempuri.org/GetAaDetailSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAaBillsDetails">
+      <soap:operation soapAction="http://tempuri.org/GetAaBillsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAnnuityDepositLumpSum">
+      <soap:operation soapAction="http://tempuri.org/CreateAnnuityDepositLumpSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoan">
+      <soap:operation soapAction="http://tempuri.org/CreateAALoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoanServicesSoap12" type="tns:LoanServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestPushCorpFacility">
+      <soap12:operation soapAction="http://tempuri.org/RequestPushCorpFacility" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoanWithFees">
+      <soap12:operation soapAction="http://tempuri.org/CreateAALoanWithFees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoanWithFees2">
+      <soap12:operation soapAction="http://tempuri.org/CreateAALoanWithFees2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAnnuityDeposit">
+      <soap12:operation soapAction="http://tempuri.org/CreateAnnuityDeposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangementIdFromActivityId">
+      <soap12:operation soapAction="http://tempuri.org/GetArrangementIdFromActivityId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAaDetailSchedule">
+      <soap12:operation soapAction="http://tempuri.org/GetAaDetailSchedule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAaBillsDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetAaBillsDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAnnuityDepositLumpSum">
+      <soap12:operation soapAction="http://tempuri.org/CreateAnnuityDepositLumpSum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAALoan">
+      <soap12:operation soapAction="http://tempuri.org/CreateAALoan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoanServices">
+    <wsdl:port name="LoanServicesSoap" binding="tns:LoanServicesSoap">
+      <soap:address location="http://10.0.41.101:809/LoanServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoanServicesSoap12" binding="tns:LoanServicesSoap12">
+      <soap12:address location="http://10.0.41.101:809/LoanServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,37 @@
+1/8/2018 11:55:46 AM: System.Net.WebException: The operation has timed out
+   at System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   at System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at SBPSwitch.sbpswitch.getInternalBankID(String AccountNumber) in c:\Users\Ogundipeet\AppData\Local\Temp\Temporary ASP.NET Files\vs\b728a75f\233feb79\App_WebReferences.jkcpsqtb.1.cs:line 46
+   at main.nuban() in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 836
+   at main.Button1_Click(Object sender, EventArgs e) in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 231
+1/8/2018 11:57:50 AM: System.Net.WebException: The request failed with HTTP status 503: Service Unavailable.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at SBPSwitch.sbpswitch.getInternalBankID(String AccountNumber) in c:\Users\Ogundipeet\AppData\Local\Temp\Temporary ASP.NET Files\vs\b728a75f\233feb79\App_WebReferences.jkcpsqtb.1.cs:line 46
+   at main.nuban() in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 836
+   at main.Button1_Click(Object sender, EventArgs e) in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 231
+1/8/2018 11:58:21 AM: System.Net.WebException: The request failed with HTTP status 503: Service Unavailable.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at SBPSwitch.sbpswitch.getInternalBankID(String AccountNumber) in c:\Users\Ogundipeet\AppData\Local\Temp\Temporary ASP.NET Files\vs\b728a75f\233feb79\App_WebReferences.jkcpsqtb.1.cs:line 46
+   at main.nuban() in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 836
+   at main.Button1_Click(Object sender, EventArgs e) in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 231
+1/8/2018 12:03:06 PM: System.Net.WebException: The request failed with HTTP status 503: Service Unavailable.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at SBPSwitch.sbpswitch.getInternalBankID(String AccountNumber) in c:\Users\Ogundipeet\AppData\Local\Temp\Temporary ASP.NET Files\vs\b728a75f\233feb79\App_WebReferences.jkcpsqtb.1.cs:line 46
+   at main.nuban() in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 836
+   at main.Button1_Click(Object sender, EventArgs e) in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 231
+1/8/2018 12:03:26 PM: System.Net.WebException: The request failed with HTTP status 503: Service Unavailable.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at SBPSwitch.sbpswitch.getInternalBankID(String AccountNumber) in c:\Users\Ogundipeet\AppData\Local\Temp\Temporary ASP.NET Files\vs\b728a75f\233feb79\App_WebReferences.jkcpsqtb.1.cs:line 46
+   at main.nuban() in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 836
+   at main.Button1_Click(Object sender, EventArgs e) in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 231
+1/8/2018 12:03:39 PM: System.Net.WebException: The request failed with HTTP status 503: Service Unavailable.
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at SBPSwitch.sbpswitch.getInternalBankID(String AccountNumber) in c:\Users\Ogundipeet\AppData\Local\Temp\Temporary ASP.NET Files\vs\b728a75f\233feb79\App_WebReferences.jkcpsqtb.1.cs:line 46
+   at main.nuban() in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 836
+   at main.Button1_Click(Object sender, EventArgs e) in C:\Users\Ogundipeet\Desktop\Coding\Bulktra_new'\main.aspx.vb:line 231

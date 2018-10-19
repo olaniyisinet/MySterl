@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.merchantpay.nibss.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="payment-service" targetNamespace="http://ws.merchantpay.nibss.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.234.10.204:9091/merchantpay/payment-service?xsd=1" namespace="http://ws.merchantpay.nibss.com/" />
+    </xsd:schema>
+  </types>
+  <message name="Pre-Payment">
+    <part name="parameters" element="tns:Pre-Payment" />
+  </message>
+  <message name="Pre-PaymentResponse">
+    <part name="parameters" element="tns:Pre-PaymentResponse" />
+  </message>
+  <message name="Payment">
+    <part name="parameters" element="tns:Payment" />
+  </message>
+  <message name="PaymentResponse">
+    <part name="parameters" element="tns:PaymentResponse" />
+  </message>
+  <message name="TransactionStatus">
+    <part name="parameters" element="tns:TransactionStatus" />
+  </message>
+  <message name="TransactionStatusResponse">
+    <part name="parameters" element="tns:TransactionStatusResponse" />
+  </message>
+  <portType name="PaymentWebService">
+    <operation name="Pre-Payment">
+      <input wsam:Action="http://ws.merchantpay.nibss.com/PaymentWebService/Pre-PaymentRequest" message="tns:Pre-Payment" />
+      <output wsam:Action="http://ws.merchantpay.nibss.com/PaymentWebService/Pre-PaymentResponse" message="tns:Pre-PaymentResponse" />
+    </operation>
+    <operation name="Payment">
+      <input wsam:Action="http://ws.merchantpay.nibss.com/PaymentWebService/PaymentRequest" message="tns:Payment" />
+      <output wsam:Action="http://ws.merchantpay.nibss.com/PaymentWebService/PaymentResponse" message="tns:PaymentResponse" />
+    </operation>
+    <operation name="TransactionStatus">
+      <input wsam:Action="http://ws.merchantpay.nibss.com/PaymentWebService/TransactionStatusRequest" message="tns:TransactionStatus" />
+      <output wsam:Action="http://ws.merchantpay.nibss.com/PaymentWebService/TransactionStatusResponse" message="tns:TransactionStatusResponse" />
+    </operation>
+  </portType>
+  <binding name="PaymentWebServicePortBinding" type="tns:PaymentWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Pre-Payment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Payment">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="TransactionStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="payment-service">
+    <port name="PaymentWebServicePort" binding="tns:PaymentWebServicePortBinding">
+      <soap:address location="http://192.234.10.204:9091/merchantpay/payment-service" />
+    </port>
+  </service>
+</definitions>

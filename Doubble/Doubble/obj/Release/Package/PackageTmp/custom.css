@@ -1,0 +1,44 @@
+.df_title {border-bottom:1px solid #ebebeb;}
+
+.smaller {font-size:10px; font-weight: bold; margin-top: -10px;}
+/* Append Currency */
+form {
+    width: 100%;
+    /* max-width: 300px; */
+    margin: 0 auto;
+}
+form input {
+    font-size: 25px;
+    padding: 1px 0 0 0;
+    border: 2px solid #ccc;
+    border-left: 0;
+    width: 100%;
+    color: #666;
+    border-radius: 0 7px 7px 0;
+    font-family: 'PT Sans', sans-serif;
+    /* font-weight: bold; */
+}
+form input:focus {
+    outline: 0;
+}
+form input.error {
+    border-color: #ff0000;
+}
+.flex {
+    display: flex;
+    justify-content: flex-start;
+}
+.flex input {
+    max-width: 300px;
+    flex: 1 1 300px;
+}
+.flex .currency {
+    font-size: 25px;
+    padding: 0 4px 0 13px;
+    color: #999;
+    border: 2px solid #ccc;
+    border-right: 0;
+    line-height: 1.4;
+    border-radius: 7px 0 0 7px;
+    background: white;
+}

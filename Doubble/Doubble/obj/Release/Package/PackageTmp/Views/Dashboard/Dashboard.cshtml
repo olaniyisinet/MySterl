@@ -1,0 +1,78 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-12 col-md-12 py-3">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-8" style="background: linear-gradient(180deg, gainsboro -50%, white, white);">
+                <h2 class="mb-3">Welcome, @ViewBag.fName!</h2>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 small">View and Manage your investments and profile.</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 small" style="text-align: right;">Dashboard | @Html.ActionLink("Log Out", "LogOff", "Dashboard")</div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h5 class="py-3"><b>My Profile</b></h5>
+                        <div>
+                            <div class="py-1">
+                                <span class="text-muted small">Full Name:</span><br>
+                                <span><b>@ViewBag.name</b></span>
+                            </div>
+
+                            <div class="py-1">
+                                <span class="text-muted small">Email:</span><br>
+                                <span><b>@ViewBag.mail</b></span>
+                            </div>
+                            <div class="py-1">
+                                <span class="text-muted small">Mobile:</span><br>
+                                <span><b>@ViewBag.phoneNo</b></span>
+                            </div>
+                            <div class="py-1">
+                                <span class="text-muted small">BVN:</span><br>
+                                <span><b>@ViewBag.bvn</b></span>
+                            </div>
+                        </div>
+                        <div class="hidden-md hidden-lg">
+                            <hr />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="my-3">
+                            @Html.ActionLink("My Investments", "InvestList", "Dashboard", new { area = "" }, new { @class = "text-black mb-0" })
+                            <span class="text-muted small">View all on-going Investments</span>
+                        </div>
+
+                        @*<div class="my-3">
+
+                            @Html.ActionLink("Documentation", "Profiler", "Dashboard", new { area = "" }, new { @class = "text-black mb-0" })
+                            <span class="text-muted small">Complete my Account Documentation</span>
+                        </div>*@
+
+                        <div class="my-3">
+
+                            @Html.ActionLink("New Investment", "NewInvestment", "Dashboard", new { area = "" }, new { @class = "text-black mb-0" })
+                            <span class="text-muted small">Create a New Doubble Investment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

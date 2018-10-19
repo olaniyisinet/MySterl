@@ -1,0 +1,74 @@
+1/11/2018 3:24:09 PM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+ 
+1/11/2018 3:24:09 PM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Failed
+ 
+1/11/2018 3:24:09 PM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Failed
+@batch_id=>008201815759650
+ 
+1/11/2018 4:03:12 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+ 
+1/11/2018 4:03:12 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+ 
+1/11/2018 4:03:12 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+@status=>Treated
+ 
+1/11/2018 4:03:12 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+@status=>Treated
+@batch_id=>008201814371225
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500456317
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500456317
+@status=>Treated
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500456317
+@status=>Treated
+@batch_id=>008201814371225
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Partially Treated
+ 
+1/11/2018 4:03:13 PM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Partially Treated
+@batch_id=>008201814371225
+ 
+1/11/2018 4:21:05 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+ 
+1/11/2018 4:21:05 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+ 
+1/11/2018 4:21:05 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+@status=>Treated
+ 
+1/11/2018 4:21:05 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+@status=>Treated
+@batch_id=>008201815759650
+ 
+1/11/2018 4:25:06 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+ 
+1/11/2018 4:25:06 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+ 
+1/11/2018 4:25:06 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+@status=>Treated
+ 
+1/11/2018 4:25:06 PM : Object reference not set to an instance of an object.::update trans set Status=@status where sub_acct_code=@sub_acct_code and batch_id=@batch_id
+@sub_acct_code=>0500239026
+@status=>Treated
+@batch_id=>008201815759650
+ 

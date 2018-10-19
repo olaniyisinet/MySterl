@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="checkRequestX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkRequestXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkRequestXResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferDebitPlAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trnxType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="profitCentreCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endpointApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferDebitPlAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="performFundsTransferDebitPlAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trnxType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endpointApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="performFundsTransferResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferExchange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trnxType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rate" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="endpointApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferExchangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="performFundsTransferExchangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferOverdraw">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trnxType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endpointApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferOverdrawResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="performFundsTransferOverdrawResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferWithSenderBvn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trnxType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senderBvn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endpointApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferWithSenderBvnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="performFundsTransferWithSenderBvnResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferWithSwift">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trnxType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inwardSenderBic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="swiftField20" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="debitValueDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="creditValueDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="endpointApp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="performFundsTransferWithSwiftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="performFundsTransferWithSwiftResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="checkRequestXSoapIn">
+    <wsdl:part name="parameters" element="tns:checkRequestX" />
+  </wsdl:message>
+  <wsdl:message name="checkRequestXSoapOut">
+    <wsdl:part name="parameters" element="tns:checkRequestXResponse" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferDebitPlAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:performFundsTransferDebitPlAccount" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferDebitPlAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:performFundsTransferDebitPlAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:performFundsTransfer" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:performFundsTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferExchangeSoapIn">
+    <wsdl:part name="parameters" element="tns:performFundsTransferExchange" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferExchangeSoapOut">
+    <wsdl:part name="parameters" element="tns:performFundsTransferExchangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferOverdrawSoapIn">
+    <wsdl:part name="parameters" element="tns:performFundsTransferOverdraw" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferOverdrawSoapOut">
+    <wsdl:part name="parameters" element="tns:performFundsTransferOverdrawResponse" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferWithSenderBvnSoapIn">
+    <wsdl:part name="parameters" element="tns:performFundsTransferWithSenderBvn" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferWithSenderBvnSoapOut">
+    <wsdl:part name="parameters" element="tns:performFundsTransferWithSenderBvnResponse" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferWithSwiftSoapIn">
+    <wsdl:part name="parameters" element="tns:performFundsTransferWithSwift" />
+  </wsdl:message>
+  <wsdl:message name="performFundsTransferWithSwiftSoapOut">
+    <wsdl:part name="parameters" element="tns:performFundsTransferWithSwiftResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ft_genericSoap">
+    <wsdl:operation name="checkRequestX">
+      <wsdl:input message="tns:checkRequestXSoapIn" />
+      <wsdl:output message="tns:checkRequestXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferDebitPlAccount">
+      <wsdl:input message="tns:performFundsTransferDebitPlAccountSoapIn" />
+      <wsdl:output message="tns:performFundsTransferDebitPlAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransfer">
+      <wsdl:input message="tns:performFundsTransferSoapIn" />
+      <wsdl:output message="tns:performFundsTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferExchange">
+      <wsdl:input message="tns:performFundsTransferExchangeSoapIn" />
+      <wsdl:output message="tns:performFundsTransferExchangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferOverdraw">
+      <wsdl:input message="tns:performFundsTransferOverdrawSoapIn" />
+      <wsdl:output message="tns:performFundsTransferOverdrawSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferWithSenderBvn">
+      <wsdl:input message="tns:performFundsTransferWithSenderBvnSoapIn" />
+      <wsdl:output message="tns:performFundsTransferWithSenderBvnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferWithSwift">
+      <wsdl:input message="tns:performFundsTransferWithSwiftSoapIn" />
+      <wsdl:output message="tns:performFundsTransferWithSwiftSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ft_genericSoap" type="tns:ft_genericSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkRequestX">
+      <soap:operation soapAction="http://tempuri.org/checkRequestX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferDebitPlAccount">
+      <soap:operation soapAction="http://tempuri.org/performFundsTransferDebitPlAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransfer">
+      <soap:operation soapAction="http://tempuri.org/performFundsTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferExchange">
+      <soap:operation soapAction="http://tempuri.org/performFundsTransferExchange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferOverdraw">
+      <soap:operation soapAction="http://tempuri.org/performFundsTransferOverdraw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferWithSenderBvn">
+      <soap:operation soapAction="http://tempuri.org/performFundsTransferWithSenderBvn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferWithSwift">
+      <soap:operation soapAction="http://tempuri.org/performFundsTransferWithSwift" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ft_genericSoap12" type="tns:ft_genericSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkRequestX">
+      <soap12:operation soapAction="http://tempuri.org/checkRequestX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferDebitPlAccount">
+      <soap12:operation soapAction="http://tempuri.org/performFundsTransferDebitPlAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransfer">
+      <soap12:operation soapAction="http://tempuri.org/performFundsTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferExchange">
+      <soap12:operation soapAction="http://tempuri.org/performFundsTransferExchange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferOverdraw">
+      <soap12:operation soapAction="http://tempuri.org/performFundsTransferOverdraw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferWithSenderBvn">
+      <soap12:operation soapAction="http://tempuri.org/performFundsTransferWithSenderBvn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="performFundsTransferWithSwift">
+      <soap12:operation soapAction="http://tempuri.org/performFundsTransferWithSwift" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ft_generic">
+    <wsdl:port name="ft_genericSoap" binding="tns:ft_genericSoap">
+      <soap:address location="http://10.0.41.102:814/ft_generic.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ft_genericSoap12" binding="tns:ft_genericSoap12">
+      <soap12:address location="http://10.0.41.102:814/ft_generic.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

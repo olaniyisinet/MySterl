@@ -1,0 +1,116 @@
+﻿
+
+@model IEnumerable<Doubble.Models.Portfolio>
+
+@{
+    ViewBag.Title = "Invest-List";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-12 col-md-12 py-3">
+                <!--<h2 class="my-4">Doubble</h2>-->
+                <!--<hr>-->
+            </div>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-8" style="background: linear-gradient(180deg, gainsboro -50%, white, white);">
+            <h2 class="mb-3">Welcome, @ViewBag.fName!</h2>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 small">View and Manage your investments and profile.</div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 small" style="text-align: right;">@Html.ActionLink("Dashboard", "Dashboard", "Dashboard") | @Html.ActionLink("Logout", "LogOff", "Dashboard")</div>
+            </div>
+            @if (@ViewBag.message != null)
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger p-2 mx-auto col-sm-12 col-md-5" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+
+                            <h4 class="alert-heading">There was a problem!</h4>
+                            <p class="mb-0">@ViewBag.message!.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h5 class="py-3"><b>My Investments</b></h5>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    
+                                    <th scope="col">Arrangement ID</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Value</th>
+                                    <th scope="col">Contributions</th>
+                                    <th scope="col">Interest</th>
+                                    <th scope="col">Pay-In Account</th>
+                                    <th scope="col">Beneficiary Account</th>
+                                    @*<th></th>*@
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td data-label="ArrangementId">
+                                                @Html.DisplayFor(modelItem => item.ArrangementId)
+                                            </td>
+                                            <td data-label="Type">
+                                                @Html.DisplayFor(modelItem => item.InvestmentType)
+                                            </td>
+                                            <td data-label="Amount1">
+                                                @Html.DisplayFor(modelItem => item.TotalInvestmentValue)
+                                            </td>
+                                            <td data-label="Amount2">
+                                                @Html.DisplayFor(modelItem => item.TotalContributions)
+                                            </td>
+                                            <td data-label="Amount3">
+                                                @Html.DisplayFor(modelItem => item.InterestEarned)
+                                            </td>
+                                            <td data-label="Amount1">
+                                                @Html.DisplayFor(modelItem => item.PayInAccount)
+                                            </td>
+                                            <td data-label="Amount2">
+                                                @Html.DisplayFor(modelItem => item.BeneficiaryAccount)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Change Beneficiary", "Beneficiary", "Dashboard", new { ArrangementId = item.ArrangementId }, new { @class = "btn btn-success" })
+                                            </td>
+                                            @*<td>
+        @Html.ActionLink("Pre-Terminate", "Terminate", "Dashboard", new { id = item.ArrangementId }, new { @class = "btn btn-success" })
+    </td>*@
+
+                                        </tr>
+                                    }
+                                }
+
+
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertIntoInfobip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msdn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertIntoInfobipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertIntoInfobipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertIntoInfobipSoapIn">
+    <wsdl:part name="parameters" element="tns:insertIntoInfobip" />
+  </wsdl:message>
+  <wsdl:message name="insertIntoInfobipSoapOut">
+    <wsdl:part name="parameters" element="tns:insertIntoInfobipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SMSINFOBIPSoap">
+    <wsdl:operation name="insertIntoInfobip">
+      <wsdl:input message="tns:insertIntoInfobipSoapIn" />
+      <wsdl:output message="tns:insertIntoInfobipSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSINFOBIPSoap" type="tns:SMSINFOBIPSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertIntoInfobip">
+      <soap:operation soapAction="http://tempuri.org/insertIntoInfobip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSINFOBIPSoap12" type="tns:SMSINFOBIPSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertIntoInfobip">
+      <soap12:operation soapAction="http://tempuri.org/insertIntoInfobip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMSINFOBIP">
+    <wsdl:port name="SMSINFOBIPSoap" binding="tns:SMSINFOBIPSoap">
+      <soap:address location="http://10.0.0.217/infobipsms/SMSINFOBIP.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSINFOBIPSoap12" binding="tns:SMSINFOBIPSoap12">
+      <soap12:address location="http://10.0.0.217/infobipsms/SMSINFOBIP.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DoubbleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="T24ID" />
+    </Key>
+    <Property Name="T24ID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Company_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mnemonic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sub_Div_Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bra_Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Term" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DoubbleRequest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BVN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateOfEntry" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SterlingVerified" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ValCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="For_Later">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BVN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayInAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfEntry" Type="DateTime" Precision="3" />
+    <Property Name="PayInAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DAOCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cusnum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="CusType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Term" Type="Int32" />
+    <Property Name="ValCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ARRANGEMENT_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="LAST_PROMPT" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ForNonSterling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BVN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HomeAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfEntry" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PayInAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CusNum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayInAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DAOCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ValCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status_Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvestmentLetter" Type="Int32" />
+    <Property Name="ARRANGEMENT_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="changedPassword" Type="Int32" Nullable="false" />
+    <Property Name="Term" Type="Int32" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="MaturityDate" Type="DateTime" Precision="3" />
+    <Property Name="ContactPerson" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactMobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ForSterling">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BVN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PayInAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryAccount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateOfEntry" Type="DateTime" Precision="3" />
+    <Property Name="PayInAmount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DAOCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BeneficiaryType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cusnum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InvestmentLetter" Type="Int32" Nullable="false" />
+    <Property Name="ARRANGEMENT_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="changedPassword" Type="Int32" Nullable="false" />
+    <Property Name="Term" Type="Int32" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="MaturityDate" Type="DateTime" Precision="3" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="ValCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="State_tbl">
+    <Key>
+      <PropertyRef Name="StateName" />
+    </Key>
+    <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ValId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DoubbleDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Branches" EntityType="Self.Branch" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="DoubbleRequests" EntityType="Self.DoubbleRequest" />
+    <EntitySet Name="For_Later" EntityType="Self.For_Later" />
+    <EntitySet Name="ForNonSterlings" EntityType="Self.ForNonSterling" />
+    <EntitySet Name="ForSterlings" EntityType="Self.ForSterling" />
+    <EntitySet Name="State_tbl" EntityType="Self.State_tbl" />
+    <EntitySet Name="Roles" EntityType="DoubbleDBModel.Role" />
+    <EntitySet Name="Users_tbl" EntityType="DoubbleDBModel.Users_tbl" />
+    <EntitySet Name="database_firewall_rules" EntityType="DoubbleDBModel.database_firewall_rules" />
+  </EntityContainer>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Users_tbl">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastLogin" Type="DateTime" Precision="3" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ActiveStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="start_ip_address" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="end_ip_address" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

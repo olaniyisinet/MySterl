@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://com.gameteclabs.ws/msgsubsys-ws" name="GTConnectService" targetNamespace="http://com.gameteclabs.ws/msgsubsys-ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="https://gtltest.net:8443/msgsubsys-ws/GTConnectService/GTConnectBean?xsd=GTConnectService_schema1.xsd" namespace="http://com.gameteclabs.ws/msgsubsys-ws" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="routePlayerDepositRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="playerDepositReq" element="tns:playerDepositReq" />
+  </wsdl:message>
+  <wsdl:message name="routeDistributorSignOnRequestResponse">
+    <wsdl:part name="routeDistributorSignOnResponse" element="tns:routeDistributorSignOnResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerTransactionsRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="playerTransReq" element="tns:playerTransReq" />
+  </wsdl:message>
+  <wsdl:message name="routeRegisterPlayerRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="registerPlayerReq" element="tns:registerPlayerReq" />
+  </wsdl:message>
+  <wsdl:message name="routeCurrentDayBalanceRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="currentDayBalReq" element="tns:currentDayBalReq" />
+  </wsdl:message>
+  <wsdl:message name="routeDistributorSignOffRequestResponse">
+    <wsdl:part name="routeDistributorSignOffResponse" element="tns:routeDistributorSignOffResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeLottoGameRequestResponse">
+    <wsdl:part name="routeLottoGameResponse" element="tns:routeLottoGameResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeWinCheckRequestResponse">
+    <wsdl:part name="routeWinCheckResponse" element="tns:routeWinCheckResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeGetCurrentDrawInfoRequestResponse">
+    <wsdl:part name="routeGetCurrentDrawInfoResponse" element="tns:routeGetCurrentDrawInfoResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeCurrentWeekBalanceRequestResponse">
+    <wsdl:part name="routeCurrentWeekBalanceResponse" element="tns:routeCurrentWeekBalanceResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeEditPlayerRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="editPlayerReq" element="tns:editPlayerReq" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerBalancesRequestResponse">
+    <wsdl:part name="routePlayerBalancesResponse" element="tns:routePlayerBalancesResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeDistributorSignOffRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="distributorSignOffReq" element="tns:distributorSignOffReq" />
+  </wsdl:message>
+  <wsdl:message name="routeRegisterPlayerRequestResponse">
+    <wsdl:part name="routeRegisterPlayerResponse" element="tns:routeRegisterPlayerResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeCurrentWeekBalanceRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="currentWeekBalReq" element="tns:currentWeekBalReq" />
+  </wsdl:message>
+  <wsdl:message name="routeCancelRequestResponse">
+    <wsdl:part name="routeCancelResponse" element="tns:routeCancelResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="WSErrorResponseException">
+    <wsdl:part name="WSErrorResponseException" element="tns:WSErrorResponseException" />
+  </wsdl:message>
+  <wsdl:message name="routeWinCheckRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="winCheckReq" element="tns:winCheckReq" />
+  </wsdl:message>
+  <wsdl:message name="routeSignOnRequestResponse">
+    <wsdl:part name="routeSignOnResponse" element="tns:routeSignOnResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeGetPlayerProfileRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="getPlayerProfileReq" element="tns:getPlayerProfileReq" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerDepositRequestResponse">
+    <wsdl:part name="routePlayerDepositResponse" element="tns:routePlayerDepositResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerWithdrawRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="playerWithdrawReq" element="tns:playerWithdrawReq" />
+  </wsdl:message>
+  <wsdl:message name="routeDistributorSignOnRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="distributorSignOnReq" element="tns:distributorSignOnReq" />
+  </wsdl:message>
+  <wsdl:message name="routeGetVoucherFileRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="getVoucherFileReq" element="tns:getVoucherFileReq" />
+  </wsdl:message>
+  <wsdl:message name="routeChangePasswordRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="changePwdReq" element="tns:changePwdReq" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerWithdrawRequestResponse">
+    <wsdl:part name="routePlayerWithdrawResponse" element="tns:routePlayerWithdrawResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeGetVoucherFileRequestResponse">
+    <wsdl:part name="routeGetVoucherFileResponse" element="tns:routeGetVoucherFileResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeKenoGameRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="kenoReq" element="tns:kenoReq" />
+  </wsdl:message>
+  <wsdl:message name="routePayRequestResponse">
+    <wsdl:part name="routePayResponse" element="tns:routePayResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routePayRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="payReq" element="tns:payReq" />
+  </wsdl:message>
+  <wsdl:message name="routeKenoGameRequestResponse">
+    <wsdl:part name="routeKenoGameResponse" element="tns:routeKenoGameResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeEditPlayerRequestResponse">
+    <wsdl:part name="routeEditPlayerResponse" element="tns:routeEditPlayerResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeSignOnRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="signOnReq" element="tns:signOnReq" />
+  </wsdl:message>
+  <wsdl:message name="routeDrawResultsRequestResponse">
+    <wsdl:part name="routeDrawResultsResponse" element="tns:routeDrawResultsResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerBalancesRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="playerBalReq" element="tns:playerBalReq" />
+  </wsdl:message>
+  <wsdl:message name="routeChangePasswordRequestResponse">
+    <wsdl:part name="routeChangePasswordResponse" element="tns:routeChangePasswordResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routePurchaseVoucherRequestResponse">
+    <wsdl:part name="routePurchaseVoucherResponse" element="tns:routePurchaseVoucherResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routePurchaseVoucherRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="purchaseVoucherReq" element="tns:purchaseVoucherReq" />
+  </wsdl:message>
+  <wsdl:message name="routeGetCurrentDrawInfoRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="getCurrentDrawInfoReq" element="tns:getCurrentDrawInfoReq" />
+  </wsdl:message>
+  <wsdl:message name="routeCurrentDayBalanceRequestResponse">
+    <wsdl:part name="routeCurrentDayBalanceResponse" element="tns:routeCurrentDayBalanceResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeSignOffRequestResponse">
+    <wsdl:part name="routeSignOffResponse" element="tns:routeSignOffResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeLottoGameRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="lottoReq" element="tns:lottoReq" />
+  </wsdl:message>
+  <wsdl:message name="routeGetPlayerProfileRequestResponse">
+    <wsdl:part name="routeGetPlayerProfileResponse" element="tns:routeGetPlayerProfileResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeGetVoucherFileNamesRequestResponse">
+    <wsdl:part name="routeGetVoucherFileNamesResponse" element="tns:routeGetVoucherFileNamesResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeForgotPasswordRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="getForgotPasswordReq" element="tns:getForgotPasswordReq" />
+  </wsdl:message>
+  <wsdl:message name="routeForgotPasswordRequestResponse">
+    <wsdl:part name="routeForgotPasswordResponse" element="tns:routeForgotPasswordResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeSignOffRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="signOffReq" element="tns:signOffReq" />
+  </wsdl:message>
+  <wsdl:message name="routeGetVoucherFileNamesRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="getVoucherFileNamesReq" element="tns:getVoucherFileNamesReq" />
+  </wsdl:message>
+  <wsdl:message name="routePlayerTransactionsRequestResponse">
+    <wsdl:part name="routePlayerTransactionsResponse" element="tns:routePlayerTransactionsResponse" />
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+  </wsdl:message>
+  <wsdl:message name="routeDrawResultsRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="drReq" element="tns:drReq" />
+  </wsdl:message>
+  <wsdl:message name="routeCancelRequest">
+    <wsdl:part name="headerMsg" element="tns:headerMsg" />
+    <wsdl:part name="cancelReq" element="tns:cancelReq" />
+  </wsdl:message>
+  <wsdl:portType name="GTConnect">
+    <wsdl:operation name="routeGetPlayerProfileRequest" parameterOrder="headerMsg getPlayerProfileReq">
+      <wsdl:input name="routeGetPlayerProfileRequest" message="tns:routeGetPlayerProfileRequest" />
+      <wsdl:output name="routeGetPlayerProfileRequestResponse" message="tns:routeGetPlayerProfileRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeForgotPasswordRequest" parameterOrder="headerMsg getForgotPasswordReq">
+      <wsdl:input name="routeForgotPasswordRequest" message="tns:routeForgotPasswordRequest" />
+      <wsdl:output name="routeForgotPasswordRequestResponse" message="tns:routeForgotPasswordRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeGetCurrentDrawInfoRequest" parameterOrder="headerMsg getCurrentDrawInfoReq">
+      <wsdl:input name="routeGetCurrentDrawInfoRequest" message="tns:routeGetCurrentDrawInfoRequest" />
+      <wsdl:output name="routeGetCurrentDrawInfoRequestResponse" message="tns:routeGetCurrentDrawInfoRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeCurrentWeekBalanceRequest" parameterOrder="headerMsg currentWeekBalReq">
+      <wsdl:input name="routeCurrentWeekBalanceRequest" message="tns:routeCurrentWeekBalanceRequest" />
+      <wsdl:output name="routeCurrentWeekBalanceRequestResponse" message="tns:routeCurrentWeekBalanceRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeChangePasswordRequest" parameterOrder="headerMsg changePwdReq">
+      <wsdl:input name="routeChangePasswordRequest" message="tns:routeChangePasswordRequest" />
+      <wsdl:output name="routeChangePasswordRequestResponse" message="tns:routeChangePasswordRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeCancelRequest" parameterOrder="headerMsg cancelReq">
+      <wsdl:input name="routeCancelRequest" message="tns:routeCancelRequest" />
+      <wsdl:output name="routeCancelRequestResponse" message="tns:routeCancelRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeCurrentDayBalanceRequest" parameterOrder="headerMsg currentDayBalReq">
+      <wsdl:input name="routeCurrentDayBalanceRequest" message="tns:routeCurrentDayBalanceRequest" />
+      <wsdl:output name="routeCurrentDayBalanceRequestResponse" message="tns:routeCurrentDayBalanceRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeEditPlayerRequest" parameterOrder="headerMsg editPlayerReq">
+      <wsdl:input name="routeEditPlayerRequest" message="tns:routeEditPlayerRequest" />
+      <wsdl:output name="routeEditPlayerRequestResponse" message="tns:routeEditPlayerRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerWithdrawRequest" parameterOrder="headerMsg playerWithdrawReq">
+      <wsdl:input name="routePlayerWithdrawRequest" message="tns:routePlayerWithdrawRequest" />
+      <wsdl:output name="routePlayerWithdrawRequestResponse" message="tns:routePlayerWithdrawRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeSignOffRequest" parameterOrder="headerMsg signOffReq">
+      <wsdl:input name="routeSignOffRequest" message="tns:routeSignOffRequest" />
+      <wsdl:output name="routeSignOffRequestResponse" message="tns:routeSignOffRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeDistributorSignOffRequest" parameterOrder="headerMsg distributorSignOffReq">
+      <wsdl:input name="routeDistributorSignOffRequest" message="tns:routeDistributorSignOffRequest" />
+      <wsdl:output name="routeDistributorSignOffRequestResponse" message="tns:routeDistributorSignOffRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routePayRequest" parameterOrder="headerMsg payReq">
+      <wsdl:input name="routePayRequest" message="tns:routePayRequest" />
+      <wsdl:output name="routePayRequestResponse" message="tns:routePayRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeLottoGameRequest" parameterOrder="headerMsg lottoReq">
+      <wsdl:input name="routeLottoGameRequest" message="tns:routeLottoGameRequest" />
+      <wsdl:output name="routeLottoGameRequestResponse" message="tns:routeLottoGameRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeWinCheckRequest" parameterOrder="headerMsg winCheckReq">
+      <wsdl:input name="routeWinCheckRequest" message="tns:routeWinCheckRequest" />
+      <wsdl:output name="routeWinCheckRequestResponse" message="tns:routeWinCheckRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerTransactionsRequest" parameterOrder="headerMsg playerTransReq">
+      <wsdl:input name="routePlayerTransactionsRequest" message="tns:routePlayerTransactionsRequest" />
+      <wsdl:output name="routePlayerTransactionsRequestResponse" message="tns:routePlayerTransactionsRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeKenoGameRequest" parameterOrder="headerMsg kenoReq">
+      <wsdl:input name="routeKenoGameRequest" message="tns:routeKenoGameRequest" />
+      <wsdl:output name="routeKenoGameRequestResponse" message="tns:routeKenoGameRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerBalancesRequest" parameterOrder="headerMsg playerBalReq">
+      <wsdl:input name="routePlayerBalancesRequest" message="tns:routePlayerBalancesRequest" />
+      <wsdl:output name="routePlayerBalancesRequestResponse" message="tns:routePlayerBalancesRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeSignOnRequest" parameterOrder="headerMsg signOnReq">
+      <wsdl:input name="routeSignOnRequest" message="tns:routeSignOnRequest" />
+      <wsdl:output name="routeSignOnRequestResponse" message="tns:routeSignOnRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeDistributorSignOnRequest" parameterOrder="headerMsg distributorSignOnReq">
+      <wsdl:input name="routeDistributorSignOnRequest" message="tns:routeDistributorSignOnRequest" />
+      <wsdl:output name="routeDistributorSignOnRequestResponse" message="tns:routeDistributorSignOnRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeRegisterPlayerRequest" parameterOrder="headerMsg registerPlayerReq">
+      <wsdl:input name="routeRegisterPlayerRequest" message="tns:routeRegisterPlayerRequest" />
+      <wsdl:output name="routeRegisterPlayerRequestResponse" message="tns:routeRegisterPlayerRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeDrawResultsRequest" parameterOrder="headerMsg drReq">
+      <wsdl:input name="routeDrawResultsRequest" message="tns:routeDrawResultsRequest" />
+      <wsdl:output name="routeDrawResultsRequestResponse" message="tns:routeDrawResultsRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerDepositRequest" parameterOrder="headerMsg playerDepositReq">
+      <wsdl:input name="routePlayerDepositRequest" message="tns:routePlayerDepositRequest" />
+      <wsdl:output name="routePlayerDepositRequestResponse" message="tns:routePlayerDepositRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routePurchaseVoucherRequest" parameterOrder="headerMsg purchaseVoucherReq">
+      <wsdl:input name="routePurchaseVoucherRequest" message="tns:routePurchaseVoucherRequest" />
+      <wsdl:output name="routePurchaseVoucherRequestResponse" message="tns:routePurchaseVoucherRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeGetVoucherFileRequest" parameterOrder="headerMsg getVoucherFileReq">
+      <wsdl:input name="routeGetVoucherFileRequest" message="tns:routeGetVoucherFileRequest" />
+      <wsdl:output name="routeGetVoucherFileRequestResponse" message="tns:routeGetVoucherFileRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+    <wsdl:operation name="routeGetVoucherFileNamesRequest" parameterOrder="headerMsg getVoucherFileNamesReq">
+      <wsdl:input name="routeGetVoucherFileNamesRequest" message="tns:routeGetVoucherFileNamesRequest" />
+      <wsdl:output name="routeGetVoucherFileNamesRequestResponse" message="tns:routeGetVoucherFileNamesRequestResponse" />
+      <wsdl:fault name="WSErrorResponseException" message="tns:WSErrorResponseException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GTConnectServiceSoapBinding" type="tns:GTConnect">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="routeGetPlayerProfileRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeGetPlayerProfileRequest">
+        <soap:header message="tns:routeGetPlayerProfileRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="getPlayerProfileReq" />
+      </wsdl:input>
+      <wsdl:output name="routeGetPlayerProfileRequestResponse">
+        <soap:header message="tns:routeGetPlayerProfileRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeGetPlayerProfileResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeForgotPasswordRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeForgotPasswordRequest">
+        <soap:header message="tns:routeForgotPasswordRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="getForgotPasswordReq" />
+      </wsdl:input>
+      <wsdl:output name="routeForgotPasswordRequestResponse">
+        <soap:header message="tns:routeForgotPasswordRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeForgotPasswordResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeGetCurrentDrawInfoRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeGetCurrentDrawInfoRequest">
+        <soap:header message="tns:routeGetCurrentDrawInfoRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="getCurrentDrawInfoReq" />
+      </wsdl:input>
+      <wsdl:output name="routeGetCurrentDrawInfoRequestResponse">
+        <soap:header message="tns:routeGetCurrentDrawInfoRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeGetCurrentDrawInfoResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeCurrentWeekBalanceRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeCurrentWeekBalanceRequest">
+        <soap:header message="tns:routeCurrentWeekBalanceRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="currentWeekBalReq" />
+      </wsdl:input>
+      <wsdl:output name="routeCurrentWeekBalanceRequestResponse">
+        <soap:header message="tns:routeCurrentWeekBalanceRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeCurrentWeekBalanceResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeChangePasswordRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeChangePasswordRequest">
+        <soap:header message="tns:routeChangePasswordRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="changePwdReq" />
+      </wsdl:input>
+      <wsdl:output name="routeChangePasswordRequestResponse">
+        <soap:header message="tns:routeChangePasswordRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeChangePasswordResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeCancelRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeCancelRequest">
+        <soap:header message="tns:routeCancelRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="cancelReq" />
+      </wsdl:input>
+      <wsdl:output name="routeCancelRequestResponse">
+        <soap:header message="tns:routeCancelRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeCancelResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeCurrentDayBalanceRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeCurrentDayBalanceRequest">
+        <soap:header message="tns:routeCurrentDayBalanceRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="currentDayBalReq" />
+      </wsdl:input>
+      <wsdl:output name="routeCurrentDayBalanceRequestResponse">
+        <soap:header message="tns:routeCurrentDayBalanceRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeCurrentDayBalanceResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeEditPlayerRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeEditPlayerRequest">
+        <soap:header message="tns:routeEditPlayerRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="editPlayerReq" />
+      </wsdl:input>
+      <wsdl:output name="routeEditPlayerRequestResponse">
+        <soap:header message="tns:routeEditPlayerRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeEditPlayerResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerWithdrawRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routePlayerWithdrawRequest">
+        <soap:header message="tns:routePlayerWithdrawRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="playerWithdrawReq" />
+      </wsdl:input>
+      <wsdl:output name="routePlayerWithdrawRequestResponse">
+        <soap:header message="tns:routePlayerWithdrawRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routePlayerWithdrawResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routePayRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routePayRequest">
+        <soap:header message="tns:routePayRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="payReq" />
+      </wsdl:input>
+      <wsdl:output name="routePayRequestResponse">
+        <soap:header message="tns:routePayRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routePayResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeSignOffRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeSignOffRequest">
+        <soap:header message="tns:routeSignOffRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="signOffReq" />
+      </wsdl:input>
+      <wsdl:output name="routeSignOffRequestResponse">
+        <soap:header message="tns:routeSignOffRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeSignOffResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeDistributorSignOffRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeDistributorSignOffRequest">
+        <soap:header message="tns:routeDistributorSignOffRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="distributorSignOffReq" />
+      </wsdl:input>
+      <wsdl:output name="routeDistributorSignOffRequestResponse">
+        <soap:header message="tns:routeDistributorSignOffRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeDistributorSignOffResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeLottoGameRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeLottoGameRequest">
+        <soap:header message="tns:routeLottoGameRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="lottoReq" />
+      </wsdl:input>
+      <wsdl:output name="routeLottoGameRequestResponse">
+        <soap:header message="tns:routeLottoGameRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeLottoGameResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeWinCheckRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeWinCheckRequest">
+        <soap:header message="tns:routeWinCheckRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="winCheckReq" />
+      </wsdl:input>
+      <wsdl:output name="routeWinCheckRequestResponse">
+        <soap:header message="tns:routeWinCheckRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeWinCheckResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerTransactionsRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routePlayerTransactionsRequest">
+        <soap:header message="tns:routePlayerTransactionsRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="playerTransReq" />
+      </wsdl:input>
+      <wsdl:output name="routePlayerTransactionsRequestResponse">
+        <soap:header message="tns:routePlayerTransactionsRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routePlayerTransactionsResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeKenoGameRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeKenoGameRequest">
+        <soap:header message="tns:routeKenoGameRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="kenoReq" />
+      </wsdl:input>
+      <wsdl:output name="routeKenoGameRequestResponse">
+        <soap:header message="tns:routeKenoGameRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeKenoGameResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerBalancesRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routePlayerBalancesRequest">
+        <soap:header message="tns:routePlayerBalancesRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="playerBalReq" />
+      </wsdl:input>
+      <wsdl:output name="routePlayerBalancesRequestResponse">
+        <soap:header message="tns:routePlayerBalancesRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routePlayerBalancesResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeSignOnRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeSignOnRequest">
+        <soap:header message="tns:routeSignOnRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="signOnReq" />
+      </wsdl:input>
+      <wsdl:output name="routeSignOnRequestResponse">
+        <soap:header message="tns:routeSignOnRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeSignOnResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeDistributorSignOnRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeDistributorSignOnRequest">
+        <soap:header message="tns:routeDistributorSignOnRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="distributorSignOnReq" />
+      </wsdl:input>
+      <wsdl:output name="routeDistributorSignOnRequestResponse">
+        <soap:header message="tns:routeDistributorSignOnRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeDistributorSignOnResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeRegisterPlayerRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeRegisterPlayerRequest">
+        <soap:header message="tns:routeRegisterPlayerRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="registerPlayerReq" />
+      </wsdl:input>
+      <wsdl:output name="routeRegisterPlayerRequestResponse">
+        <soap:header message="tns:routeRegisterPlayerRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeRegisterPlayerResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeDrawResultsRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeDrawResultsRequest">
+        <soap:header message="tns:routeDrawResultsRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="drReq" />
+      </wsdl:input>
+      <wsdl:output name="routeDrawResultsRequestResponse">
+        <soap:header message="tns:routeDrawResultsRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeDrawResultsResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routePlayerDepositRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routePlayerDepositRequest">
+        <soap:header message="tns:routePlayerDepositRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="playerDepositReq" />
+      </wsdl:input>
+      <wsdl:output name="routePlayerDepositRequestResponse">
+        <soap:header message="tns:routePlayerDepositRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routePlayerDepositResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routePurchaseVoucherRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routePurchaseVoucherRequest">
+        <soap:header message="tns:routePurchaseVoucherRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="purchaseVoucherReq" />
+      </wsdl:input>
+      <wsdl:output name="routePurchaseVoucherRequestResponse">
+        <soap:header message="tns:routePurchaseVoucherRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routePurchaseVoucherResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeGetVoucherFileRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeGetVoucherFileRequest">
+        <soap:header message="tns:routeGetVoucherFileRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="getVoucherFileReq" />
+      </wsdl:input>
+      <wsdl:output name="routeGetVoucherFileRequestResponse">
+        <soap:header message="tns:routeGetVoucherFileRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeGetVoucherFileResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="routeGetVoucherFileNamesRequest">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="routeGetVoucherFileNamesRequest">
+        <soap:header message="tns:routeGetVoucherFileNamesRequest" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="getVoucherFileNamesReq" />
+      </wsdl:input>
+      <wsdl:output name="routeGetVoucherFileNamesRequestResponse">
+        <soap:header message="tns:routeGetVoucherFileNamesRequestResponse" part="headerMsg" use="literal" />
+        <soap:body use="literal" parts="routeGetVoucherFileNamesResponse" />
+      </wsdl:output>
+      <wsdl:fault name="WSErrorResponseException">
+        <soap:fault use="literal" name="WSErrorResponseException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GTConnectService">
+    <wsdl:port name="GTConnectPort" binding="tns:GTConnectServiceSoapBinding">
+      <soap:address location="https://gtltest.net:8443/msgsubsys-ws/GTConnectService/GTConnectBean" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

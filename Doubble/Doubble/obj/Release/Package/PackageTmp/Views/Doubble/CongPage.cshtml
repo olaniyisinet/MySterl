@@ -1,0 +1,81 @@
+﻿@using Doubble.Models
+@model ForNonSterling
+@{
+    ViewBag.Title = "Doubble - Sterling Account Created";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("CongPage", "Doubble", FormMethod.Post))
+{
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-12 col-md-12">
+                        <h2 class="my-4">Doubble Sign Up</h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+@if (@ViewBag.message != null)
+{
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger p-2 mx-auto col-sm-12 col-md-5" role="alert">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <h4 class="alert-heading">There was a problem!</h4>
+                        <p class="mb-0">@ViewBag.message!.</p>
+                    </div>
+                </div>
+            </div>
+}
+            <div class="row py-3">
+                <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert p-2 mx-auto col-sm-12 col-md-12 alert-success" role="alert">
+                                <h4 class="alert-heading">
+                                    <b>@ViewBag.fname Congratulations!!</b>
+                                </h4>
+                                <p class="mb-0">
+                                    You are a few steps closer to completing this process.&nbsp;
+                                    <br>A Sterling Bank account has been created for you. Below is your Account Number, please fund the account with a minimum of
+                                    <b>Investment Amount or more.</b>
+                                    @*<b>N1000 or more.</b>*@
+                                </p>
+                                <h3 class="alert-heading my-3">Account Number - @ViewBag.acct</h3>
+                                @Html.HiddenFor(md => md.Email)
+                                @Html.HiddenFor(md => md.BVN)
+                                @Html.HiddenFor(md => md.DateOfBirth)
+                                @Html.HiddenFor(md => md.FirstName)
+                                @Html.HiddenFor(md => md.LastName)
+                                @Html.HiddenFor(md => md.MobileNumber)
+                                @Html.HiddenFor(md => md.PayInAccount)
+                                @Html.HiddenFor(md => md.DateOfEntry)
+                                @Html.HiddenFor(md => md.CusNum)
+                                @Html.HiddenFor(md => md.Term)
+                                @Html.HiddenFor(md => md.ValCode)
+
+                            </div>
+                        </div>
+                    </div>
+                    <form action="exp_ret_insuf.html" autocomplete="off">
+                        <div class="mb-3">
+                            <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+                                    <b>Once you have received a confirmation sms of the transfer, please click continue for selection of preferred package.</b>
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-block btn-danger" type="submit">Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

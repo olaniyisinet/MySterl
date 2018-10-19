@@ -1,0 +1,512 @@
+2/29/2012 4:33:06 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:33:07 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:33:11 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:33:11 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:33:14 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:33:14 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:34:01 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:34:01 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:34:04 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>2</msg></ussd>
+ 
+2/29/2012 4:34:04 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:35:51 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:35:51 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:36:01 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:36:01 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:37:29 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:37:29 PM : sdssd
+ 
+2/29/2012 4:37:29 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:38:03 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:38:03 PM : sdssd
+ 
+2/29/2012 4:38:03 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:38:05 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:38:05 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:38:54 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:38:54 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:38:57 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:38:58 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:39:01 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>3</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:39:01 PM : sdssd
+ 
+2/29/2012 4:39:01 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:39:52 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:39:52 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:40:11 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:40:11 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:41:22 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:41:22 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:41:25 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:41:26 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:42:38 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:42:38 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:42:41 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:42:42 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:04 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:43:04 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:14 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:43:14 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:17 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:43:17 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:18 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:43:18 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:21 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:43:21 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:25 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>2</msg></ussd>
+ 
+2/29/2012 4:43:25 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:27 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:43:27 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:40 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:43:40 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:43:50 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:43:50 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:44:00 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:44:00 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:44:10 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:44:10 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:45:48 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:45:48 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:45:56 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:45:57 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:03 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg></msg></ussd>
+ 
+2/29/2012 4:46:09 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:46:09 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:12 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:46:12 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:14 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:46:14 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:16 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:46:16 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:18 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:46:18 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:30 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:46:30 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:46:47 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:46:47 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:32 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:47:32 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:37 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:47:37 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:39 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:47:39 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:41 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:47:41 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:43 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:47:43 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:44 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:47:45 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:46 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:47:46 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:47:50 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:47:50 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:48:52 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>1</type><msg>*727#</msg></ussd>
+ 
+2/29/2012 4:48:52 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:48:55 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1234</msg></ussd>
+ 
+2/29/2012 4:48:55 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:48:58 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:48:58 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:49:01 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:49:01 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:49:03 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:49:03 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:49:05 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:49:05 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:56:36 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:56:36 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:56:39 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:56:39 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:56:45 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:56:45 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:56:58 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:56:58 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:57:02 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:57:02 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:58:03 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:58:03 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:58:11 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:58:11 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:58:13 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 4:58:13 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:58:16 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:58:16 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 4:58:20 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 4:58:20 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:16 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 6:10:16 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:20 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 6:10:20 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:25 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 6:10:25 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:28 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 6:10:28 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:31 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 6:10:31 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:36 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>19</msg></ussd>
+ 
+2/29/2012 6:10:36 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:39 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>9</msg></ussd>
+ 
+2/29/2012 6:10:39 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:40 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 6:10:40 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 
+2/29/2012 6:10:47 PM : <?xml version="1.0" ?><ussd><msisdn>08039590420</msisdn><sessionid>4</sessionid><type>2</type><msg>1</msg></ussd>
+ 
+2/29/2012 6:10:47 PM : System.InvalidCastException: Object cannot be cast from DBNull to other types.
+   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at Connect.insert() in g:\wima\sterlingUSSD\App_Code\Connect.cs:line 108
+ 

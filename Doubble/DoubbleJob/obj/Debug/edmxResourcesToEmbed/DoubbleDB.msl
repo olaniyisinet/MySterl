@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DoubbleDBModelStoreContainer" CdmEntityContainer="DoubbleDBEntities1">
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="DoubbleDBModel.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="T24ID" ColumnName="T24ID" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Mnemonic" ColumnName="Mnemonic" />
+          <ScalarProperty Name="Sub_Div_Code" ColumnName="Sub_Div_Code" />
+          <ScalarProperty Name="Bra_Code" ColumnName="Bra_Code" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="DoubbleDBModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoubbleRequests">
+      <EntityTypeMapping TypeName="DoubbleDBModel.DoubbleRequest">
+        <MappingFragment StoreEntitySet="DoubbleRequests">
+          <ScalarProperty Name="ValCode" ColumnName="ValCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="BVN" ColumnName="BVN" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DateOfEntry" ColumnName="DateOfEntry" />
+          <ScalarProperty Name="SterlingVerified" ColumnName="SterlingVerified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="For_Later">
+      <EntityTypeMapping TypeName="DoubbleDBModel.For_Later">
+        <MappingFragment StoreEntitySet="For_Later">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="BVN" ColumnName="BVN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="PayInAccount" ColumnName="PayInAccount" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="BeneficiaryAccount" ColumnName="BeneficiaryAccount" />
+          <ScalarProperty Name="DateOfEntry" ColumnName="DateOfEntry" />
+          <ScalarProperty Name="PayInAmount" ColumnName="PayInAmount" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+          <ScalarProperty Name="DAOCode" ColumnName="DAOCode" />
+          <ScalarProperty Name="BeneficiaryType" ColumnName="BeneficiaryType" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cusnum" ColumnName="Cusnum" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="CusType" ColumnName="CusType" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+          <ScalarProperty Name="ValCode" ColumnName="ValCode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ARRANGEMENT_ID" ColumnName="ARRANGEMENT_ID" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="LAST_PROMPT" ColumnName="LAST_PROMPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForNonSterlings">
+      <EntityTypeMapping TypeName="DoubbleDBModel.ForNonSterling">
+        <MappingFragment StoreEntitySet="ForNonSterlings">
+          <ScalarProperty Name="ContactAddress" ColumnName="ContactAddress" />
+          <ScalarProperty Name="ContactMobileNumber" ColumnName="ContactMobileNumber" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="BVN" ColumnName="BVN" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="DateOfEntry" ColumnName="DateOfEntry" />
+          <ScalarProperty Name="PayInAccount" ColumnName="PayInAccount" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="CusNum" ColumnName="CusNum" />
+          <ScalarProperty Name="BeneficiaryAccount" ColumnName="BeneficiaryAccount" />
+          <ScalarProperty Name="BeneficiaryType" ColumnName="BeneficiaryType" />
+          <ScalarProperty Name="PayInAmount" ColumnName="PayInAmount" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+          <ScalarProperty Name="DAOCode" ColumnName="DAOCode" />
+          <ScalarProperty Name="ValCode" ColumnName="ValCode" />
+          <ScalarProperty Name="Status_Flag" ColumnName="Status_Flag" />
+          <ScalarProperty Name="InvestmentLetter" ColumnName="InvestmentLetter" />
+          <ScalarProperty Name="ARRANGEMENT_ID" ColumnName="ARRANGEMENT_ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="changedPassword" ColumnName="changedPassword" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForSterlings">
+      <EntityTypeMapping TypeName="DoubbleDBModel.ForSterling">
+        <MappingFragment StoreEntitySet="ForSterlings">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="BVN" ColumnName="BVN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="PayInAccount" ColumnName="PayInAccount" />
+          <ScalarProperty Name="BeneficiaryName" ColumnName="BeneficiaryName" />
+          <ScalarProperty Name="BeneficiaryAccount" ColumnName="BeneficiaryAccount" />
+          <ScalarProperty Name="DateOfEntry" ColumnName="DateOfEntry" />
+          <ScalarProperty Name="PayInAmount" ColumnName="PayInAmount" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+          <ScalarProperty Name="DAOCode" ColumnName="DAOCode" />
+          <ScalarProperty Name="BeneficiaryType" ColumnName="BeneficiaryType" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cusnum" ColumnName="Cusnum" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="InvestmentLetter" ColumnName="InvestmentLetter" />
+          <ScalarProperty Name="ARRANGEMENT_ID" ColumnName="ARRANGEMENT_ID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="changedPassword" ColumnName="changedPassword" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="MaturityDate" ColumnName="MaturityDate" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="ValCode" ColumnName="ValCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State_tbl">
+      <EntityTypeMapping TypeName="DoubbleDBModel.State_tbl">
+        <MappingFragment StoreEntitySet="State_tbl">
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="ValId" ColumnName="ValId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="database_firewall_rules">
+      <EntityTypeMapping TypeName="DoubbleDBModel.database_firewall_rules">
+        <MappingFragment StoreEntitySet="database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+          <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="DoubbleDBModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Role1" ColumnName="Role" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users_tbl">
+      <EntityTypeMapping TypeName="DoubbleDBModel.Users_tbl">
+        <MappingFragment StoreEntitySet="Users_tbl">
+          <ScalarProperty Name="ActiveStatus" ColumnName="ActiveStatus" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

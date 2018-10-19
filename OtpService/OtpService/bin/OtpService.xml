@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OtpService</name>
+    </assembly>
+    <members>
+        <member name="T:OtpService.ewsTest.sms">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.AOF">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.MID">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.LCV">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.pp">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.MandateForm">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.UB">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.SR">
+            <remarks/>
+        </member>
+        <member name="P:OtpService.ewsTest.sms.BC">
+            <remarks/>
+        </member>
+        <member name="T:OtpService.ewsTest.ProcessingState">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.AccountCreated">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.FormSubmission">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.FormSubmitted">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.PhysicalFormTransport">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.FormReceived">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.ADAUpload">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.CPCInputter">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.LegalVerfication">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.CPCVerifier">
+            <remarks/>
+        </member>
+        <member name="F:OtpService.ewsTest.ProcessingState.CPCLogistics">
+            <remarks/>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.RegisterCustomer(OtpService.Models.Request.RegisterUser)">
+            <summary>
+            This method registers a new user, and creartes a wallet, this wallet Id is their BVN
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.LoginUser(OtpService.Models.Request.LoginUser)">
+            <summary>
+            To login a user
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.ForgotPassword(OtpService.Models.Request.ForgotPassword)">
+            <summary>
+            To recover forgotten password
+            </summary>
+            <returns>200</returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.UpdateUser(OtpService.Models.Request.UpdateUser)">
+            <summary>
+            used to update user data, use the bvn as the handle/userid
+            </summary>
+            <returns>200</returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.GetUserDetails(OtpService.Models.Request.GetUser)">
+            <summary>
+            get the details of a user.mail of user..the bvn is the handle to use
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.GetFullWalletDetails(OtpService.Models.Request.GetUser)">
+            <summary>
+            pass the bvn (aka ID of the user to get their full wallet details)
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.SendMoneyViaUserHandle(OtpService.Models.Request.SendMoneyViaUserHandleReq)">
+             <summary>
+             send money to user wallet via a registered handle/username. pass the bvn (ID) of the sender. the payment ref(unique) and
+            "00" resp means it went successful.
+             </summary>
+             <param name="req"></param>
+             <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.GetUserTransactions(OtpService.Models.Request.GetUSerTrxnReq)">
+            <summary>
+            get the transactions between 2 dates, the fromdate being the most recent date
+            </summary>
+            <param name="bvn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.DebitAnyBankCard(OtpService.Models.Request.DebitAnyBankCardReq)">
+            <summary>
+            this debits a users card and credits a wallet, pass the bvn of the user alongside card details
+            </summary>
+            <param name="Req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.SterlingAccountToWallet(OtpService.Models.Request.WalletToWalletReq)">
+            <summary>
+            fund wallet from cards--fund wallet via a sterling acct. the toacct would be the bvn (paylite walletID)
+            the response will be "00" for successful trxns. pas the payment ref and remarks
+            </summary>
+            <param name="req"></param>
+            <returns>00</returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.WalletToWalletTransfers(OtpService.Models.Request.WalletToWalletReq)">
+            <summary>
+            This transfers money from a wallet to another, the toacct and frmacct is the bvn, i.e the walletID
+            We agreed to use the bvn as the userID, since it is unique
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.BuyAirtimeFromWallet(OtpService.Models.Request.AirTimeReq)">
+            <summary>
+            Buy airtime for user, bvn is the user id. 
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Controllers.PayliteController.SeValidateOtp(OtpService.Models.Request.CashOutViaPayCodeReq)">
+            <summary>
+            Get paycode to user to cashout via ATM
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OtpService.Models.Helper.ConvertDataTable``1(System.Data.DataTable)">
+            <summary>
+            converter
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="P:OtpService.Models.Request.GenerateOtpViaNuban.nuban">
+            <summary>
+            account number of user
+            </summary>
+        </member>
+        <member name="P:OtpService.Models.Request.GenerateOtpViaNuban.Appid">
+            <summary>
+            Appid of sending
+            </summary>
+        </member>
+        <member name="P:OtpService.Models.Request.TwiilioReq.WhatsAppNumber">
+            <summary>
+            Whatsapp number of the receipient, MUST start with "234"
+            </summary>
+        </member>
+        <member name="P:OtpService.Models.Request.TwiilioReq.OTP">
+            <summary>
+            the otp to be sent
+            </summary>
+        </member>
+        <member name="P:OtpService.Models.Request.TwiilioReq.Message">
+            <summary>
+            the message..optional
+            </summary>
+        </member>
+        <member name="T:OtpService.Models.Request.verifyOtpHigherDelayReq">
+            <summary>
+            verify otp while passing in the minutes of expiration
+            </summary>
+        </member>
+        <member name="P:OtpService.Models.Request.verifyOtpHigherDelayReq.minutes">
+            <summary>
+            minutes of otp validation
+            </summary>
+        </member>
+        <member name="T:Connect">
+            <summary>
+            Summary description for Connect
+            </summary>
+        </member>
+        <member name="T:CryptorEngine">
+            <summary>
+            Summary description for CryptorEngine
+            </summary>
+        </member>
+        <member name="M:CryptorEngine.Decrypt(System.String,System.Boolean)">
+            <summary>
+            DeCrypt a string using dual encryption method. Return a DeCrypted clear string
+            </summary>
+            <param name="cipherString">encrypted string</param>
+            <param name="useHashing">Did you use hashing to encrypt this data? pass true is yes</param>
+            <returns></returns>
+        </member>
+        <member name="T:ErrorLog">
+            <summary>
+            Summary description for ErrorLog
+            </summary>
+        </member>
+        <member name="T:Gadget">
+            <summary>
+            Summary description for Gadget
+            </summary>
+        </member>
+        <member name="T:msgBuilder">
+            <summary>
+            Summary description for msgBuilder
+            </summary>
+        </member>
+        <member name="T:SendOtpMail">
+            <summary>
+            Summary description for SendOtpMail
+            </summary>
+        </member>
+        <member name="T:SMS">
+            <summary>
+            Summary description for SMS
+            </summary>
+        </member>
+        <member name="T:SymmCrypto">
+            <summary>
+            Summary description for SymmCrypto
+            </summary>
+        </member>
+        <member name="M:SymmCrypto.#ctor(System.Security.Cryptography.SymmetricAlgorithm)">
+            <remarks>
+            Constructor for using a customized SymmetricAlgorithm class.
+            </remarks>
+        </member>
+        <member name="M:SymmCrypto.GetLegalKey(System.String)">
+            <remarks>
+            Depending on the legal key size limitations of a specific CryptoService provider
+            and length of the private key provided, padding the secret key with space character
+            to meet the legal size of the algorithm.
+            </remarks>
+        </member>
+        <member name="T:Utility">
+            <summary>
+            Summary description for Utility
+            </summary>
+        </member>
+    </members>
+</doc>

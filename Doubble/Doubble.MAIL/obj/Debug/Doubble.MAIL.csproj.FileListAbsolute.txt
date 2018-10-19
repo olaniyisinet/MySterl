@@ -1,0 +1,43 @@
+C:\DevApps\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+C:\DevApps\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+C:\DevApps\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+C:\DevApps\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csprojResolveAssemblyReference.cache
+C:\DevApps\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+C:\DevApps\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb
+D:\Source Files\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+D:\Source Files\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+D:\Source Files\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+D:\Source Files\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csproj.CoreCompileInputs.cache
+D:\Source Files\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+D:\Source Files\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb
+C:\Users\Ogundipeet\Downloads\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+C:\Users\Ogundipeet\Downloads\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+C:\Users\Ogundipeet\Downloads\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+C:\Users\Ogundipeet\Downloads\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csprojResolveAssemblyReference.cache
+C:\Users\Ogundipeet\Downloads\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+C:\Users\Ogundipeet\Downloads\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb
+C:\Users\appsupport\Desktop\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csproj.CoreCompileInputs.cache
+C:\Users\appsupport\Desktop\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+C:\Users\appsupport\Desktop\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb
+C:\Users\appsupport\Desktop\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+C:\Users\appsupport\Desktop\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+C:\Users\appsupport\Desktop\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+D:\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+D:\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+D:\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+D:\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csprojResolveAssemblyReference.cache
+D:\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+D:\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb
+C:\Users\Ogundipeet\Documents\GitHub\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+C:\Users\Ogundipeet\Documents\GitHub\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+C:\Users\Ogundipeet\Documents\GitHub\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+C:\Users\Ogundipeet\Documents\GitHub\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csprojResolveAssemblyReference.cache
+C:\Users\Ogundipeet\Documents\GitHub\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+C:\Users\Ogundipeet\Documents\GitHub\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb
+E:\Tolu\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll.config
+E:\Tolu\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.dll
+E:\Tolu\Doubble\Doubble.MAIL\bin\Debug\Doubble.MAIL.pdb
+E:\Tolu\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csprojAssemblyReference.cache
+E:\Tolu\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.csproj.CoreCompileInputs.cache
+E:\Tolu\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.dll
+E:\Tolu\Doubble\Doubble.MAIL\obj\Debug\Doubble.MAIL.pdb

@@ -1,0 +1,231 @@
+﻿@model Doubble.Models.ForSterling
+
+@{
+    ViewBag.Title = "Doubble - Let's get to know you.";
+
+}
+
+
+
+@using (Html.BeginForm("NewInvestment", "Doubble", FormMethod.Post))
+{
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-12 col-md-12">
+                        <h2 class="my-4">Doubble Sign Up</h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            @if (@ViewBag.message != null)
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger p-2 mx-auto col-sm-12 col-md-5" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <h4 class="alert-heading">There was a problem!</h4>
+                            <p class="mb-0">@ViewBag.message!.</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="row py-3">
+                <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-5">
+                    <h2 class="mb-3">Select Doubble Package</h2>
+                    <p class="my-3">Your final step to starting your savings.</p>
+                    <form action="confirmation.html" autocomplete="off">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="firstName">Select Preffered Package</label>
+
+                                <select class="form-control form-control-sm bg-light" id="myOptions" required="required" name="CategoryName">
+                                    <option value="Doubble 3">Doubble 3</option>
+                                    <option value="Doubble 5">Doubble 5</option>
+                                    <option value="Doubble 10">Doubble 10</option>
+                                    <option value="Doubble Lumpsum">Doubble Lumpsum</option>
+                                </select>
+
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <div class="alert alert-warning" role="alert" style="padding:2px 15px 2px 15px; margin:-10px 0px -2px 0px ;">
+                                    <span id="change-text" style="font-size: 14px">This is a 72 months contract with 36 months contribution period and the following 36 months for pay-out.</span>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" id="nonLump">Monthly Deposit</label>
+                                <label for="firstName" id="lump">Lumpsum Deposit</label>
+
+                                @Html.TextBoxFor(md => md.PayInAmount, new { @class = "form-control form-control-sm", @id = "firstName", @placeholder = "", @value = "", @required = "", @type = "number", @step = ".01", @min = "5,000.00", @autocomplete = "off" })
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Funding Account</label>
+
+                                @Html.DropDownList("Account2", ViewBag.Accounts as SelectList, new { @class = "form-control form-control-sm bg-light", @id = "lastName", @placeholder = "", @required = "", @value = "" })
+                            </div>
+                        </div>
+                        <hr style="margin:0px 0px 15px 0px">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <p class="my-3">
+                                    <b>Beneficiary Information</b>
+                                </p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">
+                                    Effective Date
+                                    <br>
+                                </label>
+                                @Html.TextBoxFor(md => md.EffectiveDate, new { @class = "form-control form-control-sm", @id = "dob", @placeholder = "dd-mm-yyyy ex. 17-11-1960", @value = "", @required = "", @name = "dob", Type = "date" })
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Select Beneficiary</label>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+
+                                        @Html.RadioButtonFor(md => md.BeneficiaryAccount, "Self", new
+                                   {
+                                       @class = "form-check-input bg-light",
+                                       @value = "option1",
+                                       @id = "inlineRadio1",
+                                       @name = "inlineRadioOptions"
+                                   }) Self
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        @Html.RadioButtonFor(md => md.BeneficiaryAccount, "Others", new { @class = "form-check-input", @value = "option2", @id = "inlineRadio2", @name = "inlineRadioOptions" }) Other
+
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Beneficiary Account</label>
+
+                                <span id="textbox"> <input type="text" class="form-control form-control-sm" id="firstName" placeholder="Sterling Account Number" required="" value="" name="Account" autocomplete = "off"></span>
+                                <span id="dropdown">
+                                    @Html.DropDownList("Account1", ViewBag.Accounts as SelectList, new { @class = "form-control form-control-sm bg-light", @value = "", @id = "firstName", @required = "" })
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Beneficiary Name</label>
+                                @Html.TextBoxFor(md => md.BeneficiaryName, new { @class = "form-control form-control-sm", @value = "", @id = "firstName", @placeholder = "Beneficiary Name", @autocomplete = "off" })
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" contenteditable="true">
+                                    Referral Code
+                                    <span style="font-size:13px">(optional)</span>
+                                </label>
+                                @Html.TextBoxFor(md => md.DAOCode, new { @class = "form-control form-control-sm", @id = "lastName", @placeholder = "", @value = "", @autocomplete = "off" })
+                            </div>
+                        </div>
+                        <button class="btn btn-block btn-danger my-2" type="submit">Submit</button>
+                        @Html.HiddenFor(md => md.Email)
+                        @Html.HiddenFor(md => md.BVN)
+                        @Html.HiddenFor(md => md.FirstName)
+                        @Html.HiddenFor(md => md.LastName)
+                        @Html.HiddenFor(md => md.MobileNumber)
+                        @Html.HiddenFor(md => md.DateOfEntry)
+                        @Html.HiddenFor(md => md.CusNum)
+                        @Html.HiddenFor(md => md.Term)
+                        @Html.HiddenFor(md => md.DateOfBirth)
+                        @Html.HiddenFor(md => md.ValCode)
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $("#dropdown").hide();
+        $("input[name='BeneficiaryAccount']").on("change", function () {
+            if ($(this).val() == "Self") {
+                $("#dropdown").show();
+                $("#textbox").hide();
+            }
+        });
+    </script>
+    <script>
+        $("#textbox").hide();
+        $("input[name='BeneficiaryAccount']").on("change", function () {
+            if ($(this).val() == "Others") {
+                $("#textbox").show();
+                $("#dropdown").hide();
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('#submit').prop("disabled", true);
+        $(function () {
+            $('#chckBox').change(function () {
+                var st = this.checked;
+                if (st) {
+                    $('#submit').prop("disabled", false);
+                }
+                else {
+                    $('#submit').prop("disabled", true);
+                }
+            });
+
+        });
+
+
+    </script>
+
+    <script>
+        $('#lump').hide();
+        $('#myOptions').change(function () {
+            var span = $("#change-text");
+            var val = $("#myOptions option:selected").text();
+            console.log(val);
+            if (val === "Doubble 3") {
+                $(span).html("This is a 72 months contract with 36 months contribution period and the following 36 months for pay-out.");
+                $('#lump').hide();
+                $('#nonLump').show();
+            } else if (val === "Doubble 5") {
+                $(span).html("This is a 120 months contract with 60 months contribution period and the following 60 months for pay-out.");
+                $('#lump').hide();
+                $('#nonLump').show();
+            } else if (val === "Doubble 10") {
+                $(span).html("This is a 180 months contract with 60 months contribution period and the following 120 months for pay-out.");
+                $('#lump').hide();
+                $('#nonLump').show();
+            } else {
+                $(span).html("This is a 10 year contract with an initial lumpsum payment and monthly pay-out starting from year 6.");
+                $('#lump').show();
+                $('#nonLump').hide();
+            };
+
+        });
+</script>
+
+}
+
+

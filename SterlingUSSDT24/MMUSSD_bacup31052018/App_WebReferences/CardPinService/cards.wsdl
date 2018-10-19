@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendMultipleToCopyReciptAttachments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sbj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mails" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="attch" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendMultipleToCopyReciptAttachmentsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendSingleToMailAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sbj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSingleToMailAttachmentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendSingleToMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sbj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSingleToMailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sbj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mails" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="mailc" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GenerateAndUpdateRandomPIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateAndUpdateRandomPINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateAndUpdateRandomPINResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectPINAndUpdatePINOffset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedPin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSelectPINAndUpdatePINOffsetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSelectPINAndUpdatePINOffsetResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateNewCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedPin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivateNewCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActivateNewCardResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINOffSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINOffSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPINOffSetResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateCVV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateCVV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateCVV1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateCVV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateCVV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateCVV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneratePINBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvki" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeneratePINBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeneratePINBlockResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINFromClearPINBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINFromClearPINBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPINFromClearPINBlockResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINFromPINOffset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pvk" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pinLength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINFromPINOffsetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPINFromPINOffsetResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINOffSetFromSelectedPIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPINOffSetFromSelectedPINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPINOffSetFromSelectedPINResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SFTPFileUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sftpHost" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sftpPort" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sftpUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sftpPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sftpPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uploadFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sftpName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SFTPFileUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SFTPFileUploadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCardPIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateCardPINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateCardPINResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveCards">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveCardsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveCardsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidNewCards">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidNewCardsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetValidNewCardsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveCardsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveCardsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveCardsByCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInActiveCardsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInActiveCardsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInActiveCardsByCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidNewCardsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidNewCardsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetValidNewCardsByCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLimitCardsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLimitCardsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLimitCardsByCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIBSLimitCardsByCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customer_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIBSLimitCardsByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIBSLimitCardsByCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCardData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardProg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCardDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCardDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatemVisaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatemVisaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatemVisaDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlockCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customer_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlockCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BlockCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardStat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardStatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardStatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseCardWebLimit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="card_program" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="limit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseCardWebLimitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncreaseCardWebLimitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseCardPurchaseLimit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="card_program" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="limit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseCardPurchaseLimitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncreaseCardPurchaseLimitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseCardPaymentLimit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seq_nr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="card_program" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="limit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IncreaseCardPaymentLimitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IncreaseCardPaymentLimitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMPassData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMPassDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMPassDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullCountryList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFullCountryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullCountryListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByCurrCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="curCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByCurrCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryByCurrCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByISO2Code">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="isoCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByISO2CodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryByISO2CodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendMultipleToCopyReciptAttachmentsSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMultipleToCopyReciptAttachments" />
+  </wsdl:message>
+  <wsdl:message name="SendMultipleToCopyReciptAttachmentsSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMultipleToCopyReciptAttachmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleToMailAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSingleToMailAttachment" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleToMailAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSingleToMailAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleToMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSingleToMail" />
+  </wsdl:message>
+  <wsdl:message name="SendSingleToMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSingleToMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="SendMailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateAndUpdateRandomPINSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateAndUpdateRandomPIN" />
+  </wsdl:message>
+  <wsdl:message name="GenerateAndUpdateRandomPINSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateAndUpdateRandomPINResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectPINAndUpdatePINOffsetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSelectPINAndUpdatePINOffset" />
+  </wsdl:message>
+  <wsdl:message name="GetSelectPINAndUpdatePINOffsetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSelectPINAndUpdatePINOffsetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateNewCardSoapIn">
+    <wsdl:part name="parameters" element="tns:ActivateNewCard" />
+  </wsdl:message>
+  <wsdl:message name="ActivateNewCardSoapOut">
+    <wsdl:part name="parameters" element="tns:ActivateNewCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPINOffSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPINOffSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPINOffSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPINOffSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateCVV1SoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateCVV1" />
+  </wsdl:message>
+  <wsdl:message name="GenerateCVV1SoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateCVV1Response" />
+  </wsdl:message>
+  <wsdl:message name="GenerateCVV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateCVV2" />
+  </wsdl:message>
+  <wsdl:message name="GenerateCVV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateCVV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePINBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:GeneratePINBlock" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePINBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:GeneratePINBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPINFromClearPINBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPINFromClearPINBlock" />
+  </wsdl:message>
+  <wsdl:message name="GetPINFromClearPINBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPINFromClearPINBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPINFromPINOffsetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPINFromPINOffset" />
+  </wsdl:message>
+  <wsdl:message name="GetPINFromPINOffsetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPINFromPINOffsetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPINOffSetFromSelectedPINSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPINOffSetFromSelectedPIN" />
+  </wsdl:message>
+  <wsdl:message name="GetPINOffSetFromSelectedPINSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPINOffSetFromSelectedPINResponse" />
+  </wsdl:message>
+  <wsdl:message name="SFTPFileUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:SFTPFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="SFTPFileUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:SFTPFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCardPINSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateCardPIN" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCardPINSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateCardPINResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveCardsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveCards" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveCardsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetValidNewCardsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetValidNewCards" />
+  </wsdl:message>
+  <wsdl:message name="GetValidNewCardsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetValidNewCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveCardsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveCardsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveCardsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveCardsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInActiveCardsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInActiveCardsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetInActiveCardsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInActiveCardsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetValidNewCardsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetValidNewCardsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetValidNewCardsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetValidNewCardsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLimitCardsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLimitCardsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetLimitCardsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLimitCardsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIBSLimitCardsByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIBSLimitCardsByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetIBSLimitCardsByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIBSLimitCardsByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCardDataSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCardData" />
+  </wsdl:message>
+  <wsdl:message name="InsertCardDataSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCardDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatemVisaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatemVisaData" />
+  </wsdl:message>
+  <wsdl:message name="CreatemVisaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatemVisaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="BlockCardSoapIn">
+    <wsdl:part name="parameters" element="tns:BlockCard" />
+  </wsdl:message>
+  <wsdl:message name="BlockCardSoapOut">
+    <wsdl:part name="parameters" element="tns:BlockCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardStatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardStat" />
+  </wsdl:message>
+  <wsdl:message name="GetCardStatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardStatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseCardWebLimitSoapIn">
+    <wsdl:part name="parameters" element="tns:IncreaseCardWebLimit" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseCardWebLimitSoapOut">
+    <wsdl:part name="parameters" element="tns:IncreaseCardWebLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseCardPurchaseLimitSoapIn">
+    <wsdl:part name="parameters" element="tns:IncreaseCardPurchaseLimit" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseCardPurchaseLimitSoapOut">
+    <wsdl:part name="parameters" element="tns:IncreaseCardPurchaseLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseCardPaymentLimitSoapIn">
+    <wsdl:part name="parameters" element="tns:IncreaseCardPaymentLimit" />
+  </wsdl:message>
+  <wsdl:message name="IncreaseCardPaymentLimitSoapOut">
+    <wsdl:part name="parameters" element="tns:IncreaseCardPaymentLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMPassDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMPassData" />
+  </wsdl:message>
+  <wsdl:message name="GetMPassDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMPassDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullCountryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullCountryList" />
+  </wsdl:message>
+  <wsdl:message name="GetFullCountryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryByCurrCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByCurrCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryByCurrCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByISO2CodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryByISO2Code" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByISO2CodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryByISO2CodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CardsSoap">
+    <wsdl:operation name="SendMultipleToCopyReciptAttachments">
+      <wsdl:input message="tns:SendMultipleToCopyReciptAttachmentsSoapIn" />
+      <wsdl:output message="tns:SendMultipleToCopyReciptAttachmentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSingleToMailAttachment">
+      <wsdl:input message="tns:SendSingleToMailAttachmentSoapIn" />
+      <wsdl:output message="tns:SendSingleToMailAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSingleToMail">
+      <wsdl:input message="tns:SendSingleToMailSoapIn" />
+      <wsdl:output message="tns:SendSingleToMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input message="tns:SendMailSoapIn" />
+      <wsdl:output message="tns:SendMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAndUpdateRandomPIN">
+      <wsdl:input message="tns:GenerateAndUpdateRandomPINSoapIn" />
+      <wsdl:output message="tns:GenerateAndUpdateRandomPINSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectPINAndUpdatePINOffset">
+      <wsdl:input message="tns:GetSelectPINAndUpdatePINOffsetSoapIn" />
+      <wsdl:output message="tns:GetSelectPINAndUpdatePINOffsetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateNewCard">
+      <wsdl:input message="tns:ActivateNewCardSoapIn" />
+      <wsdl:output message="tns:ActivateNewCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPINOffSet">
+      <wsdl:input message="tns:GetPINOffSetSoapIn" />
+      <wsdl:output message="tns:GetPINOffSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCVV1">
+      <wsdl:input message="tns:GenerateCVV1SoapIn" />
+      <wsdl:output message="tns:GenerateCVV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCVV2">
+      <wsdl:input message="tns:GenerateCVV2SoapIn" />
+      <wsdl:output message="tns:GenerateCVV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePINBlock">
+      <wsdl:input message="tns:GeneratePINBlockSoapIn" />
+      <wsdl:output message="tns:GeneratePINBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPINFromClearPINBlock">
+      <wsdl:input message="tns:GetPINFromClearPINBlockSoapIn" />
+      <wsdl:output message="tns:GetPINFromClearPINBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPINFromPINOffset">
+      <wsdl:input message="tns:GetPINFromPINOffsetSoapIn" />
+      <wsdl:output message="tns:GetPINFromPINOffsetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPINOffSetFromSelectedPIN">
+      <wsdl:input message="tns:GetPINOffSetFromSelectedPINSoapIn" />
+      <wsdl:output message="tns:GetPINOffSetFromSelectedPINSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SFTPFileUpload">
+      <wsdl:input message="tns:SFTPFileUploadSoapIn" />
+      <wsdl:output message="tns:SFTPFileUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCardPIN">
+      <wsdl:input message="tns:ValidateCardPINSoapIn" />
+      <wsdl:output message="tns:ValidateCardPINSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveCards">
+      <wsdl:input message="tns:GetActiveCardsSoapIn" />
+      <wsdl:output message="tns:GetActiveCardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidNewCards">
+      <wsdl:input message="tns:GetValidNewCardsSoapIn" />
+      <wsdl:output message="tns:GetValidNewCardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveCardsByCustomer">
+      <wsdl:input message="tns:GetActiveCardsByCustomerSoapIn" />
+      <wsdl:output message="tns:GetActiveCardsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInActiveCardsByCustomer">
+      <wsdl:input message="tns:GetInActiveCardsByCustomerSoapIn" />
+      <wsdl:output message="tns:GetInActiveCardsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidNewCardsByCustomer">
+      <wsdl:input message="tns:GetValidNewCardsByCustomerSoapIn" />
+      <wsdl:output message="tns:GetValidNewCardsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLimitCardsByCustomer">
+      <wsdl:input message="tns:GetLimitCardsByCustomerSoapIn" />
+      <wsdl:output message="tns:GetLimitCardsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIBSLimitCardsByCustomer">
+      <wsdl:input message="tns:GetIBSLimitCardsByCustomerSoapIn" />
+      <wsdl:output message="tns:GetIBSLimitCardsByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCardData">
+      <wsdl:input message="tns:InsertCardDataSoapIn" />
+      <wsdl:output message="tns:InsertCardDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatemVisaData">
+      <wsdl:input message="tns:CreatemVisaDataSoapIn" />
+      <wsdl:output message="tns:CreatemVisaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockCard">
+      <wsdl:input message="tns:BlockCardSoapIn" />
+      <wsdl:output message="tns:BlockCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardStat">
+      <wsdl:input message="tns:GetCardStatSoapIn" />
+      <wsdl:output message="tns:GetCardStatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardWebLimit">
+      <wsdl:input message="tns:IncreaseCardWebLimitSoapIn" />
+      <wsdl:output message="tns:IncreaseCardWebLimitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardPurchaseLimit">
+      <wsdl:input message="tns:IncreaseCardPurchaseLimitSoapIn" />
+      <wsdl:output message="tns:IncreaseCardPurchaseLimitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardPaymentLimit">
+      <wsdl:input message="tns:IncreaseCardPaymentLimitSoapIn" />
+      <wsdl:output message="tns:IncreaseCardPaymentLimitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMPassData">
+      <wsdl:input message="tns:GetMPassDataSoapIn" />
+      <wsdl:output message="tns:GetMPassDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullCountryList">
+      <wsdl:input message="tns:GetFullCountryListSoapIn" />
+      <wsdl:output message="tns:GetFullCountryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrCode">
+      <wsdl:input message="tns:GetCountryByCurrCodeSoapIn" />
+      <wsdl:output message="tns:GetCountryByCurrCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByISO2Code">
+      <wsdl:input message="tns:GetCountryByISO2CodeSoapIn" />
+      <wsdl:output message="tns:GetCountryByISO2CodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CardsSoap" type="tns:CardsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMultipleToCopyReciptAttachments">
+      <soap:operation soapAction="http://tempuri.org/SendMultipleToCopyReciptAttachments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSingleToMailAttachment">
+      <soap:operation soapAction="http://tempuri.org/SendSingleToMailAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSingleToMail">
+      <soap:operation soapAction="http://tempuri.org/SendSingleToMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAndUpdateRandomPIN">
+      <soap:operation soapAction="http://tempuri.org/GenerateAndUpdateRandomPIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectPINAndUpdatePINOffset">
+      <soap:operation soapAction="http://tempuri.org/GetSelectPINAndUpdatePINOffset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateNewCard">
+      <soap:operation soapAction="http://tempuri.org/ActivateNewCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINOffSet">
+      <soap:operation soapAction="http://tempuri.org/GetPINOffSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCVV1">
+      <soap:operation soapAction="http://tempuri.org/GenerateCVV1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCVV2">
+      <soap:operation soapAction="http://tempuri.org/GenerateCVV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePINBlock">
+      <soap:operation soapAction="http://tempuri.org/GeneratePINBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINFromClearPINBlock">
+      <soap:operation soapAction="http://tempuri.org/GetPINFromClearPINBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINFromPINOffset">
+      <soap:operation soapAction="http://tempuri.org/GetPINFromPINOffset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINOffSetFromSelectedPIN">
+      <soap:operation soapAction="http://tempuri.org/GetPINOffSetFromSelectedPIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SFTPFileUpload">
+      <soap:operation soapAction="http://tempuri.org/SFTPFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCardPIN">
+      <soap:operation soapAction="http://tempuri.org/ValidateCardPIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveCards">
+      <soap:operation soapAction="http://tempuri.org/GetActiveCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidNewCards">
+      <soap:operation soapAction="http://tempuri.org/GetValidNewCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveCardsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetActiveCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInActiveCardsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetInActiveCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidNewCardsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetValidNewCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLimitCardsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetLimitCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIBSLimitCardsByCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetIBSLimitCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCardData">
+      <soap:operation soapAction="http://tempuri.org/InsertCardData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatemVisaData">
+      <soap:operation soapAction="http://tempuri.org/CreatemVisaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockCard">
+      <soap:operation soapAction="http://tempuri.org/BlockCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardStat">
+      <soap:operation soapAction="http://tempuri.org/GetCardStat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardWebLimit">
+      <soap:operation soapAction="http://tempuri.org/IncreaseCardWebLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardPurchaseLimit">
+      <soap:operation soapAction="http://tempuri.org/IncreaseCardPurchaseLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardPaymentLimit">
+      <soap:operation soapAction="http://tempuri.org/IncreaseCardPaymentLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPassData">
+      <soap:operation soapAction="http://tempuri.org/GetMPassData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullCountryList">
+      <soap:operation soapAction="http://tempuri.org/GetFullCountryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrCode">
+      <soap:operation soapAction="http://tempuri.org/GetCountryByCurrCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByISO2Code">
+      <soap:operation soapAction="http://tempuri.org/GetCountryByISO2Code" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CardsSoap12" type="tns:CardsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMultipleToCopyReciptAttachments">
+      <soap12:operation soapAction="http://tempuri.org/SendMultipleToCopyReciptAttachments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSingleToMailAttachment">
+      <soap12:operation soapAction="http://tempuri.org/SendSingleToMailAttachment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSingleToMail">
+      <soap12:operation soapAction="http://tempuri.org/SendSingleToMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://tempuri.org/SendMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateAndUpdateRandomPIN">
+      <soap12:operation soapAction="http://tempuri.org/GenerateAndUpdateRandomPIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectPINAndUpdatePINOffset">
+      <soap12:operation soapAction="http://tempuri.org/GetSelectPINAndUpdatePINOffset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateNewCard">
+      <soap12:operation soapAction="http://tempuri.org/ActivateNewCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINOffSet">
+      <soap12:operation soapAction="http://tempuri.org/GetPINOffSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCVV1">
+      <soap12:operation soapAction="http://tempuri.org/GenerateCVV1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCVV2">
+      <soap12:operation soapAction="http://tempuri.org/GenerateCVV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePINBlock">
+      <soap12:operation soapAction="http://tempuri.org/GeneratePINBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINFromClearPINBlock">
+      <soap12:operation soapAction="http://tempuri.org/GetPINFromClearPINBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINFromPINOffset">
+      <soap12:operation soapAction="http://tempuri.org/GetPINFromPINOffset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPINOffSetFromSelectedPIN">
+      <soap12:operation soapAction="http://tempuri.org/GetPINOffSetFromSelectedPIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SFTPFileUpload">
+      <soap12:operation soapAction="http://tempuri.org/SFTPFileUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCardPIN">
+      <soap12:operation soapAction="http://tempuri.org/ValidateCardPIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveCards">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidNewCards">
+      <soap12:operation soapAction="http://tempuri.org/GetValidNewCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveCardsByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInActiveCardsByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetInActiveCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidNewCardsByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetValidNewCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLimitCardsByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetLimitCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIBSLimitCardsByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetIBSLimitCardsByCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCardData">
+      <soap12:operation soapAction="http://tempuri.org/InsertCardData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatemVisaData">
+      <soap12:operation soapAction="http://tempuri.org/CreatemVisaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BlockCard">
+      <soap12:operation soapAction="http://tempuri.org/BlockCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardStat">
+      <soap12:operation soapAction="http://tempuri.org/GetCardStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardWebLimit">
+      <soap12:operation soapAction="http://tempuri.org/IncreaseCardWebLimit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardPurchaseLimit">
+      <soap12:operation soapAction="http://tempuri.org/IncreaseCardPurchaseLimit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncreaseCardPaymentLimit">
+      <soap12:operation soapAction="http://tempuri.org/IncreaseCardPaymentLimit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMPassData">
+      <soap12:operation soapAction="http://tempuri.org/GetMPassData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullCountryList">
+      <soap12:operation soapAction="http://tempuri.org/GetFullCountryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByCurrCode">
+      <soap12:operation soapAction="http://tempuri.org/GetCountryByCurrCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByISO2Code">
+      <soap12:operation soapAction="http://tempuri.org/GetCountryByISO2Code" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Cards">
+    <wsdl:port name="CardsSoap" binding="tns:CardsSoap">
+      <soap:address location="http://10.0.41.166/testcardservice/cards.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CardsSoap12" binding="tns:CardsSoap12">
+      <soap12:address location="http://10.0.41.166/testcardservice/cards.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

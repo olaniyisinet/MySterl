@@ -1,0 +1,6 @@
+1/5/2018 6:35:47 PM : Could not find stored procedure 'imalbulktrajob'.::imalbulktrajob
+ 
+1/5/2018 6:36:17 PM : Could not find stored procedure 'imalbulktrajob'.::imalbulktrajob
+ 
+1/5/2018 6:46:29 PM : Could not find stored procedure 'imalbulktrajob'.::imalbulktrajob
+ 

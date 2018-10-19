@@ -1,0 +1,76 @@
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.csprojAssemblyReference.cache
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.Migrations.InitialCreate.resources
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.Migrations._new.resources
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.Migrations.Monday.resources
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.Migrations.Monday2.resources
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.Migrations.Wednesday.resources
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.Migrations.new11.resources
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.csproj.GenerateResource.cache
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.csproj.CoreCompileInputs.cache
+D:\Source Files\Doubble\Doubble\bin\roslyn\csc.exe
+D:\Source Files\Doubble\Doubble\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Source Files\Doubble\Doubble\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Source Files\Doubble\Doubble\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Source Files\Doubble\Doubble\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Source Files\Doubble\Doubble\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Source Files\Doubble\Doubble\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Source Files\Doubble\Doubble\bin\roslyn\System.Collections.Immutable.dll
+D:\Source Files\Doubble\Doubble\bin\roslyn\System.Reflection.Metadata.dll
+D:\Source Files\Doubble\Doubble\bin\roslyn\vbc.exe
+D:\Source Files\Doubble\Doubble\bin\roslyn\VBCSCompiler.exe
+D:\Source Files\Doubble\Doubble\bin\roslyn\VBCSCompiler.exe.config
+D:\Source Files\Doubble\Doubble\bin\Doubble.dll.config
+D:\Source Files\Doubble\Doubble\bin\Doubble.dll
+D:\Source Files\Doubble\Doubble\bin\Doubble.pdb
+D:\Source Files\Doubble\Doubble\bin\Doubble.BLL.dll
+D:\Source Files\Doubble\Doubble\bin\Doubble.DAL.dll
+D:\Source Files\Doubble\Doubble\bin\Doubble.MAIL.dll
+D:\Source Files\Doubble\Doubble\bin\Doubble.Models.dll
+D:\Source Files\Doubble\Doubble\bin\Doubble.MAIL.pdb
+D:\Source Files\Doubble\Doubble\bin\Doubble.MAIL.dll.config
+D:\Source Files\Doubble\Doubble\bin\Doubble.Models.pdb
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.csproj.CopyComplete
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.dll
+D:\Source Files\Doubble\Doubble\obj\Release\Doubble.pdb
+D:\Source Files\Doubble\Doubble\bin\Doubble.BLL.pdb
+D:\Source Files\Doubble\Doubble\bin\Doubble.BLL.dll.config
+D:\Source Files\Doubble\Doubble\bin\Doubble.DAL.pdb
+D:\Source Files\Doubble\Doubble\bin\Doubble.DAL.dll.config
+D:\Doubble\Doubble\bin\roslyn\csc.exe
+D:\Doubble\Doubble\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Doubble\Doubble\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Doubble\Doubble\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Doubble\Doubble\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Doubble\Doubble\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Doubble\Doubble\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Doubble\Doubble\bin\roslyn\System.Collections.Immutable.dll
+D:\Doubble\Doubble\bin\roslyn\System.Reflection.Metadata.dll
+D:\Doubble\Doubble\bin\roslyn\vbc.exe
+D:\Doubble\Doubble\bin\roslyn\VBCSCompiler.exe
+D:\Doubble\Doubble\bin\roslyn\VBCSCompiler.exe.config
+D:\Doubble\Doubble\bin\Doubble.dll.config
+D:\Doubble\Doubble\bin\Doubble.dll
+D:\Doubble\Doubble\bin\Doubble.pdb
+D:\Doubble\Doubble\bin\Doubble.BLL.dll
+D:\Doubble\Doubble\bin\Doubble.DAL.dll
+D:\Doubble\Doubble\bin\Doubble.MAIL.dll
+D:\Doubble\Doubble\bin\Doubble.Models.dll
+D:\Doubble\Doubble\bin\Doubble.BLL.pdb
+D:\Doubble\Doubble\bin\Doubble.BLL.dll.config
+D:\Doubble\Doubble\bin\Doubble.DAL.pdb
+D:\Doubble\Doubble\bin\Doubble.DAL.dll.config
+D:\Doubble\Doubble\bin\Doubble.MAIL.pdb
+D:\Doubble\Doubble\bin\Doubble.MAIL.dll.config
+D:\Doubble\Doubble\bin\Doubble.Models.pdb
+D:\Doubble\Doubble\obj\Release\Doubble.csprojAssemblyReference.cache
+D:\Doubble\Doubble\obj\Release\Doubble.Migrations.InitialCreate.resources
+D:\Doubble\Doubble\obj\Release\Doubble.Migrations._new.resources
+D:\Doubble\Doubble\obj\Release\Doubble.Migrations.Monday.resources
+D:\Doubble\Doubble\obj\Release\Doubble.Migrations.Monday2.resources
+D:\Doubble\Doubble\obj\Release\Doubble.Migrations.Wednesday.resources
+D:\Doubble\Doubble\obj\Release\Doubble.Migrations.new11.resources
+D:\Doubble\Doubble\obj\Release\Doubble.csproj.GenerateResource.cache
+D:\Doubble\Doubble\obj\Release\Doubble.csproj.CoreCompileInputs.cache
+D:\Doubble\Doubble\obj\Release\Doubble.csproj.CopyComplete
+D:\Doubble\Doubble\obj\Release\Doubble.dll
+D:\Doubble\Doubble\obj\Release\Doubble.pdb

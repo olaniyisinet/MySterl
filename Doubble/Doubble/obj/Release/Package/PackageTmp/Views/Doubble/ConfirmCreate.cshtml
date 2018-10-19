@@ -1,0 +1,116 @@
+﻿@model Doubble.Models.ForNonSterling
+@{
+    ViewBag.Title = "Doubble - Let's get to know you.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("ConfirmCreate", "Doubble", FormMethod.Post))
+{
+
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-12 col-md-12">
+                        <h2 class="my-4">Doubble Sign Up</h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+@if (@ViewBag.message != null)
+{
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger p-2 mx-auto col-sm-12 col-md-5" role="alert">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <h4 class="alert-heading">There was a problem!</h4>
+                        <p class="mb-0">@ViewBag.message!.</p>
+                    </div>
+                </div>
+            </div>
+}
+            <div class="row py-3">
+                <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-5">
+                    <h2 class="mb-3">Confirmation Details</h2>
+                    <p class="my-3">Congratulations! You have successfully created a Doubble Account. Please see below your details.</p>
+                    <form action="ns.html" autocomplete="off">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>
+                                    <b>@ViewBag.categ</b>
+                                </h5>
+                                <p class="card-text text-success text-justify">You selected the @ViewBag.categ that will run for the next @ViewBag.term years starting from @ViewBag.doe till @ViewBag.eod.</p>
+                                <h5 class="my-3">
+                                    <b>Recurring Deposit: N @ViewBag.payInam</b>
+                                </h5>
+                                <h5 class="my-3">
+                                    <b>Funding Account</b>
+                                    <br>@ViewBag.lastN - @ViewBag.payInacc
+                                </h5>
+                                <h5 class="my-3">
+                                    <b>Beneficiary Account</b>
+                                    <br>@ViewBag.BName - @ViewBag.BAcc
+                                </h5>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="my-3"></p>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="exampleCheck1" value="on">
+                                    <label class="form-check-label" for="exampleCheck1">I agree to </label><a href="https://doubble.ng/#/terms" target="_blank"><b>Terms &amp; Conditions</b></a>
+                                </div>
+                                <small id="emailHelp" class="form-text text-muted text-justify">By Checking this box, Sterling Bank will open an Account for you to complete the process.</small>
+                            </div>
+                        </div>
+                        @Html.HiddenFor(md => md.Category)
+                        @Html.HiddenFor(md => md.PayInAccount)
+                        @Html.HiddenFor(md => md.BeneficiaryName)
+                        @Html.HiddenFor(md => md.BeneficiaryAccount)
+                        @Html.HiddenFor(md => md.PayInAmount)
+                        @Html.HiddenFor(md => md.DAOCode)
+                        @Html.HiddenFor(md => md.CusNum)
+                        @Html.HiddenFor(md => md.Term)
+                        @Html.HiddenFor(md => md.ValCode)
+                        @Html.HiddenFor(md => md.BeneficiaryType)
+                        @Html.HiddenFor(md => md.EffectiveDate)
+                        @Html.HiddenFor(md => md.FirstName)
+                        @Html.HiddenFor(md => md.LastName)
+                        @Html.HiddenFor(md => md.MobileNumber)
+                        @Html.HiddenFor(md => md.BVN)
+                        @Html.HiddenFor(md => md.DateOfEntry)
+                        @Html.HiddenFor(md => md.Email)
+                        @Html.HiddenFor(md => md.ValCode)
+
+                        <button class="btn btn-danger my-2 btn-block" type="submit" id="submit">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+@section Scripts {
+<script type="text/javascript">
+        $('#submit').prop("disabled", true);
+        $(function () {
+            $('#exampleCheck1').change(function () {
+                var st = this.checked;
+                if (st) {
+                    $('#submit').prop("disabled", false);
+                }
+                else {
+                    $('#submit').prop("disabled", true);
+                }
+            });
+
+        });
+</script>
+
+}

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Doubble - Let's get to know you.";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Continue", "Doubble", FormMethod.Post))
+{
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-12 col-md-12">
+                <h2 class="my-4">Doubble Sign Up</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+@if (@ViewBag.messe != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger p-2 mx-auto col-sm-12 col-md-5" role="alert">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4 class="alert-heading">There was a problem!</h4>
+                <p class="mb-0">Place error message here!.</p>
+            </div>
+        </div>
+    </div>
+}
+    <div class="row py-3">
+        <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-5">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="alert p-2 mx-auto col-sm-12 col-md-12 alert-info" role="alert">
+                        <h3 class="alert-heading my-3">
+                            <b>Welcome Back!</b>
+                        </h3>
+                        <p class="mb-0">Let's complete your Doubble application. Please use the code sent to your email address and your new account number to continue.</p>
+                    </div>
+@if (@ViewBag.message != null)
+{
+                    <div class="alert p-2 mx-auto col-sm-12 col-md-12 alert-danger" role="alert">
+                        <h3 class="alert-heading my-3">
+                            <b>There was a problem!</b>
+                        </h3>
+                        <p class="mb-0">
+                            @ViewBag.message.
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+}
+                </div>
+            </div>
+            <form action="ns_step4.html" autocomplete="off">
+                <div class="mb-3">
+                    <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row my-4">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Code</label>
+                                <input type="text" class="form-control form-control-sm" id="firstName" placeholder="Verification Code" value="" required="" name="sentCode">
+                                <div class="invalid-feedback"> Valid Code is required. </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Account Number</label>
+                                <input type="text" class="form-control form-control-sm" id="lastName" placeholder="Created Account Number" required="" value="" name="acctNo">
+                                <div class="invalid-feedback"> Valid Created Account Number is required. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-block btn-danger" type="submit">Continue</button>
+            </form>
+        </div>
+    </div>
+</div>
+  
+
+}
+

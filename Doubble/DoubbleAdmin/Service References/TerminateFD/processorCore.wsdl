@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateTermDepositRolloverWithInterest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="effectivedate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="rate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payinacct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutacct1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutacct2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutacct3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeperiod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTermDepositRolloverWithInterestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTermDepositRolloverWithInterestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTermDepositRolloverWithoutInterest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="effectivedate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="rate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payinacct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutacct1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutacct2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payoutacct3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeperiod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTermDepositRolloverWithoutInterestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTermDepositRolloverWithoutInterestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminateFixedDeposit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="arrangementid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TerminateFixedDepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TerminateFixedDepositResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateBankerAcceptance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessdaydef" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valuedate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="finmatdate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="interestbasis" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="limitref" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="interestrate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="ratetype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IntPaymentMtd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="drawdownacct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrinLiqAcct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IntLiqAcct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChargLiqAcct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FeePayAcct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LDAcctOfficer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BAAssetID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BAAssetAmt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Capitalisation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LiqMode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PositionType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateBankerAcceptanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateBankerAcceptanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformPostingRestriction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nuban" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="restcode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="action" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformPostingRestrictionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerformPostingRestrictionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeAccountProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="datecreated" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="newproduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acctBranch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeAccountProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeAccountProductResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateTermDepositRolloverWithInterestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTermDepositRolloverWithInterest" />
+  </wsdl:message>
+  <wsdl:message name="CreateTermDepositRolloverWithInterestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTermDepositRolloverWithInterestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTermDepositRolloverWithoutInterestSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTermDepositRolloverWithoutInterest" />
+  </wsdl:message>
+  <wsdl:message name="CreateTermDepositRolloverWithoutInterestSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTermDepositRolloverWithoutInterestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TerminateFixedDepositSoapIn">
+    <wsdl:part name="parameters" element="tns:TerminateFixedDeposit" />
+  </wsdl:message>
+  <wsdl:message name="TerminateFixedDepositSoapOut">
+    <wsdl:part name="parameters" element="tns:TerminateFixedDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateBankerAcceptanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateBankerAcceptance" />
+  </wsdl:message>
+  <wsdl:message name="CreateBankerAcceptanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateBankerAcceptanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerformPostingRestrictionSoapIn">
+    <wsdl:part name="parameters" element="tns:PerformPostingRestriction" />
+  </wsdl:message>
+  <wsdl:message name="PerformPostingRestrictionSoapOut">
+    <wsdl:part name="parameters" element="tns:PerformPostingRestrictionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeAccountProductSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeAccountProduct" />
+  </wsdl:message>
+  <wsdl:message name="ChangeAccountProductSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeAccountProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="banksSoap">
+    <wsdl:operation name="CreateTermDepositRolloverWithInterest">
+      <wsdl:input message="tns:CreateTermDepositRolloverWithInterestSoapIn" />
+      <wsdl:output message="tns:CreateTermDepositRolloverWithInterestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTermDepositRolloverWithoutInterest">
+      <wsdl:input message="tns:CreateTermDepositRolloverWithoutInterestSoapIn" />
+      <wsdl:output message="tns:CreateTermDepositRolloverWithoutInterestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminateFixedDeposit">
+      <wsdl:input message="tns:TerminateFixedDepositSoapIn" />
+      <wsdl:output message="tns:TerminateFixedDepositSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankerAcceptance">
+      <wsdl:input message="tns:CreateBankerAcceptanceSoapIn" />
+      <wsdl:output message="tns:CreateBankerAcceptanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformPostingRestriction">
+      <wsdl:input message="tns:PerformPostingRestrictionSoapIn" />
+      <wsdl:output message="tns:PerformPostingRestrictionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAccountProduct">
+      <wsdl:input message="tns:ChangeAccountProductSoapIn" />
+      <wsdl:output message="tns:ChangeAccountProductSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="banksSoap" type="tns:banksSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateTermDepositRolloverWithInterest">
+      <soap:operation soapAction="http://tempuri.org/CreateTermDepositRolloverWithInterest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTermDepositRolloverWithoutInterest">
+      <soap:operation soapAction="http://tempuri.org/CreateTermDepositRolloverWithoutInterest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminateFixedDeposit">
+      <soap:operation soapAction="http://tempuri.org/TerminateFixedDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankerAcceptance">
+      <soap:operation soapAction="http://tempuri.org/CreateBankerAcceptance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformPostingRestriction">
+      <soap:operation soapAction="http://tempuri.org/PerformPostingRestriction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAccountProduct">
+      <soap:operation soapAction="http://tempuri.org/ChangeAccountProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="banksSoap12" type="tns:banksSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateTermDepositRolloverWithInterest">
+      <soap12:operation soapAction="http://tempuri.org/CreateTermDepositRolloverWithInterest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTermDepositRolloverWithoutInterest">
+      <soap12:operation soapAction="http://tempuri.org/CreateTermDepositRolloverWithoutInterest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminateFixedDeposit">
+      <soap12:operation soapAction="http://tempuri.org/TerminateFixedDeposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankerAcceptance">
+      <soap12:operation soapAction="http://tempuri.org/CreateBankerAcceptance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformPostingRestriction">
+      <soap12:operation soapAction="http://tempuri.org/PerformPostingRestriction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAccountProduct">
+      <soap12:operation soapAction="http://tempuri.org/ChangeAccountProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="banks">
+    <wsdl:port name="banksSoap" binding="tns:banksSoap">
+      <soap:address location="http://10.0.41.102/procore/processorCore.asmx" />
+    </wsdl:port>
+    <wsdl:port name="banksSoap12" binding="tns:banksSoap12">
+      <soap12:address location="http://10.0.41.102/procore/processorCore.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

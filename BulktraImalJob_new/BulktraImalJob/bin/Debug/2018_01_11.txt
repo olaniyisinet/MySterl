@@ -1,0 +1,18 @@
+1/11/2018 8:14:47 AM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+ 
+1/11/2018 8:14:47 AM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Failed
+ 
+1/11/2018 8:14:47 AM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Failed
+@batch_id=>008201815759650
+ 
+1/11/2018 8:23:40 AM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+ 
+1/11/2018 8:23:40 AM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Failed
+ 
+1/11/2018 8:23:40 AM : Object reference not set to an instance of an object.::update batches set status=@status where batch_id=@batch_id
+@status=>Failed
+@batch_id=>008201814371225
+ 

@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 17, 2018, 12:34:48 PM
+    Author     : o2
+*/
+
+.tile-subs {
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+    border: 1px solid #E4E4E4;
+    -webkit-border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 20px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    background: #FFF;
+    transition: all .3s ease-in-out;
+}
+
+.tile-subs:hover .icon i {
+    animation-name: transformAnimation;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    color: rgba(58, 58, 58, .41);
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: transformAnimation;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: transformAnimation;
+    -moz-animation-duration: .5s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease;
+    -moz-animation-fill-mode: forwards
+}
+
+.tile-subs .icon {
+    width: 20px;
+    height: 20px;
+    color: #BAB8B8;
+    position: absolute;
+    right: 75px;
+    top: -5px;
+    z-index: 1;
+    font-size: 50px;
+}
+
+.tile-subs .icon i {
+    margin: 0;
+    font-size: 60px;
+    line-height: 0;
+    vertical-align: bottom;
+    padding: 0
+}
+
+.tile-subs .count {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.65857
+}
+
+.tile-subs .count,
+.tile-subs h3,
+.tile-subs p {
+    position: relative;
+    margin: 0 0 -5px 10px;
+    z-index: 5;
+    padding: 0
+}
+
+.tile-subs h3 {
+    color: #BAB8B8
+}
+
+.tile-subs p {
+    margin-top: 5px;
+    font-size: 12px
+}
+
+.profile_icon {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 40px;
+    clear: both;
+    font-weight: 400;
+    height: 40px;
+    font-size: 23px;
+    color: #ad161f;
+    background-color: #bab8b8;
+    display: block;
+    margin: 0;
+    padding: 2px 1px;
+    margin: 30px 0 10px 10px;
+}

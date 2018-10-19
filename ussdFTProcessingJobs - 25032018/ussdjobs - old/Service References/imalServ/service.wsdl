@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AccountLookUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acctnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cbs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountLookUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountLookUpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountTag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acctnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cbs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="officer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountTagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountTagResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountUnTag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acctnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cbs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="officer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountUnTagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountUnTagResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountsListByIntroducer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cbs" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="officer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="introtype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountsListByIntroducerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountsListByIntroducerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cbs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountTypesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByAccountNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acctnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountByAccountNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountByAccountNumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AccountLookUpSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountLookUp" />
+  </wsdl:message>
+  <wsdl:message name="AccountLookUpSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountLookUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountTagSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountTag" />
+  </wsdl:message>
+  <wsdl:message name="AccountTagSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountUnTagSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountUnTag" />
+  </wsdl:message>
+  <wsdl:message name="AccountUnTagSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountUnTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountsListByIntroducerSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountsListByIntroducer" />
+  </wsdl:message>
+  <wsdl:message name="AccountsListByIntroducerSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountsListByIntroducerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountTypes" />
+  </wsdl:message>
+  <wsdl:message name="AccountTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByAccountNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountByAccountNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountByAccountNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountByAccountNumberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="AccountLookUp">
+      <wsdl:input message="tns:AccountLookUpSoapIn" />
+      <wsdl:output message="tns:AccountLookUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountTag">
+      <wsdl:input message="tns:AccountTagSoapIn" />
+      <wsdl:output message="tns:AccountTagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountUnTag">
+      <wsdl:input message="tns:AccountUnTagSoapIn" />
+      <wsdl:output message="tns:AccountUnTagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountsListByIntroducer">
+      <wsdl:input message="tns:AccountsListByIntroducerSoapIn" />
+      <wsdl:output message="tns:AccountsListByIntroducerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountTypes">
+      <wsdl:input message="tns:AccountTypesSoapIn" />
+      <wsdl:output message="tns:AccountTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByAccountNumber">
+      <wsdl:input message="tns:GetAccountByAccountNumberSoapIn" />
+      <wsdl:output message="tns:GetAccountByAccountNumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountLookUp">
+      <soap:operation soapAction="http://tempuri.org/AccountLookUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountTag">
+      <soap:operation soapAction="http://tempuri.org/AccountTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountUnTag">
+      <soap:operation soapAction="http://tempuri.org/AccountUnTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountsListByIntroducer">
+      <soap:operation soapAction="http://tempuri.org/AccountsListByIntroducer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountTypes">
+      <soap:operation soapAction="http://tempuri.org/AccountTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByAccountNumber">
+      <soap:operation soapAction="http://tempuri.org/GetAccountByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AccountLookUp">
+      <soap12:operation soapAction="http://tempuri.org/AccountLookUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountTag">
+      <soap12:operation soapAction="http://tempuri.org/AccountTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountUnTag">
+      <soap12:operation soapAction="http://tempuri.org/AccountUnTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountsListByIntroducer">
+      <soap12:operation soapAction="http://tempuri.org/AccountsListByIntroducer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountTypes">
+      <soap12:operation soapAction="http://tempuri.org/AccountTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByAccountNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://10.0.0.92:8090/SalesManagerWS/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://10.0.0.92:8090/SalesManagerWS/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

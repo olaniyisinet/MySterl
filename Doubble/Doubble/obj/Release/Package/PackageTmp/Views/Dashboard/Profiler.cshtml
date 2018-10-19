@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+    @using (Html.BeginForm("Profiler", "Dashboard", FormMethod.Post))
+    {
+
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-12 col-md-12 py-3">
+                            <!--<h2 class="my-4">Doubble</h2>-->
+                            <!--<hr>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row py-3">
+                    <div class="order-md-1 w-100 mx-auto box-shadow p-4 col-sm-12 col-12 col-md-8" style="background: linear-gradient(180deg, gainsboro -50%, white, white);">
+                        <h2 class="mb-3">Welcome, @ViewBag.fName!</h2>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 small">View and Manage your investments and profile.</div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 small" style="text-align: right;">@Html.ActionLink("Dashboard", "Dashboard", "Dashboard") | @Html.ActionLink("Logout", "LogOff", "Dashboard")</div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <h5 class="py-3"><b>My Profile</b></h5>
+                                <div>
+                                    <div class="py-1">
+                                        <span class="text-muted small">Full Name:</span><br>
+                                        <span><b>@ViewBag.name</b></span>
+                                    </div>
+
+                                    <div class="py-1">
+                                        <span class="text-muted small">Email:</span><br>
+                                        <span><b>@ViewBag.mail</b></span>
+                                    </div>
+                                    <div class="py-1">
+                                        <span class="text-muted small">Mobile:</span><br>
+                                        <span><b>@ViewBag.phoneNo</b></span>
+                                    </div>
+                                    <div class="py-1">
+                                        <span class="text-muted small">BVN:</span><br>
+                                        <span><b>@ViewBag.bvn</b></span>
+                                    </div>
+                                </div>
+                                <div class="hidden-md hidden-lg">
+                                    <hr />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="my-3">
+                                    <h6 class="mb-1"><b>Passport Photo</b></h6>
+                                    <input type="file" name="passport" />
+                                    <img src="" width="30%" alt="customer_name">
+                                    <button class="btn btn-info btn-sm m-2">Upload</button>
+                                    <hr>
+                                </div>
+
+                                <div class="my-3">
+                                    <h6 class="mb-1"><b>Valid ID</b></h6>
+                                    <input type="file" name="validId" />
+                                    <span class='text-success small' id="validId">[file name.jpg] - ID Uploaded <i class="fa fa-check-circle-o"></i></span><br>
+                                    <button class="btn btn-info btn-sm m-2">Upload</button>
+                                    <hr>
+                                </div>
+
+                                <div class="my-3">
+                                    <h6 class="mb-1"><b>Signature Upload</b></h6>
+                                    <input type="file" name="signature" id="signature"/>
+                                    <span class='text-success small'>[file name.jpg] - Signature Uploaded <i class="fa fa-check-circle-o"></i></span><br>
+                                    <button class="btn btn-info btn-sm m-2">Upload</button>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
