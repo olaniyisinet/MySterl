@@ -1,7 +1,0 @@
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\obj\Debug\ResolveAssemblyReference.cache
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\bin\Debug\BankTellerFundsTransfer.exe.config
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\bin\Debug\BankTellerFundsTransfer.exe
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\bin\Debug\BankTellerFundsTransfer.pdb
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\bin\Debug\ClassLibrary1.dll
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\obj\Debug\BankTellerFundsTransfer.exe
-D:\liveApps\BankTellerFundsTransfer\BankTellerFundsTransfer\BankTellerFundsTransfer\obj\Debug\BankTellerFundsTransfer.pdb

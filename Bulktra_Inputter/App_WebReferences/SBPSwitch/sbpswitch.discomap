@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.0.41.102/sbpswitch/sbpswitch.asmx?wsdl" filename="sbpswitch.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://10.0.41.102/sbpswitch/sbpswitch.asmx?disco" filename="sbpswitch.disco" />
-  </Results>
-</DiscoveryClientResultsFile>

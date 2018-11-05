@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-DoubbleAdmin-20180718052734.mdf;Initial Catalog=aspnet-DoubbleAdmin-20180718052734;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\Doubble\\DoubbleAdmin\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="DoubbleDBEntities-Web.config Connection String" description="DoubbleDBEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.DoubbleDB.csdl|res://*/Models.DoubbleDB.ssdl|res://*/Models.DoubbleDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=appsupportdb.database.windows.net,1433;initial catalog=DoubbleDB;persist security info=True;user id=paasuser;password=($terl1ng);MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\Doubble\\DoubbleAdmin\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DoubbleDBEntities']/@connectionString" />
-  </parameter>
-</parameters>
